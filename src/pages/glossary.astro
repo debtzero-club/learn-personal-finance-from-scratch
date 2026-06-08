@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { glossary } from '../data/glossary';
+const terms = [...glossary].sort((a, b) => a.term.localeCompare(b.term));
+---
+
+<BaseLayout title="Glossary · Learn Personal Finance from Scratch" description="Every finance term, in plain English. No jargon.">
+  <div class="page">
+    <p class="page-eyebrow">Glossary</p>
+    <h1>Plain-English glossary</h1>
+    <p>Every confusing money word, explained simply. {terms.length} terms and growing.</p>
+    <dl>
+      {
+        terms.map((t) => (
+          <div class="glossary-term">
+            <dt>{t.term}</dt>
+            <dd>{t.def}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</BaseLayout>

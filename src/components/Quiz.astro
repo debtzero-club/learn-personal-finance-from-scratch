@@ -1,0 +1,57 @@
+---
+interface Q {
+  q: string;
+  options: string[];
+  answer: number;
+  explain?: string;
+}
+const { questions = [] } = Astro.props as { questions: Q[] };
+---
+
+{
+  questions.length > 0 && (
+    <section class="quiz">
+      <h2>Check yourself</h2>
+      {questions.map((item, qi) => (
+        <div class="quiz-q" data-answer={item.answer}>
+          <p class="quiz-prompt">
+            {qi + 1}. {item.q}
+          </p>
+          <ul class="quiz-options">
+            {item.options.map((opt, oi) => (
+              <li>
+                <button type="button" class="quiz-opt" data-index={oi}>
+                  {opt}
+                </button>
+              </li>
+            ))}
+          </ul>
+          {item.explain && (
+            <p class="quiz-explain" hidden>
+              {item.explain}
+            </p>
+          )}
+        </div>
+      ))}
+    </section>
+  )
+}
+
+<script>
+  document.querySelectorAll<HTMLElement>('.quiz-q').forEach((q) => {
+    const answer = Number(q.getAttribute('data-answer'));
+    const explain = q.querySelector<HTMLElement>('.quiz-explain');
+    q.querySelectorAll<HTMLButtonElement>('.quiz-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.getAttribute('data-index'));
+        q.querySelectorAll('.quiz-opt').forEach((b) => b.removeAttribute('data-state'));
+        btn.setAttribute('data-state', idx === answer ? 'correct' : 'wrong');
+        if (idx !== answer) {
+          const correct = q.querySelector(`.quiz-opt[data-index="${answer}"]`);
+          if (correct) correct.setAttribute('data-state', 'correct');
+        }
+        if (explain) explain.hidden = false;
+      });
+    });
+  });
+</script>

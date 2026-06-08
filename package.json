@@ -1,0 +1,17 @@
+{
+  "name": "learn-personal-finance-from-scratch",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A free, open-source, beginner personal-finance course for US first-job starters. Built by the team at Toya, and contributors.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.18"
+  }
+}

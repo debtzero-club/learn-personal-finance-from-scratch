@@ -1,0 +1,101 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Quiz from '../components/Quiz.astro';
+import { curriculum } from '../data/curriculum';
+
+interface Props {
+  entry: CollectionEntry<'lessons'>;
+  prev?: CollectionEntry<'lessons'> | null;
+  next?: CollectionEntry<'lessons'> | null;
+}
+const { entry, prev = null, next = null } = Astro.props;
+const d = entry.data;
+const track = curriculum.find((t) => t.track === d.track);
+const phase = track?.phases.find((p) => p.phase === d.phase);
+---
+
+<BaseLayout title={`${d.title} · Learn Personal Finance from Scratch`} description={d.summary}>
+  <article class="lesson">
+    <p class="lesson-eyebrow">
+      <a href="/catalog">Track {d.track} · {track?.name}</a> &nbsp;→&nbsp; Phase {d.phase}: {phase?.title}
+    </p>
+    <h1 class="lesson-title">
+      {d.title}
+      {d.mechanics && <span class="gear" title="How it actually works">⚙</span>}
+    </h1>
+    <p class="lesson-summary">{d.summary}</p>
+    <p class="lesson-meta">Lesson {d.id} · Last reviewed {d.lastReviewed} · ~4 min read</p>
+
+    <div class="lesson-body">
+      <slot />
+    </div>
+
+    <section class="do-it">
+      <h2>Do it</h2>
+      <p>{d.doIt}</p>
+    </section>
+
+    <Quiz questions={d.quiz} />
+
+    <section class="keep-this">
+      <h2>Keep this</h2>
+      <p>{d.keepThis}</p>
+    </section>
+
+    {
+      d.sources.length > 0 && (
+        <section class="sources">
+          <h2>Sources</h2>
+          <ul>
+            {d.sources.map((s) => (
+              <li>
+                <a href={s.url} rel="noopener" target="_blank">
+                  {s.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="lesson-actions">
+      <button type="button" class="mark-done" data-slug={entry.slug}>Mark as done</button>
+    </div>
+
+    <nav class="lesson-nav">
+      {prev ? <a class="nav-prev" href={`/lessons/${prev.slug}`}>← {prev.data.title}</a> : <span></span>}
+      {next ? <a class="nav-next" href={`/lessons/${next.slug}`}>{next.data.title} →</a> : <span></span>}
+    </nav>
+  </article>
+</BaseLayout>
+
+<script>
+  // Progress saved in the browser only — no signup, no server.
+  const KEY = 'pfs:done';
+  const read = (): string[] => {
+    try {
+      return JSON.parse(localStorage.getItem(KEY) || '[]');
+    } catch {
+      return [];
+    }
+  };
+  document.querySelectorAll<HTMLButtonElement>('.mark-done').forEach((btn) => {
+    const slug = btn.getAttribute('data-slug') || '';
+    const sync = () => {
+      const done = read().includes(slug);
+      btn.textContent = done ? '✓ Done' : 'Mark as done';
+      btn.toggleAttribute('data-done', done);
+    };
+    sync();
+    btn.addEventListener('click', () => {
+      const done = read();
+      const i = done.indexOf(slug);
+      if (i === -1) done.push(slug);
+      else done.splice(i, 1);
+      localStorage.setItem(KEY, JSON.stringify(done));
+      sync();
+    });
+  });
+</script>

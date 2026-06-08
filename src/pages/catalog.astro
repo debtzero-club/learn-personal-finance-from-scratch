@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { allLessons, curriculum } from '../data/curriculum';
+const lessons = allLessons();
+---
+
+<BaseLayout title="Catalog · Learn Personal Finance from Scratch" description="Every lesson across all 14 phases. Filter by track, phase, and status.">
+  <div class="page">
+    <p class="page-eyebrow">Catalog</p>
+    <h1>Every lesson</h1>
+    <p>{lessons.length} lessons across 14 phases. The ⚙ lessons are the "how it actually works" mechanics.</p>
+
+    <div class="filters">
+      <label>Track
+        <select id="f-track">
+          <option value="">All</option>
+          {curriculum.map((t) => <option value={t.track}>Track {t.track} · {t.name}</option>)}
+        </select>
+      </label>
+      <label>Status
+        <select id="f-status">
+          <option value="">All</option>
+          <option value="complete">Available now</option>
+          <option value="planned">Coming soon</option>
+        </select>
+      </label>
+      <label>Type
+        <select id="f-type">
+          <option value="">All</option>
+          <option value="mechanics">⚙ Mechanics only</option>
+        </select>
+      </label>
+    </div>
+
+    <table class="catalog-table">
+      <thead>
+        <tr><th>#</th><th>Lesson</th><th>Phase</th><th>Status</th></tr>
+      </thead>
+      <tbody id="catalog-body">
+        {
+          lessons.map((l) => (
+            <tr
+              class="cat-row"
+              data-track={l.track}
+              data-status={l.status}
+              data-mechanics={l.mechanics ? 'yes' : 'no'}
+            >
+              <td>{l.id}</td>
+              <td>
+                {l.status === 'complete' && l.slug ? (
+                  <a href={`/lessons/${l.slug}`}>{l.title}</a>
+                ) : (
+                  l.title
+                )}
+                {l.mechanics && <span class="gear" title="How it actually works"> ⚙</span>}
+              </td>
+              <td>{l.phaseTitle}</td>
+              <td><span class={`pill ${l.status}`}>{l.status === 'complete' ? 'Available' : 'Soon'}</span></td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<script>
+  const track = document.getElementById('f-track') as HTMLSelectElement;
+  const status = document.getElementById('f-status') as HTMLSelectElement;
+  const type = document.getElementById('f-type') as HTMLSelectElement;
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('.cat-row'));
+  const apply = () => {
+    rows.forEach((r) => {
+      const okTrack = !track.value || r.dataset.track === track.value;
+      const okStatus = !status.value || r.dataset.status === status.value;
+      const okType = !type.value || r.dataset.mechanics === 'yes';
+      r.style.display = okTrack && okStatus && okType ? '' : 'none';
+    });
+  };
+  [track, status, type].forEach((s) => s.addEventListener('change', apply));
+</script>

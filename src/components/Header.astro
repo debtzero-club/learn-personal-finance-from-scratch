@@ -1,0 +1,20 @@
+---
+const links = [
+  { href: '/', label: 'Contents' },
+  { href: '/catalog', label: 'Catalog' },
+  { href: '/roadmap', label: 'Roadmap' },
+  { href: '/glossary', label: 'Glossary' },
+];
+// TODO: point this at the real repo once it's created on GitHub.
+const GITHUB = 'https://github.com/usetoya/learn-personal-finance-from-scratch';
+---
+<header class="site-header">
+  <a href="/" class="wordmark">
+    <span>PERSONAL&nbsp;FINANCE</span>
+    <span class="wordmark-sub">FROM&nbsp;SCRATCH</span>
+  </a>
+  <nav class="site-nav">
+    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    <a href={GITHUB} class="gh" rel="noopener" target="_blank">GitHub ↗</a>
+  </nav>
+</header>

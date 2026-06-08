@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { curriculum, counts } from '../data/curriculum';
+const c = counts();
+const FIRST = '1-1-what-this-course-is';
+---
+
+<BaseLayout title="Learn Personal Finance from Scratch — free, open-source money basics">
+  <section class="hero">
+    <p class="eyebrow">Free · Open source · US · 2026</p>
+    <h1>Learn Personal Finance<br /><em>from Scratch</em></h1>
+    <p class="lede">
+      The beginner's guide to money the internet forgot to write. {c.total} lessons across 14 phases —
+      built for your first paycheck, not your stock portfolio.
+    </p>
+    <div class="hero-cta">
+      <a class="btn" href={`/lessons/${FIRST}`}>Start lesson 1 →</a>
+      <a class="btn btn-ghost" href="/catalog">Browse the catalog</a>
+    </div>
+    <p class="hero-note">No signup. No paywall. No ads. Progress saved in your browser only.</p>
+  </section>
+
+  <section class="how">
+    <h2>How this works</h2>
+    <p>
+      Most money advice is scattered — a TikTok here, a scary article there, a word you don't know
+      everywhere. This is the spine. Every lesson runs the same short loop:
+      <strong>the situation → the idea → by the numbers → do it → check yourself → keep this.</strong>
+      Read it in a few minutes, do one real thing, move on.
+    </p>
+    <p>
+      Two tracks. <strong>Foundations</strong> starts at your first paycheck — paychecks, banking,
+      budgeting, saving, interest, credit. <strong>Real-Life Money</strong> covers debt, big
+      decisions, and building. Already have debt? Jump straight to Track 2.
+    </p>
+  </section>
+
+  <section class="contents" id="contents">
+    <h2>Contents</h2>
+    {
+      curriculum.map((track) => (
+        <div class="track">
+          <h3 class="track-h">
+            Track {track.track} · {track.name}
+            <span class="track-tag">{track.tagline}</span>
+          </h3>
+          {track.phases.map((phase) => (
+            <details class="phase" open={phase.phase === 1}>
+              <summary>
+                <span class="phase-n">Phase {phase.phase}</span> {phase.title}
+              </summary>
+              <ul class="phase-lessons">
+                {phase.lessons.map((l) => (
+                  <li class={`lesson-row ${l.status}`} data-slug={l.slug ?? ''}>
+                    {l.status === 'complete' && l.slug ? (
+                      <a href={`/lessons/${l.slug}`}>
+                        {l.id} {l.title}
+                      </a>
+                    ) : (
+                      <span>
+                        {l.id} {l.title}
+                      </span>
+                    )}
+                    {l.mechanics && <span class="gear" title="How it actually works">⚙</span>}
+                    {l.status !== 'complete' && <span class="soon">soon</span>}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      ))
+    }
+  </section>
+</BaseLayout>
+
+<script>
+  try {
+    const done = JSON.parse(localStorage.getItem('pfs:done') || '[]');
+    document.querySelectorAll<HTMLElement>('.lesson-row[data-slug]').forEach((el) => {
+      const s = el.getAttribute('data-slug');
+      if (s && done.includes(s)) el.classList.add('done');
+    });
+  } catch {}
+</script>

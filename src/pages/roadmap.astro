@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { curriculum, counts } from '../data/curriculum';
+const c = counts();
+const phases = curriculum.flatMap((t) =>
+  t.phases.map((p) => {
+    const total = p.lessons.length;
+    const done = p.lessons.filter((l) => l.status === 'complete').length;
+    return { track: t.track, phase: p.phase, title: p.title, total, done, pct: Math.round((done / total) * 100) };
+  })
+);
+---
+
+<BaseLayout title="Roadmap · Learn Personal Finance from Scratch" description="What's written, what's next. The course grows over time, lesson by lesson.">
+  <div class="page">
+    <p class="page-eyebrow">Roadmap</p>
+    <h1>What's done, what's next</h1>
+    <p>
+      {c.complete} of {c.total} lessons written so far. Like the course that inspired this one, lessons
+      ship when they're ready — accurate, plain-language, and sourced. Want to help?
+      <a href="https://github.com/usetoya/learn-personal-finance-from-scratch" rel="noopener" target="_blank">Contribute on GitHub</a>.
+    </p>
+
+    {
+      phases.map((p) => (
+        <div class="road-phase">
+          <div style="min-width: 13rem">
+            <strong>Phase {p.phase}</strong> · {p.title}
+          </div>
+          <div class="road-bar"><span style={`width:${p.pct}%`} /></div>
+          <div class="road-count">{p.done}/{p.total}</div>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>

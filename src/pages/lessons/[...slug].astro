@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import LessonLayout from '../../layouts/LessonLayout.astro';
+
+function cmpId(a: string, b: string): number {
+  const [a1, a2] = a.split('.').map(Number);
+  const [b1, b2] = b.split('.').map(Number);
+  return a1 - b1 || a2 - b2;
+}
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('lessons');
+  const sorted = lessons.sort((a, b) => cmpId(a.data.id, b.data.id));
+  return sorted.map((entry, i) => ({
+    params: { slug: entry.slug },
+    props: {
+      entry,
+      prev: sorted[i - 1] ?? null,
+      next: sorted[i + 1] ?? null,
+    },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<'lessons'>;
+  prev: CollectionEntry<'lessons'> | null;
+  next: CollectionEntry<'lessons'> | null;
+};
+const { entry, prev, next } = Astro.props as Props;
+const { Content } = await entry.render();
+---
+
+<LessonLayout entry={entry} prev={prev} next={next}>
+  <Content />
+</LessonLayout>
