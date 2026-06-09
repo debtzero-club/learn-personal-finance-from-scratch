@@ -34,6 +34,8 @@ const lessons = defineCollection({
     sources: z
       .array(z.object({ label: z.string(), url: z.string().url() }))
       .default([]),
+    // numbers.ts keys this lesson's prose depends on (validated by scripts/validate-content.mjs)
+    figures: z.array(z.string()).default([]),
   }),
 });
 
