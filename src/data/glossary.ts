@@ -10,7 +10,7 @@ export interface Term {
 
 export const glossary: Term[] = [
   { term: 'APR (Annual Percentage Rate)', def: 'The yearly cost of borrowing money, shown as a percentage. On a credit card, your APR divided by 365 is roughly what you are charged per day on a balance.', related: ['6.5', '7.4'] },
-  { term: 'APY (Annual Percentage Yield)', def: 'The yearly amount you earn on savings, including the effect of compounding. A higher APY means your money grows faster.', related: ['6.5'] },
+  { term: 'APY (Annual Percentage Yield)', def: 'The yearly amount you earn on savings, including the effect of compounding. A higher APY means your money grows faster.', related: ['3.3', '6.5'] },
   { term: 'Compound interest', def: 'Interest calculated on your original money plus the interest already added. It is why savings snowball over time — and why debt can spiral.', related: ['6.2', '6.3'] },
   { term: 'Simple interest', def: 'Interest calculated only on the original amount, never on interest already added.', related: ['6.2'] },
   { term: 'Principal', def: 'The original amount of money you borrowed or invested, before any interest.', related: ['8.2'] },
@@ -34,4 +34,9 @@ export const glossary: Term[] = [
   { term: '1099 / Independent contractor', def: 'A worker who is paid in full with no taxes withheld and reported on a 1099 form. Contractors owe both halves of FICA (15.3% self-employment tax) and pay quarterly estimated taxes themselves.', related: ['2.5'] },
   { term: 'Tax refund vs. liability', def: 'Your liability is the tax you actually owe for the year; a refund is just money returned when your withholding was more than that liability. A refund is your own money back, not a bonus.', related: ['2.6', '2.7'] },
   { term: 'Social Security wage base', def: 'The annual wage ceiling above which the 6.2% Social Security tax stops applying — $184,500 in 2026. Medicare tax has no such cap.', related: ['2.3'] },
+  { term: 'Overdraft', def: 'Spending more than your checking balance. With overdraft "coverage" turned on, the bank lets the charge through and hits you with a flat fee (often about $35); turn it off and the card simply declines instead.', related: ['3.5'] },
+  { term: 'Two-factor authentication (2FA)', def: 'A second login step beyond your password — usually a code from an app or a tap on your phone — so a stolen password alone can\'t get into your account. Use an authenticator app over text-message codes where you can.', related: ['3.6'] },
+  { term: 'Credit freeze', def: 'A free, reversible lock you place on your credit file with the credit bureaus. It blocks new accounts from being opened in your name, which stops most identity theft; you lift it temporarily when you actually apply for credit.', related: ['3.6'] },
+  { term: 'FDIC insurance', def: 'Federal protection that guarantees the money in your bank deposit accounts (up to the legal limit) even if the bank fails. Look for "FDIC-insured" when choosing a bank — credit unions have equivalent NCUA coverage.', related: ['3.1', '3.3', '3.6'] },
+  { term: 'Direct deposit', def: 'Having your paycheck sent electronically straight into your bank account instead of as a paper check. It is faster, free, and often the easiest way a bank will waive a monthly account fee.', related: ['3.1', '3.2'] },
 ];

@@ -74,12 +74,12 @@ export const curriculum: Track[] = [
         title: 'Banking Without Getting Robbed (by fees)',
         blurb: 'Accounts, fees, and keeping your money safe.',
         lessons: [
-          { id: '3.1', order: 1, title: 'Checking vs. savings — what each is for', status: 'planned' },
-          { id: '3.2', order: 2, title: 'The account fees quietly draining you', status: 'planned' },
-          { id: '3.3', order: 3, title: 'High-yield savings: same money, more of it', status: 'planned' },
-          { id: '3.4', order: 4, title: "Debit vs. credit — what's really happening", status: 'planned' },
-          { id: '3.5', order: 5, title: 'Beating overdraft and the $35 coffee', status: 'planned' },
-          { id: '3.6', order: 6, title: 'Keeping your money safe (fraud, scams, 2FA)', status: 'planned' },
+          { id: '3.1', order: 1, title: 'Checking vs. savings — what each is for', slug: '3-1-checking-vs-savings', status: 'complete' },
+          { id: '3.2', order: 2, title: 'The account fees quietly draining you', slug: '3-2-the-account-fees-draining-you', status: 'complete' },
+          { id: '3.3', order: 3, title: 'High-yield savings: same money, more of it', slug: '3-3-high-yield-savings', status: 'complete' },
+          { id: '3.4', order: 4, title: "Debit vs. credit — what's really happening", slug: '3-4-debit-vs-credit', status: 'complete' },
+          { id: '3.5', order: 5, title: 'Beating overdraft and the $35 coffee', slug: '3-5-beating-overdraft', status: 'complete' },
+          { id: '3.6', order: 6, title: 'Keeping your money safe (fraud, scams, 2FA)', slug: '3-6-keeping-your-money-safe', status: 'complete' },
         ],
       },
       {
