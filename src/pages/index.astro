@@ -75,11 +75,10 @@ const FIRST = '1-1-what-this-course-is';
 </BaseLayout>
 
 <script>
-  try {
-    const done = JSON.parse(localStorage.getItem('pfs:done') || '[]');
-    document.querySelectorAll<HTMLElement>('.lesson-row[data-slug]').forEach((el) => {
-      const s = el.getAttribute('data-slug');
-      if (s && done.includes(s)) el.classList.add('done');
-    });
-  } catch {}
+  // Progress read goes through the single progress-key owner in src/lib/progress.ts.
+  import { isDone } from '../lib/progress.ts';
+  document.querySelectorAll<HTMLElement>('.lesson-row[data-slug]').forEach((el) => {
+    const s = el.dataset.slug;
+    if (s && isDone(s)) el.classList.add('done');
+  });
 </script>

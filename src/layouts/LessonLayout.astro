@@ -73,28 +73,18 @@ const phase = track?.phases.find((p) => p.phase === d.phase);
 
 <script>
   // Progress saved in the browser only — no signup, no server.
-  const KEY = 'pfs:done';
-  const read = (): string[] => {
-    try {
-      return JSON.parse(localStorage.getItem(KEY) || '[]');
-    } catch {
-      return [];
-    }
-  };
+  // All localStorage logic lives in src/lib/progress.ts (the single key owner).
+  import { isDone, toggle } from '../lib/progress.ts';
   document.querySelectorAll<HTMLButtonElement>('.mark-done').forEach((btn) => {
-    const slug = btn.getAttribute('data-slug') || '';
+    const slug = btn.dataset.slug || '';
     const sync = () => {
-      const done = read().includes(slug);
+      const done = isDone(slug);
       btn.textContent = done ? '✓ Done' : 'Mark as done';
       btn.toggleAttribute('data-done', done);
     };
     sync();
     btn.addEventListener('click', () => {
-      const done = read();
-      const i = done.indexOf(slug);
-      if (i === -1) done.push(slug);
-      else done.splice(i, 1);
-      localStorage.setItem(KEY, JSON.stringify(done));
+      toggle(slug);
       sync();
     });
   });
