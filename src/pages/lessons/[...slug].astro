@@ -3,13 +3,15 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
 
-function cmpId(a: string, b: string): number {
-  const [a1, a2] = a.split('.').map(Number);
-  const [b1, b2] = b.split('.').map(Number);
-  return a1 - b1 || a2 - b2;
-}
-
 export async function getStaticPaths() {
+  // Inlined comparator: a top-level function declaration referenced only inside
+  // getStaticPaths gets dropped from Astro's serialized build bundle
+  // ("cmpId is not defined"), so keep it local to this scope.
+  const cmpId = (a: string, b: string): number => {
+    const [a1, a2] = a.split('.').map(Number);
+    const [b1, b2] = b.split('.').map(Number);
+    return a1 - b1 || a2 - b2;
+  };
   const lessons = await getCollection('lessons');
   const sorted = lessons.sort((a, b) => cmpId(a.data.id, b.data.id));
   return sorted.map((entry, i) => ({
