@@ -107,6 +107,68 @@ function quizAnswerErrors(block, id) {
   return errs;
 }
 
+// --- figures binding (Phase 2 / 02-01) -------------------------------------
+// A figure-bearing lesson lists the numbers.ts keys its prose depends on via a
+// `figures:` frontmatter array. The scalar `kv` regex in readFrontmatter CANNOT read
+// arrays, so this dedicated parser (mirroring the __hasSources style) reads BOTH YAML
+// forms from the frontmatter block:
+//   block list:    figures:\n  - key1\n  - key2
+//   inline array:  figures: [key1, key2]
+// An empty `figures: []` or a bare `figures:` returns []. Returns the raw keys with
+// quotes/whitespace stripped.
+function parseFiguresList(block) {
+  if (!block) return [];
+  const lines = block.split(/\r?\n/);
+  const startIdx = lines.findIndex((l) => /^figures:/.test(l));
+  if (startIdx === -1) return [];
+  const startLine = lines[startIdx];
+
+  // Inline array form: figures: [a, b, c]
+  const inline = startLine.match(/^figures:\s*\[([^\]]*)\]\s*$/);
+  if (inline) {
+    return inline[1]
+      .split(',')
+      .map((s) => s.trim().replace(/^["']|["']$/g, ''))
+      .filter((s) => s.length > 0);
+  }
+
+  // Block list form: figures:\n  - a\n  - b   (anything after `figures:` on the same line is ignored)
+  const keys = [];
+  for (let i = startIdx + 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^\S/.test(line)) break; // dedented to a new top-level key -> figures block ended
+    const item = line.trim().match(/^-\s*(.+?)\s*$/);
+    if (item) {
+      keys.push(item[1].replace(/^["']|["']$/g, '').trim());
+    } else if (line.trim() === '') {
+      continue; // tolerate blank lines inside the block
+    } else {
+      break; // a non-list indented line -> block ended
+    }
+  }
+  return keys;
+}
+
+// Resolve a dot-path (e.g. "socialSecurityWageBase" or "federalIncomeTaxBrackets.single")
+// against the NUMBERS registry. Returns true iff it lands on a figure LEAF ({value}|{rate})
+// or a non-empty bracket array ([{rate,...}, ...]). The non-leaf parent
+// `federalIncomeTaxBrackets` and a bogus key (e.g. `headOfHousehold`) MUST return false.
+function figureKeyResolves(numbers, dotPath) {
+  const parts = dotPath.split('.');
+  let node = numbers;
+  for (const p of parts) {
+    if (node == null || typeof node !== 'object') return false;
+    node = node[p];
+  }
+  if (node == null || typeof node !== 'object') return false;
+  const isFigureLeaf = 'value' in node || 'rate' in node;
+  const isBracketArray =
+    Array.isArray(node) &&
+    node.length > 0 &&
+    node.every((r) => r && typeof r === 'object' && 'rate' in r);
+  return isFigureLeaf || isBracketArray;
+}
+
 // --- INFRA-01: content-sync checks, parameterized over (lessons, lessonDir) -
 function checkContentSync(lessons, lessonDir) {
   const errors = [];
@@ -148,6 +210,23 @@ function checkContentSync(lessons, lessonDir) {
 
     // 6. quiz answer-index bound check (nice-to-have)
     errors.push(...quizAnswerErrors(fm.__block, l.id));
+
+    // 7. figures binding (Phase 2 / 02-01): for a lesson that declares figures[],
+    //    every key must resolve in numbers.ts AND the lesson must cite an IRS/SSA source.
+    //    Both clauses are scoped INSIDE `if (figures.length > 0)` so the non-figure
+    //    banking/budgeting/saving lessons (CFPB/Fed/FINRA) keep passing the generic
+    //    ≥1-source check unchanged (Pitfall 2).
+    const figures = parseFiguresList(fm.__block);
+    if (figures.length > 0) {
+      for (const key of figures) {
+        if (!figureKeyResolves(NUMBERS, key)) {
+          errors.push(`[figures] ${l.id}: key "${key}" does not resolve in numbers.ts`);
+        }
+      }
+      if (!/https:\/\/(www\.)?(irs|ssa)\.gov/.test(fm.__block)) {
+        errors.push(`[figures] ${l.id}: figure lesson must cite an IRS/SSA source`);
+      }
+    }
   }
 
   // 2. orphan check: every .md file in the dir must map to a `complete` curriculum entry
