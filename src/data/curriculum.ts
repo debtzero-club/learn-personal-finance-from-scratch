@@ -101,11 +101,11 @@ export const curriculum: Track[] = [
         title: 'Saving & Your Safety Net',
         blurb: 'The emergency fund that comes before almost everything.',
         lessons: [
-          { id: '5.1', order: 1, title: 'Why an emergency fund comes before almost everything', status: 'planned' },
-          { id: '5.2', order: 2, title: 'Your first $1,000 (the starter fund)', status: 'planned' },
-          { id: '5.3', order: 3, title: 'How big should my emergency fund be?', status: 'planned' },
-          { id: '5.4', order: 4, title: 'Where to actually keep your savings', status: 'planned' },
-          { id: '5.5', order: 5, title: 'Saving for goals: short, medium, long', status: 'planned' },
+          { id: '5.1', order: 1, title: 'Why an emergency fund comes before almost everything', slug: '5-1-why-an-emergency-fund-first', status: 'complete' },
+          { id: '5.2', order: 2, title: 'Your first $1,000 (the starter fund)', slug: '5-2-your-first-1000', status: 'complete' },
+          { id: '5.3', order: 3, title: 'How big should my emergency fund be?', slug: '5-3-how-big-should-it-be', status: 'complete' },
+          { id: '5.4', order: 4, title: 'Where to actually keep your savings', slug: '5-4-where-to-keep-your-savings', status: 'complete' },
+          { id: '5.5', order: 5, title: 'Saving for goals: short, medium, long', slug: '5-5-saving-for-goals', status: 'complete' },
         ],
       },
       {

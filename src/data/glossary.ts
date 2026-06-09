@@ -19,8 +19,8 @@ export const glossary: Term[] = [
   { term: 'FICA', def: 'Payroll taxes for Social Security and Medicare, automatically taken from your paycheck (7.65% of pay for most employees).', related: ['2.3', '2.2', '2.5'] },
   { term: 'W-4', def: 'The form you give your employer that tells them how much tax to withhold from each paycheck.', related: ['2.4', '2.7'] },
   { term: 'W-2', def: 'The year-end form from your employer summarizing what you earned and what taxes were withheld. You use it to file your tax return.', related: ['2.5', '2.6'] },
-  { term: 'Emergency fund', def: 'Money set aside only for unexpected costs (a car repair, a medical bill, a lost job). A starter goal is $1,000; a fuller goal is 3–6 months of expenses.', related: ['5.1', '5.2'] },
-  { term: 'High-yield savings account (HYSA)', def: 'A savings account that pays meaningfully more interest than a typical big-bank savings account, usually online.', related: ['3.3'] },
+  { term: 'Emergency fund', def: 'Money set aside only for unexpected costs (a car repair, a medical bill, a lost job). A starter goal is $1,000; a fuller goal is 3–6 months of essential expenses.', related: ['5.1', '5.2', '5.3'] },
+  { term: 'High-yield savings account (HYSA)', def: 'A savings account that pays meaningfully more interest than a typical big-bank savings account, usually online.', related: ['3.3', '5.4'] },
   { term: 'Credit score', def: 'A number (commonly 300–850) that lenders use to judge how reliably you repay debt. Higher is better and means cheaper borrowing.', related: ['7.7'] },
   { term: 'Minimum payment', def: 'The smallest amount you can pay on a credit card to stay current. Paying only the minimum keeps you in debt for years and maximizes interest.', related: ['7.5'] },
   { term: 'Grace period', def: 'The window between your credit card statement date and due date. Pay the full statement balance within it and you owe zero interest.', related: ['7.3'] },
@@ -42,4 +42,6 @@ export const glossary: Term[] = [
   { term: '50/30/20', def: 'A simple starter budget that splits your take-home pay into 50% needs, 30% wants, and 20% saving and debt. Treat the percentages as a starting point you adjust to your real life, not a fixed rule.', related: ['4.2'] },
   { term: 'Pay yourself first', def: 'The habit of moving money into savings on payday, before you spend on anything else — like a bill owed to your future self. It beats saving "whatever is left over," which is usually nothing.', related: ['4.3', '4.4'] },
   { term: 'Sinking fund', def: 'Money you set aside a little each month for a known, irregular cost that you can see coming (like annual car insurance or the holidays). Dividing a big once-a-year bill by 12 turns it into a calm monthly habit instead of a budget shock.', related: ['4.5'] },
+  { term: 'Liquidity', def: 'How quickly you can turn money into spendable cash without losing value or paying a penalty. Cash in a savings account is highly liquid; an emergency fund must be liquid so it is there the moment you need it.', related: ['5.4'] },
+  { term: 'Time horizon', def: 'How long until you will actually need the money you are saving. A short horizon (a few years or less) calls for safe cash savings; a long horizon (many years) is where investing fits.', related: ['5.5'] },
 ];
