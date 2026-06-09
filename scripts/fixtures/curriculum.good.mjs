@@ -4,7 +4,9 @@
 // either `curriculum` (nested Track[]) or `allLessons()` (flattened with track/phase).
 // One complete lesson, 9.x range so it never collides with real authored lessons.
 //
-// Pair: scripts/fixtures/lessons-good/9-1-good-fixture.md (id "9.1", complete, has sources).
+// Pairs:
+//   scripts/fixtures/lessons-good/9-1-good-fixture.md (id "9.1", complete, has sources).
+//   scripts/fixtures/lessons-good/9-2-good-figures.md (id "9.2", complete, resolvable figures + IRS source).
 
 /** @type {{ track:number, name:string, tagline:string, phases:Array<{phase:number,title:string,blurb:string,lessons:Array<{id:string,order:number,title:string,slug?:string,status:string,mechanics?:boolean}>}> }[]} */
 export const curriculum = [
@@ -19,6 +21,8 @@ export const curriculum = [
         blurb: 'Holds the known-good validator fixture.',
         lessons: [
           { id: '9.1', order: 1, title: 'Good fixture', slug: '9-1-good-fixture', status: 'complete' },
+          // figures: [socialSecurityEmployeeRate] (resolves) + IRS source -> contributes to exit 0
+          { id: '9.2', order: 2, title: 'Good figures fixture', slug: '9-2-good-figures', status: 'complete' },
         ],
       },
     ],

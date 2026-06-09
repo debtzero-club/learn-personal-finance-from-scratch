@@ -9,6 +9,10 @@
 //   9.3 -> [slug]   slug "badslug-orphan" violates `9-3-<kebab>` AND is an orphan md
 //                   (lessons-bad/badslug-orphan.md)
 //   9.4 -> [sync]   complete but NO markdown file exists at slug "9-4-missing"
+//   9.5 -> [figures] figures: [notARealKey] does not resolve (valid IRS source isolates the key failure)
+//                   (lessons-bad/9-5-bad-figure-key.md)
+//   9.6 -> [figures] resolvable figures key but only a CFPB source -> figure lesson lacks IRS/SSA source
+//                   (lessons-bad/9-6-bad-figure-source.md)
 
 /** @type {{ track:number, name:string, tagline:string, phases:Array<{phase:number,title:string,blurb:string,lessons:Array<{id:string,order:number,title:string,slug?:string,status:string,mechanics?:boolean}>}> }[]} */
 export const curriculum = [
@@ -31,6 +35,10 @@ export const curriculum = [
           { id: '9.3', order: 3, title: 'Bad slug + orphan fixture', slug: 'badslug-orphan', status: 'complete' },
           // [sync] check: complete but there is intentionally NO file at 9-4-missing.md.
           { id: '9.4', order: 4, title: 'Complete but missing file fixture', slug: '9-4-missing', status: 'complete' },
+          // [figures] key check: figures: [notARealKey] does not resolve; a valid IRS source isolates this failure.
+          { id: '9.5', order: 5, title: 'Bad figure key fixture', slug: '9-5-bad-figure-key', status: 'complete' },
+          // [figures] source check: a resolvable figures key but only a CFPB source -> figure lesson lacks IRS/SSA.
+          { id: '9.6', order: 6, title: 'Bad figure source fixture', slug: '9-6-bad-figure-source', status: 'complete' },
         ],
       },
     ],
