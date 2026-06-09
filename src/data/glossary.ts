@@ -15,7 +15,7 @@ export const glossary: Term[] = [
   { term: 'Simple interest', def: 'Interest calculated only on the original amount, never on interest already added.', related: ['6.2'] },
   { term: 'Principal', def: 'The original amount of money you borrowed or invested, before any interest.', related: ['8.2'] },
   { term: 'Gross pay', def: 'Your salary before any taxes or deductions are taken out.', related: ['2.1', '2.2'] },
-  { term: 'Net pay', def: 'Your take-home pay — what actually lands in your account after taxes and deductions.', related: ['2.1', '2.2'] },
+  { term: 'Net pay', def: 'Your take-home pay — what actually lands in your account after taxes and deductions.', related: ['2.1', '2.2', '4.2', '4.3'] },
   { term: 'FICA', def: 'Payroll taxes for Social Security and Medicare, automatically taken from your paycheck (7.65% of pay for most employees).', related: ['2.3', '2.2', '2.5'] },
   { term: 'W-4', def: 'The form you give your employer that tells them how much tax to withhold from each paycheck.', related: ['2.4', '2.7'] },
   { term: 'W-2', def: 'The year-end form from your employer summarizing what you earned and what taxes were withheld. You use it to file your tax return.', related: ['2.5', '2.6'] },
@@ -38,5 +38,8 @@ export const glossary: Term[] = [
   { term: 'Two-factor authentication (2FA)', def: 'A second login step beyond your password — usually a code from an app or a tap on your phone — so a stolen password alone can\'t get into your account. Use an authenticator app over text-message codes where you can.', related: ['3.6'] },
   { term: 'Credit freeze', def: 'A free, reversible lock you place on your credit file with the credit bureaus. It blocks new accounts from being opened in your name, which stops most identity theft; you lift it temporarily when you actually apply for credit.', related: ['3.6'] },
   { term: 'FDIC insurance', def: 'Federal protection that guarantees the money in your bank deposit accounts (up to the legal limit) even if the bank fails. Look for "FDIC-insured" when choosing a bank — credit unions have equivalent NCUA coverage.', related: ['3.1', '3.3', '3.6'] },
-  { term: 'Direct deposit', def: 'Having your paycheck sent electronically straight into your bank account instead of as a paper check. It is faster, free, and often the easiest way a bank will waive a monthly account fee.', related: ['3.1', '3.2'] },
+  { term: 'Direct deposit', def: 'Having your paycheck sent electronically straight into your bank account instead of as a paper check. It is faster, free, and often the easiest way a bank will waive a monthly account fee.', related: ['3.1', '3.2', '4.4'] },
+  { term: '50/30/20', def: 'A simple starter budget that splits your take-home pay into 50% needs, 30% wants, and 20% saving and debt. Treat the percentages as a starting point you adjust to your real life, not a fixed rule.', related: ['4.2'] },
+  { term: 'Pay yourself first', def: 'The habit of moving money into savings on payday, before you spend on anything else — like a bill owed to your future self. It beats saving "whatever is left over," which is usually nothing.', related: ['4.3', '4.4'] },
+  { term: 'Sinking fund', def: 'Money you set aside a little each month for a known, irregular cost that you can see coming (like annual car insurance or the holidays). Dividing a big once-a-year bill by 12 turns it into a calm monthly habit instead of a budget shock.', related: ['4.5'] },
 ];
