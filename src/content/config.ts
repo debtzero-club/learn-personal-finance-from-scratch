@@ -40,8 +40,10 @@ const lessons = defineCollection({
     // so a typo'd name is a Zod build error for free — complementing the validator's
     // resolves-to-registered name-check (D-03). Must stay in sync with the CALCULATORS
     // registry in src/layouts/LessonLayout.astro and REGISTERED_CALCULATORS in
-    // scripts/validate-content.mjs.
-    calculator: z.enum(['compound', 'apr-apy']).optional(),
+    // scripts/validate-content.mjs (THREE-PLACES-IN-SYNC — Phase 4 D-14).
+    calculator: z
+      .enum(['compound', 'apr-apy', 'card-interest', 'min-payment', 'amortization', 'payoff'])
+      .optional(),
   }),
 });
 

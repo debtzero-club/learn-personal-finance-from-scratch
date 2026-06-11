@@ -15,6 +15,8 @@
 //                   (lessons-bad/9-6-bad-figure-source.md)
 //   9.7 -> [calculator] calculator: notacalc is not a registered calculator
 //                   (lessons-bad/9-7-bad-calculator.md)
+//   9.8 -> [calculator] calculator: card-intrest (a TYPO of the Phase-4 name card-interest)
+//                   is not a registered calculator (lessons-bad/9-8-bad-new-calculator.md)
 
 /** @type {{ track:number, name:string, tagline:string, phases:Array<{phase:number,title:string,blurb:string,lessons:Array<{id:string,order:number,title:string,slug?:string,status:string,mechanics?:boolean}>}> }[]} */
 export const curriculum = [
@@ -43,6 +45,8 @@ export const curriculum = [
           { id: '9.6', order: 6, title: 'Bad figure source fixture', slug: '9-6-bad-figure-source', status: 'complete' },
           // [calculator] check: calculator: notacalc is not in REGISTERED_CALCULATORS.
           { id: '9.7', order: 7, title: 'Bad calculator fixture', slug: '9-7-bad-calculator', status: 'complete' },
+          // [calculator] check: calculator: card-intrest is a TYPO of the Phase-4 name card-interest.
+          { id: '9.8', order: 8, title: 'Bad new-calculator fixture', slug: '9-8-bad-new-calculator', status: 'complete' },
         ],
       },
     ],

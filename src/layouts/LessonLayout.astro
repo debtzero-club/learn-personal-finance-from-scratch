@@ -4,6 +4,10 @@ import BaseLayout from './BaseLayout.astro';
 import Quiz from '../components/Quiz.astro';
 import CompoundCalc from '../components/CompoundCalc.astro';
 import AprApyCalc from '../components/AprApyCalc.astro';
+import CardInterestCalc from '../components/CardInterestCalc.astro';
+import MinPaymentCalc from '../components/MinPaymentCalc.astro';
+import AmortizationCalc from '../components/AmortizationCalc.astro';
+import PayoffCalc from '../components/PayoffCalc.astro';
 import { curriculum } from '../data/curriculum';
 
 interface Props {
@@ -17,11 +21,18 @@ const track = curriculum.find((t) => t.track === d.track);
 const phase = track?.phases.find((p) => p.phase === d.phase);
 
 // calculator name -> island component (D-01/D-02). A lesson opts in with
-// `calculator: compound` / `calculator: apr-apy` in frontmatter; the matching
-// island renders in the .lesson-calc slot below (after the body, before "Do it").
+// `calculator: <name>` in frontmatter; the matching island renders in the
+// .lesson-calc slot below (after the body, before "Do it").
 // Keep these keys in sync with the z.enum in src/content/config.ts and
-// REGISTERED_CALCULATORS in scripts/validate-content.mjs.
-const CALCULATORS = { compound: CompoundCalc, 'apr-apy': AprApyCalc };
+// REGISTERED_CALCULATORS in scripts/validate-content.mjs (THREE-PLACES-IN-SYNC, Phase 4 D-14).
+const CALCULATORS = {
+  compound: CompoundCalc,
+  'apr-apy': AprApyCalc,
+  'card-interest': CardInterestCalc,
+  'min-payment': MinPaymentCalc,
+  amortization: AmortizationCalc,
+  payoff: PayoffCalc,
+};
 const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
 ---
 
