@@ -7,6 +7,9 @@
 // annual-review staleness audit introspects `taxYear`/`source` on every leaf.
 // No placeholders — all TY2026 figures below are officially published and were
 // verified against IRS/SSA primary sources on 2026-06-08 (see 01-RESEARCH.md).
+// Phase 5 additions (FSA limit, student-loan interest deduction cap, SE-tax
+// figures, Roth IRA phase-outs) verified against IRS primary sources on
+// 2026-06-11 (see 05-RESEARCH.md; re-confirmed live at execution time).
 //
 // UNIT CONVENTION (read this before adding a figure):
 //   - MONEY figures are stored as INTEGER CENTS (e.g. $184,500 -> 18450000) so
@@ -69,6 +72,12 @@ const SRC_HSA = 'https://www.irs.gov/pub/irs-drop/rp-25-19.pdf';
 const SRC_BRACKETS =
   'https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill';
 
+/** IRS Topic 456 — student-loan interest deduction ($2,500 cap is statutory). */
+const SRC_SLID = 'https://www.irs.gov/taxtopics/tc456';
+
+/** IRS Topic 554 — self-employment tax (15.3% rate + 92.35% factor are statutory). */
+const SRC_SE_TAX = 'https://www.irs.gov/taxtopics/tc554';
+
 // TY2026 figures -----------------------------------------------------------
 
 export const NUMBERS = {
@@ -95,6 +104,30 @@ export const NUMBERS = {
   hsaContributionLimitSelfOnly: { value: 440000, taxYear: 2026, source: SRC_HSA },
   /** HSA contribution limit, family coverage — $8,750. */
   hsaContributionLimitFamily: { value: 875000, taxYear: 2026, source: SRC_HSA },
+
+  // --- Education & self-employment (Phase 5 additions) -------------------
+  /** Health FSA contribution limit — $3,400 (Rev. Proc. 2025-32). Indexed annually. */
+  healthFsaContributionLimit: { value: 340000, taxYear: 2026, source: SRC_BRACKETS },
+  /** Student-loan interest deduction cap — $2,500. Statutory, NOT indexed. */
+  studentLoanInterestDeductionCap: { value: 250000, taxYear: 2026, source: SRC_SLID },
+  /** Self-employment tax rate — 15.3%. Statutory (not indexed). */
+  selfEmploymentTaxRate: { value: 0.153, taxYear: 2026, source: SRC_SE_TAX },
+  /** SE Social Security portion — 12.4%. Statutory (not indexed). */
+  selfEmploymentSocialSecurityRate: { value: 0.124, taxYear: 2026, source: SRC_SE_TAX },
+  /** SE Medicare portion — 2.9%. Statutory (not indexed). */
+  selfEmploymentMedicareRate: { value: 0.029, taxYear: 2026, source: SRC_SE_TAX },
+  /** SE net-earnings factor — 92.35% of net SE earnings is taxable. Statutory. */
+  selfEmploymentNetEarningsFactor: { value: 0.9235, taxYear: 2026, source: SRC_SE_TAX },
+
+  // --- Roth IRA income phase-out (MAGI, Notice 2025-67) ------------------
+  /** Roth IRA phase-out start (Single) — $153,000 MAGI. Indexed annually. */
+  rothIraPhaseOutStartSingle: { value: 15300000, taxYear: 2026, source: SRC_RETIREMENT },
+  /** Roth IRA phase-out end (Single) — $168,000 MAGI. Indexed annually. */
+  rothIraPhaseOutEndSingle: { value: 16800000, taxYear: 2026, source: SRC_RETIREMENT },
+  /** Roth IRA phase-out start (MFJ) — $242,000 MAGI. Indexed annually. */
+  rothIraPhaseOutStartMFJ: { value: 24200000, taxYear: 2026, source: SRC_RETIREMENT },
+  /** Roth IRA phase-out end (MFJ) — $252,000 MAGI. Indexed annually. */
+  rothIraPhaseOutEndMFJ: { value: 25200000, taxYear: 2026, source: SRC_RETIREMENT },
 
   // --- Standard deduction -----------------------------------------------
   /** Standard deduction (Single) — $16,100. */
