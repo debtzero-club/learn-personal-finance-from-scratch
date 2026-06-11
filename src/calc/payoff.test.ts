@@ -22,14 +22,20 @@ import { describe, it, expect } from 'vitest';
 //   payoff({ debts, extra }) -> { avalanche: MethodResult, snowball: MethodResult }
 //   MethodResult = { months, totalInterest, order: string[] /* clear order */ }
 import { payoff } from './payoff';
+import { amortize } from './amortization';
 import { toCents } from '../lib/money';
 
 describe('payoff — avalanche vs snowball, pinned cents (refactor-proof)', () => {
   // The verified DIVERGENT default set (Pitfall 4). Re-run gives distinct interest totals.
+  // store + card are REVOLVING (their minimum is the interest+1%/$35 form, computed by the
+  // engine). The auto is an INSTALLMENT loan — its minimum is its fixed amortized payment
+  // (the 48-month payment on $9,000 @ 6% = $211.37, from the amortization engine), exactly
+  // as 04-RESEARCH §CALC-06 specifies ("installment → its fixed payment").
+  const autoMin = amortize({ principal: toCents(9000), apr: 0.06, months: 48 }).payment; // 21137c
   const debts = [
     { name: 'store', balance: toCents(1200), apr: 0.2 },
     { name: 'card', balance: toCents(5000), apr: 0.2599 },
-    { name: 'auto', balance: toCents(9000), apr: 0.06 },
+    { name: 'auto', balance: toCents(9000), apr: 0.06, minPayment: autoMin },
   ];
 
   it('Case A: the divergent default set pins avalanche vs snowball', () => {
