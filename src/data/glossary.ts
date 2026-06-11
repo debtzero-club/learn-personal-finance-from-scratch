@@ -11,9 +11,12 @@ export interface Term {
 export const glossary: Term[] = [
   { term: 'APR (Annual Percentage Rate)', def: 'The yearly cost of borrowing money, shown as a percentage. On a credit card, your APR divided by 365 is roughly what you are charged per day on a balance.', related: ['6.5', '7.4'] },
   { term: 'APY (Annual Percentage Yield)', def: 'The yearly amount you earn on savings, including the effect of compounding. A higher APY means your money grows faster.', related: ['3.3', '6.5'] },
-  { term: 'Compound interest', def: 'Interest calculated on your original money plus the interest already added. It is why savings snowball over time — and why debt can spiral.', related: ['6.2', '6.3'] },
+  { term: 'Compound interest', def: 'Interest calculated on your original money plus the interest already added. It is why savings snowball over time — and why debt can spiral.', related: ['6.2', '6.3', '6.7'] },
   { term: 'Simple interest', def: 'Interest calculated only on the original amount, never on interest already added.', related: ['6.2'] },
   { term: 'Principal', def: 'The original amount of money you borrowed or invested, before any interest.', related: ['8.2'] },
+  { term: 'Rule of 72', def: 'A quick shortcut: divide 72 by the annual interest rate to estimate how many years it takes money to double. At 6%, that is about 12 years.', related: ['6.4'] },
+  { term: 'Fixed rate', def: 'An interest rate that stays the same for the entire life of the loan or account, so your cost is predictable and never moves on its own.', related: ['6.6'] },
+  { term: 'Variable rate', def: 'An interest rate tied to an outside index (like the prime rate), so it can rise or fall over time — meaning your cost can change without you doing anything. Most credit cards use one.', related: ['6.6'] },
   { term: 'Gross pay', def: 'Your salary before any taxes or deductions are taken out.', related: ['2.1', '2.2'] },
   { term: 'Net pay', def: 'Your take-home pay — what actually lands in your account after taxes and deductions.', related: ['2.1', '2.2', '4.2', '4.3'] },
   { term: 'FICA', def: 'Payroll taxes for Social Security and Medicare, automatically taken from your paycheck (7.65% of pay for most employees).', related: ['2.3', '2.2', '2.5'] },
