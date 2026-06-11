@@ -1,0 +1,283 @@
+---
+// CardInterestCalc.astro — the "bucket-with-a-hole" card-interest island (CALC-03,
+// lessons 7.3 grace ON / 7.4 grace OFF).
+//
+// Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
+// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// the SAME pure engine (src/calc/card-interest.ts) at BUILD TIME (so the worked
+// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// live) — one source of math. Never re-derive the average-daily-balance loop here.
+//
+// The grace toggle (D-01) is the teaching moment: "Did you pay last statement in
+// full?" ON → the bucket doesn't leak ($0 interest); OFF → it drains (the ADB ×
+// DPR × days charge). Toggling MUST recompute, not hide a label.
+
+import { cardInterest } from '../calc/card-interest';
+import { format, toCents } from '../lib/money';
+
+// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// $5,000 flat carry, 30-day cycle, 24% APR, grace OFF. Pinned golden (04-01-SUMMARY):
+// adb $5,000.00, interest $98.63. Toggle ON → $0.00 (the bucket-with-a-hole moment).
+const SEED = { start: 5000, purchase: 0, purchaseDay: 10, payment: 0, paymentDay: 20, cycleDays: 30, aprPct: 24 };
+
+const seed = cardInterest({
+  start: toCents(SEED.start),
+  purchase: SEED.purchase ? toCents(SEED.purchase) : undefined,
+  purchaseDay: SEED.purchaseDay,
+  payment: SEED.payment ? toCents(SEED.payment) : undefined,
+  paymentDay: SEED.paymentDay,
+  cycleDays: SEED.cycleDays,
+  apr: SEED.aprPct / 100,
+  paidInFull: false,
+});
+
+// DPR as a percentage string for the supporting line (a rate, never money).
+const dprPct = (seed.dpr * 100).toFixed(4); // "0.0658"
+---
+
+<div
+  class="ci-calc"
+  data-start={SEED.start}
+  data-purchase={SEED.purchase}
+  data-purchaseday={SEED.purchaseDay}
+  data-payment={SEED.payment}
+  data-paymentday={SEED.paymentDay}
+  data-cycledays={SEED.cycleDays}
+  data-apr={SEED.aprPct}
+>
+  <h2 class="ci-eyebrow">WHAT A CARRIED BALANCE COSTS</h2>
+
+  <label class="ci-toggle">
+    <input id="ci-paidinfull" type="checkbox" />
+    <span class="ci-toggle-text">Did you pay last statement in full?</span>
+  </label>
+
+  <div class="ci-inputs">
+    <label class="calc-field">
+      <span class="ci-label-text">Starting balance</span>
+      <span class="ci-input-wrap">
+        <span class="ci-unit" aria-hidden="true">$</span>
+        <input id="ci-start" type="number" inputmode="decimal" min="0" step="100" value={SEED.start} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">Purchase (optional)</span>
+      <span class="ci-input-wrap">
+        <span class="ci-unit" aria-hidden="true">$</span>
+        <input id="ci-purchase" type="number" inputmode="decimal" min="0" step="50" value={SEED.purchase} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">Purchase day</span>
+      <span class="ci-input-wrap">
+        <input id="ci-purchaseday" type="number" inputmode="numeric" min="1" max="31" step="1" value={SEED.purchaseDay} />
+        <span class="ci-unit" aria-hidden="true">day</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">Payment (optional)</span>
+      <span class="ci-input-wrap">
+        <span class="ci-unit" aria-hidden="true">$</span>
+        <input id="ci-payment" type="number" inputmode="decimal" min="0" step="50" value={SEED.payment} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">Payment day</span>
+      <span class="ci-input-wrap">
+        <input id="ci-paymentday" type="number" inputmode="numeric" min="1" max="31" step="1" value={SEED.paymentDay} />
+        <span class="ci-unit" aria-hidden="true">day</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">Cycle length</span>
+      <span class="ci-input-wrap">
+        <input id="ci-cycledays" type="number" inputmode="numeric" min="1" max="62" step="1" value={SEED.cycleDays} />
+        <span class="ci-unit" aria-hidden="true">days</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="ci-label-text">APR</span>
+      <span class="ci-input-wrap">
+        <input id="ci-apr" type="number" inputmode="decimal" min="0" step="0.1" value={SEED.aprPct} />
+        <span class="ci-unit" aria-hidden="true">%</span>
+      </span>
+    </label>
+  </div>
+
+  <p class="ci-headline">
+    <span class="ci-after">This cycle's interest: </span>
+    <span id="ci-interest" class="ci-interest">{format(seed.interest)}</span>
+  </p>
+  <p class="ci-subline">
+    Average daily balance <span id="ci-adb">{format(seed.adb)}</span> ·
+    daily periodic rate <span id="ci-dpr">{dprPct}</span>% (APR ÷ 365) ·
+    over <span id="ci-days">{SEED.cycleDays}</span> days.
+  </p>
+
+  <p class="ci-caption">
+    Average daily balance × daily periodic rate (APR ÷ 365) × days in the cycle. Pay in
+    full and the grace period means <strong>$0 interest</strong> — carry a balance and
+    the bucket starts to drain.
+  </p>
+</div>
+
+<script>
+  import { cardInterest } from '../calc/card-interest';
+  import { format, toCents } from '../lib/money';
+
+  document.querySelectorAll<HTMLElement>('.ci-calc').forEach((root) => {
+    const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
+    const startEl = $<HTMLInputElement>('#ci-start');
+    const purchaseEl = $<HTMLInputElement>('#ci-purchase');
+    const purchaseDayEl = $<HTMLInputElement>('#ci-purchaseday');
+    const paymentEl = $<HTMLInputElement>('#ci-payment');
+    const paymentDayEl = $<HTMLInputElement>('#ci-paymentday');
+    const cycleDaysEl = $<HTMLInputElement>('#ci-cycledays');
+    const aprEl = $<HTMLInputElement>('#ci-apr');
+    const paidInFullEl = $<HTMLInputElement>('#ci-paidinfull');
+    const interestEl = $<HTMLElement>('#ci-interest');
+    const adbEl = $<HTMLElement>('#ci-adb');
+    const dprEl = $<HTMLElement>('#ci-dpr');
+    const daysEl = $<HTMLElement>('#ci-days');
+    if (!startEl || !cycleDaysEl || !aprEl || !paidInFullEl) return;
+
+    // Read a non-negative number, falling back to a default so the headline never shows NaN.
+    const num = (el: HTMLInputElement | null, fallback: number) => {
+      if (!el) return fallback;
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    const render = () => {
+      const start = num(startEl, Number(root.dataset.start) || 0);
+      const purchase = num(purchaseEl, Number(root.dataset.purchase) || 0);
+      const purchaseDay = Math.round(num(purchaseDayEl, Number(root.dataset.purchaseday) || 1));
+      const payment = num(paymentEl, Number(root.dataset.payment) || 0);
+      const paymentDay = Math.round(num(paymentDayEl, Number(root.dataset.paymentday) || 1));
+      let cycleDays = Math.round(num(cycleDaysEl, Number(root.dataset.cycledays) || 30));
+      if (cycleDays < 1) cycleDays = 1;
+      const aprPct = num(aprEl, Number(root.dataset.apr) || 0);
+      const paidInFull = paidInFullEl.checked;
+
+      const res = cardInterest({
+        start: toCents(start),
+        purchase: purchase ? toCents(purchase) : undefined,
+        purchaseDay,
+        payment: payment ? toCents(payment) : undefined,
+        paymentDay,
+        cycleDays,
+        apr: aprPct / 100,
+        paidInFull,
+      });
+
+      if (interestEl) interestEl.textContent = format(res.interest);
+      if (adbEl) adbEl.textContent = format(res.adb);
+      if (dprEl) dprEl.textContent = (res.dpr * 100).toFixed(4);
+      if (daysEl) daysEl.textContent = String(cycleDays);
+    };
+
+    [startEl, purchaseEl, purchaseDayEl, paymentEl, paymentDayEl, cycleDaysEl, aprEl].forEach(
+      (el) => el && el.addEventListener('input', render)
+    );
+    paidInFullEl.addEventListener('change', render);
+    // On load, reproduce the server render from the defaults (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. Reuses .calc-field from the shared island recipe. */
+  .ci-calc { display: block; }
+
+  .ci-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .ci-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.96rem;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .ci-toggle input {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--accent);
+  }
+
+  .ci-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .ci-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .ci-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .ci-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .ci-headline {
+    margin: 0.4rem 0 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .ci-interest { color: var(--accent); }
+  .ci-after { color: var(--ink); }
+  .ci-subline {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .ci-caption {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+</style>

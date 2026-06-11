@@ -1,0 +1,203 @@
+---
+// MinPaymentCalc.astro — the minimum-payment-trap island (CALC-04, lessons 7.5 / 8.5).
+//
+// Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
+// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// the SAME pure engine (src/calc/min-payment.ts) at BUILD TIME (so the worked
+// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// live) — one source of math. Never re-derive the month loop here.
+//
+// The headline is the trap: paying only the minimum, the $5k anchor is in debt for
+// 201 months (~17 years) and pays $8,441.70 in interest. That 201/$8,441.70 is the
+// VERIFIED golden (D-04) — lesson 8.5's title flexes to it, never the reverse.
+
+import { minPaymentTrap } from '../calc/min-payment';
+import { format, toCents } from '../lib/money';
+
+// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// $5,000 @ 24% APR, $35 floor, 1% of principal. Pinned golden (04-01-SUMMARY):
+// 201 months (~16.8 yr) / $8,441.70 total interest (total paid $13,441.70).
+const SEED = { balance: 5000, aprPct: 24, floor: 35, pctPrincipal: 1 };
+
+const seed = minPaymentTrap({
+  balance: toCents(SEED.balance),
+  apr: SEED.aprPct / 100,
+  floor: toCents(SEED.floor),
+  pctPrincipal: SEED.pctPrincipal / 100,
+});
+
+// Display helpers derived ONCE from the engine output (no hand-typed goldens).
+const seedYears = (seed.months / 12).toFixed(1); // "16.8"
+---
+
+<div class="mp-calc" data-balance={SEED.balance} data-apr={SEED.aprPct} data-floor={SEED.floor} data-pct={SEED.pctPrincipal}>
+  <h2 class="mp-eyebrow">THE MINIMUM-PAYMENT TRAP</h2>
+
+  <div class="mp-inputs">
+    <label class="calc-field">
+      <span class="mp-label-text">Balance</span>
+      <span class="mp-input-wrap">
+        <span class="mp-unit" aria-hidden="true">$</span>
+        <input id="mp-balance" type="number" inputmode="decimal" min="0" step="100" value={SEED.balance} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="mp-label-text">APR</span>
+      <span class="mp-input-wrap">
+        <input id="mp-apr" type="number" inputmode="decimal" min="0" step="0.1" value={SEED.aprPct} />
+        <span class="mp-unit" aria-hidden="true">%</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="mp-label-text">Minimum floor</span>
+      <span class="mp-input-wrap">
+        <span class="mp-unit" aria-hidden="true">$</span>
+        <input id="mp-floor" type="number" inputmode="decimal" min="0" step="5" value={SEED.floor} />
+      </span>
+    </label>
+  </div>
+
+  <p class="mp-headline">
+    Paying only the minimum, you'd be in debt for
+    <span id="mp-months" class="mp-strong">{seed.months}</span> months
+    (about <span id="mp-years" class="mp-strong">{seedYears}</span> years) and pay
+    <span id="mp-interest" class="mp-strong">{format(seed.totalInterest)}</span> in interest.
+  </p>
+  <p class="mp-subline">
+    The minimum each month is the greater of (this month's interest + 1% of the balance) or
+    the $<span id="mp-floor-label">{SEED.floor}</span> floor — it barely dents the balance.
+  </p>
+
+  <p class="mp-caption">
+    The "interest + 1%" minimum genuinely pays down the balance, so the payoff horizon is
+    real — but it's measured in <strong>years</strong>, not months. Paying even a little more
+    than the minimum collapses it.
+  </p>
+</div>
+
+<script>
+  import { minPaymentTrap } from '../calc/min-payment';
+  import { format, toCents } from '../lib/money';
+
+  document.querySelectorAll<HTMLElement>('.mp-calc').forEach((root) => {
+    const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
+    const balanceEl = $<HTMLInputElement>('#mp-balance');
+    const aprEl = $<HTMLInputElement>('#mp-apr');
+    const floorEl = $<HTMLInputElement>('#mp-floor');
+    const monthsEl = $<HTMLElement>('#mp-months');
+    const yearsEl = $<HTMLElement>('#mp-years');
+    const interestEl = $<HTMLElement>('#mp-interest');
+    const floorLabelEl = $<HTMLElement>('#mp-floor-label');
+    if (!balanceEl || !aprEl || !floorEl) return;
+
+    // The 1%-of-principal fraction is fixed per D-03 (only balance/APR/floor are exposed).
+    const PCT_PRINCIPAL = (Number(root.dataset.pct) || 1) / 100;
+
+    const num = (el: HTMLInputElement, fallback: number) => {
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    const render = () => {
+      const balance = num(balanceEl, Number(root.dataset.balance) || 0);
+      const aprPct = num(aprEl, Number(root.dataset.apr) || 0);
+      const floor = num(floorEl, Number(root.dataset.floor) || 0);
+
+      const res = minPaymentTrap({
+        balance: toCents(balance),
+        apr: aprPct / 100,
+        floor: toCents(floor),
+        pctPrincipal: PCT_PRINCIPAL,
+      });
+
+      if (monthsEl) monthsEl.textContent = String(res.months);
+      if (yearsEl) yearsEl.textContent = (res.months / 12).toFixed(1);
+      if (interestEl) interestEl.textContent = format(res.totalInterest);
+      if (floorLabelEl) floorLabelEl.textContent = String(floor);
+    };
+
+    [balanceEl, aprEl, floorEl].forEach((el) => el.addEventListener('input', render));
+    // On load, reproduce the server render from the defaults (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. Reuses .calc-field from the shared island recipe. */
+  .mp-calc { display: block; }
+
+  .mp-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .mp-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .mp-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .mp-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .mp-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .mp-headline {
+    margin: 0.4rem 0 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .mp-strong { color: var(--accent); }
+  .mp-subline {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .mp-caption {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+</style>
