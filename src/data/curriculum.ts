@@ -219,8 +219,8 @@ export const curriculum: Track[] = [
         title: 'Big Money Decisions',
         blurb: 'Renting, cars, moving, and the someday-home conversation.',
         lessons: [
-          { id: '13.1', order: 1, title: 'Renting: leases, deposits, roommates', status: 'planned' },
-          { id: '13.2', order: 2, title: 'Buying a car without overpaying', status: 'planned' },
+          { id: '13.1', order: 1, title: 'Renting: leases, deposits, roommates', slug: '13-1-renting-leases-deposits-roommates', status: 'complete' },
+          { id: '13.2', order: 2, title: 'Buying a car without overpaying', slug: '13-2-buying-a-car-without-overpaying', status: 'complete' },
           { id: '13.3', order: 3, title: 'Moving out / moving cities, money-wise', status: 'planned' },
           { id: '13.4', order: 4, title: 'The home-buying conversation (someday, not scary)', status: 'planned' },
           { id: '13.5', order: 5, title: 'Big purchases: how to decide', status: 'planned' },
