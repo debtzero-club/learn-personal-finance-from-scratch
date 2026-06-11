@@ -1,0 +1,437 @@
+---
+// CompoundCalc.astro — the snowball island (CALC-01, lesson 6.3 / optionally 6.2).
+//
+// Mirrors Quiz.astro: server-rendered markup + a module <script> that queries the
+// DOM. NO `client:` directive (D-05). The island imports the SAME pure engine
+// (src/calc/compound.ts) at BUILD TIME (so the worked example is correct with JS
+// OFF — D-04, Pitfall 3) AND in the <script> (so the inputs are live) — one source
+// of math.
+//
+// The snowball is rendered as a SERIES (D-06): one .split-bar track PER SAMPLED
+// YEAR, stacked vertically, so the --accent "interest" band is visibly wider each
+// year — that growth IS the snowball. Each segment is distinguishable WITHOUT
+// color (texture + in-bar text + aria-label) and backed by a data table.
+
+import { compound } from '../calc/compound';
+import { format, toCents, fromCents } from '../lib/money';
+
+// Seed default scenario — defined ONCE so the static render and the <script> agree
+// (Pitfall 3). $1,000 start + $100/mo at 5%, monthly, 10 years. Pinned golden:
+// finalBalance = $17,175.26 (the no-JS dist-grep target, see 03-02-SUMMARY).
+const SEED = { principal: 1000, contribution: 100, ratePct: 5, years: 10 };
+
+const seed = compound({
+  principal: toCents(SEED.principal),
+  contribution: toCents(SEED.contribution),
+  annualRate: SEED.ratePct / 100,
+  years: SEED.years,
+});
+
+// Sample the LAST period of each year (rows are 1-based periods; monthly => every
+// 12th: index 11, 23, ... plus the final row). Keeps a 50-year case readable.
+function yearlySamples(rows: typeof seed.rows, principalCents: number) {
+  const out: { year: number; yourMoney: number; interest: number; balance: number }[] = [];
+  for (let i = 11; i < rows.length; i += 12) {
+    const r = rows[i];
+    out.push({
+      year: (i + 1) / 12,
+      yourMoney: principalCents + r.contributed, // principal + contributions to date
+      interest: r.interestToDate,
+      balance: r.balance,
+    });
+  }
+  // Ensure the final period is represented even if years isn't a whole multiple of 12.
+  const last = rows[rows.length - 1];
+  if (rows.length && (rows.length % 12 !== 0)) {
+    out.push({
+      year: Math.ceil(rows.length / 12),
+      yourMoney: principalCents + last.contributed,
+      interest: last.interestToDate,
+      balance: last.balance,
+    });
+  }
+  return out;
+}
+
+const principalCents = toCents(SEED.principal);
+const samples = yearlySamples(seed.rows, principalCents);
+const maxBalance = samples.length ? Math.max(...samples.map((s) => s.balance)) : 1;
+const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
+---
+
+<div class="compound-calc" data-principal={SEED.principal} data-contribution={SEED.contribution} data-rate={SEED.ratePct} data-years={SEED.years}>
+  <h2 class="cc-eyebrow">TRY THE NUMBERS</h2>
+
+  <div class="cc-inputs">
+    <label class="calc-field">
+      <span class="cc-label-text">Starting amount</span>
+      <span class="cc-input-wrap">
+        <span class="cc-unit" aria-hidden="true">$</span>
+        <input id="cc-principal" type="number" inputmode="decimal" min="0" step="100" value={SEED.principal} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="cc-label-text">Monthly contribution</span>
+      <span class="cc-input-wrap">
+        <span class="cc-unit" aria-hidden="true">$</span>
+        <input id="cc-contribution" type="number" inputmode="decimal" min="0" step="100" value={SEED.contribution} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="cc-label-text">Annual rate</span>
+      <span class="cc-input-wrap">
+        <input id="cc-rate" type="number" inputmode="decimal" min="0" step="0.1" value={SEED.ratePct} />
+        <span class="cc-unit" aria-hidden="true">%</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="cc-label-text">Years</span>
+      <span class="cc-input-wrap">
+        <input id="cc-years" type="number" inputmode="numeric" min="1" max="50" step="1" value={SEED.years} />
+        <span class="cc-unit" aria-hidden="true">yr</span>
+      </span>
+    </label>
+  </div>
+
+  <p class="cc-headline">
+    <span id="cc-balance" class="cc-balance">{format(seed.finalBalance)}</span>
+    <span class="cc-after"> after <span id="cc-years-label">{SEED.years}</span> years</span>
+  </p>
+  <p class="cc-subline">
+    You put in <span id="cc-contributed">{format(seed.totalContributed)}</span>.
+    It earned <span id="cc-interest">{format(seed.totalInterest)}</span> in interest.
+  </p>
+
+  <div class="cc-snowball" id="cc-snowball" role="img" aria-label="The interest band grows wider each year — that growing band is the snowball.">
+    {
+      samples.map((s) => (
+        <div class="split-bar" data-year={s.year}>
+          <div
+            class="split-seg split-seg--principal"
+            style={`width:${pct(s.yourMoney)}%`}
+            aria-label={`Year ${s.year} — Your money: ${format(s.yourMoney as any)}`}
+          >
+            <span class="seg-text">Your money</span>
+          </div>
+          <div
+            class="split-seg split-seg--interest"
+            style={`width:${pct(s.interest)}%`}
+            aria-label={`Year ${s.year} — Interest earned: ${format(s.interest as any)}`}
+          >
+            <span class="seg-text">Interest earned</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="cc-legend">
+    <span class="legend-item"><span class="legend-swatch legend-swatch--principal" aria-hidden="true"></span> Your money</span>
+    <span class="legend-item"><span class="legend-swatch legend-swatch--interest" aria-hidden="true"></span> Interest earned</span>
+  </p>
+
+  <div class="cc-table-wrap">
+    <table class="cc-table">
+      <thead>
+        <tr>
+          <th scope="col">Year</th>
+          <th scope="col">Your money in</th>
+          <th scope="col">Interest earned</th>
+          <th scope="col">Balance</th>
+        </tr>
+      </thead>
+      <tbody id="cc-tbody">
+        {
+          samples.map((s) => (
+            <tr>
+              <td>{s.year}</td>
+              <td class="num">{format(s.yourMoney as any)}</td>
+              <td class="num">{format(s.interest as any)}</td>
+              <td class="num">{format(s.balance as any)}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="cc-caption">
+    Compounded monthly, with each contribution added at the end of the month. This is
+    a savings example — not investment advice.
+  </p>
+</div>
+
+<script>
+  import { compound } from '../calc/compound';
+  import { format, toCents } from '../lib/money';
+
+  document.querySelectorAll<HTMLElement>('.compound-calc').forEach((root) => {
+    const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
+    const principalEl = $<HTMLInputElement>('#cc-principal');
+    const contributionEl = $<HTMLInputElement>('#cc-contribution');
+    const rateEl = $<HTMLInputElement>('#cc-rate');
+    const yearsEl = $<HTMLInputElement>('#cc-years');
+    const balanceEl = $<HTMLElement>('#cc-balance');
+    const yearsLabelEl = $<HTMLElement>('#cc-years-label');
+    const contributedEl = $<HTMLElement>('#cc-contributed');
+    const interestEl = $<HTMLElement>('#cc-interest');
+    const snowballEl = $<HTMLElement>('#cc-snowball');
+    const tbodyEl = $<HTMLElement>('#cc-tbody');
+    if (!principalEl || !contributionEl || !rateEl || !yearsEl) return;
+
+    // Read an input, falling back to its default (or 0) so the headline never shows NaN.
+    const num = (el: HTMLInputElement, fallback: number) => {
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    const render = () => {
+      const principal = num(principalEl, Number(root.dataset.principal) || 0);
+      const contribution = num(contributionEl, Number(root.dataset.contribution) || 0);
+      const ratePct = num(rateEl, Number(root.dataset.rate) || 0);
+      let years = Math.round(num(yearsEl, Number(root.dataset.years) || 1));
+      if (years < 1) years = 1;
+      if (years > 50) years = 50;
+
+      const principalCents = toCents(principal);
+      const sched = compound({
+        principal: principalCents,
+        contribution: toCents(contribution),
+        annualRate: ratePct / 100,
+        years,
+      });
+
+      if (balanceEl) balanceEl.textContent = format(sched.finalBalance);
+      if (yearsLabelEl) yearsLabelEl.textContent = String(years);
+      if (contributedEl) contributedEl.textContent = format(sched.totalContributed);
+      if (interestEl) interestEl.textContent = format(sched.totalInterest);
+
+      // Re-sample yearly rows (one per year), mirroring the build-time logic.
+      const rows = sched.rows;
+      const samples: { year: number; yourMoney: number; interest: number; balance: number }[] = [];
+      for (let i = 11; i < rows.length; i += 12) {
+        const r = rows[i];
+        samples.push({ year: (i + 1) / 12, yourMoney: principalCents + r.contributed, interest: r.interestToDate, balance: r.balance });
+      }
+      if (rows.length && rows.length % 12 !== 0) {
+        const last = rows[rows.length - 1];
+        samples.push({ year: Math.ceil(rows.length / 12), yourMoney: principalCents + last.contributed, interest: last.interestToDate, balance: last.balance });
+      }
+      const maxBalance = samples.length ? Math.max(...samples.map((s) => s.balance)) : 1;
+      const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
+
+      // Rebuild the snowball SERIES (one .split-bar per sampled year).
+      if (snowballEl) {
+        snowballEl.innerHTML = samples
+          .map(
+            (s) => `
+            <div class="split-bar" data-year="${s.year}">
+              <div class="split-seg split-seg--principal" style="width:${pct(s.yourMoney)}%" aria-label="Year ${s.year} — Your money: ${format(s.yourMoney as any)}"><span class="seg-text">Your money</span></div>
+              <div class="split-seg split-seg--interest" style="width:${pct(s.interest)}%" aria-label="Year ${s.year} — Interest earned: ${format(s.interest as any)}"><span class="seg-text">Interest earned</span></div>
+            </div>`
+          )
+          .join('');
+      }
+
+      // Rebuild the data table.
+      if (tbodyEl) {
+        tbodyEl.innerHTML = samples
+          .map(
+            (s) => `<tr><td>${s.year}</td><td class="num">${format(s.yourMoney as any)}</td><td class="num">${format(s.interest as any)}</td><td class="num">${format(s.balance as any)}</td></tr>`
+          )
+          .join('');
+      }
+    };
+
+    [principalEl, contributionEl, rateEl, yearsEl].forEach((el) =>
+      el.addEventListener('input', render)
+    );
+    // On load, reproduce the server render from the default values (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. Sizes limited to the 4 UI-SPEC roles;
+     weights only 400 / 600. */
+  .compound-calc { display: block; }
+
+  .cc-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .cc-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .cc-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .cc-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .cc-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .cc-headline {
+    margin: 0.4rem 0 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .cc-balance { color: var(--accent); }
+  .cc-after { color: var(--ink); }
+  .cc-subline {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .cc-snowball {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0 0 0.6rem;
+  }
+  .split-bar {
+    display: flex;
+    height: 1.4rem;
+    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .split-seg {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease;
+  }
+  .split-seg--principal { background: var(--line-strong); }
+  .split-seg--interest {
+    background: var(--accent);
+    /* Diagonal stripe so the two segments are distinguishable WITHOUT color
+       (grayscale / colorblind). The data table is the canonical encoding. */
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 5px,
+      rgba(255, 255, 255, 0.28) 5px,
+      rgba(255, 255, 255, 0.28) 8px
+    );
+  }
+  .seg-text {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    padding: 0 0.4rem;
+    color: var(--paper);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .cc-legend {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+  }
+  .legend-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .legend-swatch {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 3px;
+    border: 1px solid var(--line);
+  }
+  .legend-swatch--principal { background: var(--line-strong); }
+  .legend-swatch--interest {
+    background: var(--accent);
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.28) 3px,
+      rgba(255, 255, 255, 0.28) 5px
+    );
+  }
+
+  .cc-table-wrap {
+    overflow-x: auto;
+    margin: 0 0 0.8rem;
+  }
+  .cc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .cc-table th,
+  .cc-table td {
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+  }
+  .cc-table th {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .cc-table td.num {
+    font-family: var(--font-mono);
+    text-align: right;
+  }
+
+  .cc-caption {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .split-seg { transition: none; }
+  }
+</style>
