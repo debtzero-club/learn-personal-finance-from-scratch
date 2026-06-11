@@ -195,9 +195,9 @@ export const curriculum: Track[] = [
         title: 'Taxes, A Bit Deeper',
         blurb: 'Deductions, credits, side income, and paying less (legally).',
         lessons: [
-          { id: '11.1', order: 1, title: 'Deductions vs. credits — and which beat which', status: 'planned' },
-          { id: '11.2', order: 2, title: 'The standard deduction and when to itemize', status: 'planned' },
-          { id: '11.3', order: 3, title: 'Side income & 1099s — what you owe', status: 'planned' },
+          { id: '11.1', order: 1, title: 'Deductions vs. credits — and which beat which', slug: '11-1-deductions-vs-credits', status: 'complete' },
+          { id: '11.2', order: 2, title: 'The standard deduction and when to itemize', slug: '11-2-standard-deduction-and-itemizing', status: 'complete' },
+          { id: '11.3', order: 3, title: 'Side income & 1099s — what you owe', slug: '11-3-side-income-and-1099s', status: 'complete' },
           { id: '11.4', order: 4, title: 'Tax-advantaged accounts recap — how to legally pay less', status: 'planned' },
           { id: '11.5', order: 5, title: 'When to DIY vs. get a pro', status: 'planned' },
         ],
