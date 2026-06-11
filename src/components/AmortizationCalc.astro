@@ -1,0 +1,451 @@
+---
+// AmortizationCalc.astro — the loan payment-split island (CALC-05, lessons 8.2 / 8.3 /
+// 8.7, and the 0%-APR BNPL "pay in 4" of 7.10).
+//
+// Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
+// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// the SAME pure engine (src/calc/amortization.ts) at BUILD TIME (so the worked
+// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// live) — one source of math. Never re-derive the amortization loop here.
+//
+// The visual REUSES the .split-bar / .split-seg primitive from CompoundCalc (D-06):
+// a series of per-payment bars split into the PRINCIPAL portion vs the INTEREST
+// portion. Early bars are mostly interest, later bars mostly principal — the 8.3
+// teaching moment. A .cc-table backs it for accessibility (color-independent).
+
+import { amortize } from '../calc/amortization';
+import type { AmortRow } from '../calc/amortization';
+import { format, toCents } from '../lib/money';
+
+// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// $20,000 @ 7%, 60 months, no extra. Pinned golden (04-02-SUMMARY): payment $396.02,
+// total interest $3,761.48, 60 rows, $0.00 final. +$100/mo extra → 47 mo / $2,867.74.
+const SEED = { principal: 20000, aprPct: 7, months: 60, extra: 0 };
+
+const baseParams = {
+  principal: toCents(SEED.principal),
+  apr: SEED.aprPct / 100,
+  months: SEED.months,
+};
+const seed = amortize({ ...baseParams, extra: SEED.extra ? toCents(SEED.extra) : undefined });
+// A no-extra baseline to compute "months saved / interest saved" when extra > 0.
+const baseline = amortize(baseParams);
+
+// Sample representative payments for the split-bars: first, last, and every ~6th in
+// between, so a 60-row schedule stays readable while showing the interest→principal flip.
+function sampleRows(rows: AmortRow[]): AmortRow[] {
+  if (rows.length <= 8) return rows;
+  const out: AmortRow[] = [];
+  const seen = new Set<number>();
+  const push = (i: number) => {
+    if (i >= 0 && i < rows.length && !seen.has(i)) {
+      seen.add(i);
+      out.push(rows[i]);
+    }
+  };
+  push(0);
+  for (let i = 5; i < rows.length - 1; i += 6) push(i);
+  push(rows.length - 1);
+  return out.sort((a, b) => a.m - b.m);
+}
+
+const samples = seed.rows.length ? sampleRows(seed.rows) : [];
+// Scale every bar against the largest single payment so widths are comparable.
+const maxPay = samples.length ? Math.max(...samples.map((r) => r.pay)) : 1;
+const pct = (part: number) => (maxPay > 0 ? (part / maxPay) * 100 : 0);
+
+// "saves" line (only meaningful when extra > 0).
+const monthsSaved = baseline.months - seed.months;
+const interestSaved = baseline.totalInterest - seed.totalInterest;
+---
+
+<div
+  class="am-calc"
+  data-principal={SEED.principal}
+  data-apr={SEED.aprPct}
+  data-months={SEED.months}
+  data-extra={SEED.extra}
+>
+  <h2 class="am-eyebrow">WHERE EACH PAYMENT GOES</h2>
+
+  <div class="am-inputs">
+    <label class="calc-field">
+      <span class="am-label-text">Loan amount</span>
+      <span class="am-input-wrap">
+        <span class="am-unit" aria-hidden="true">$</span>
+        <input id="am-principal" type="number" inputmode="decimal" min="0" step="1000" value={SEED.principal} />
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="am-label-text">APR</span>
+      <span class="am-input-wrap">
+        <input id="am-apr" type="number" inputmode="decimal" min="0" step="0.1" value={SEED.aprPct} />
+        <span class="am-unit" aria-hidden="true">%</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="am-label-text">Term</span>
+      <span class="am-input-wrap">
+        <input id="am-months" type="number" inputmode="numeric" min="1" max="480" step="1" value={SEED.months} />
+        <span class="am-unit" aria-hidden="true">mo</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="am-label-text">Extra / month</span>
+      <span class="am-input-wrap">
+        <span class="am-unit" aria-hidden="true">$</span>
+        <input id="am-extra" type="number" inputmode="decimal" min="0" step="25" value={SEED.extra} />
+      </span>
+    </label>
+  </div>
+
+  <p class="am-headline">
+    <span id="am-payment" class="am-payment">{format(seed.payment)}</span>
+    <span class="am-after"> / month · pays off in <span id="am-term">{seed.months}</span> months ·
+    <span id="am-interest">{format(seed.totalInterest)}</span> total interest</span>
+  </p>
+  <p class="am-saves" id="am-saves" hidden={monthsSaved <= 0}>
+    The extra payment saves <span id="am-months-saved">{monthsSaved}</span> months and
+    <span id="am-interest-saved">{format(interestSaved)}</span> in interest.
+  </p>
+
+  <div class="am-split" id="am-split" role="img" aria-label="Each bar is one payment split into principal and interest — early payments are mostly interest, later ones mostly principal.">
+    {
+      samples.map((r) => (
+        <div class="split-bar" data-m={r.m}>
+          <div
+            class="split-seg split-seg--principal"
+            style={`width:${pct(r.principalPaid)}%`}
+            aria-label={`Payment ${r.m} — Principal: ${format(r.principalPaid)}`}
+          >
+            <span class="seg-text">Principal</span>
+          </div>
+          <div
+            class="split-seg split-seg--interest"
+            style={`width:${pct(r.interest)}%`}
+            aria-label={`Payment ${r.m} — Interest: ${format(r.interest)}`}
+          >
+            <span class="seg-text">Interest</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="am-legend">
+    <span class="legend-item"><span class="legend-swatch legend-swatch--principal" aria-hidden="true"></span> Principal</span>
+    <span class="legend-item"><span class="legend-swatch legend-swatch--interest" aria-hidden="true"></span> Interest</span>
+  </p>
+
+  <div class="am-table-wrap">
+    <table class="cc-table">
+      <thead>
+        <tr>
+          <th scope="col">Payment</th>
+          <th scope="col">Interest</th>
+          <th scope="col">Principal</th>
+          <th scope="col">Balance</th>
+        </tr>
+      </thead>
+      <tbody id="am-tbody">
+        {
+          samples.map((r) => (
+            <tr>
+              <td>{r.m}</td>
+              <td class="num">{format(r.interest)}</td>
+              <td class="num">{format(r.principalPaid)}</td>
+              <td class="num">{format(r.balance)}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="am-caption">
+    Interest is charged on what you still owe, so early payments are mostly interest and
+    later ones mostly principal. A 0% loan (Buy-Now-Pay-Later) splits the balance evenly with
+    no interest at all.
+  </p>
+</div>
+
+<script>
+  import { amortize } from '../calc/amortization';
+  import type { AmortRow } from '../calc/amortization';
+  import { format, toCents } from '../lib/money';
+
+  document.querySelectorAll<HTMLElement>('.am-calc').forEach((root) => {
+    const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
+    const principalEl = $<HTMLInputElement>('#am-principal');
+    const aprEl = $<HTMLInputElement>('#am-apr');
+    const monthsEl = $<HTMLInputElement>('#am-months');
+    const extraEl = $<HTMLInputElement>('#am-extra');
+    const paymentEl = $<HTMLElement>('#am-payment');
+    const termEl = $<HTMLElement>('#am-term');
+    const interestEl = $<HTMLElement>('#am-interest');
+    const savesEl = $<HTMLElement>('#am-saves');
+    const monthsSavedEl = $<HTMLElement>('#am-months-saved');
+    const interestSavedEl = $<HTMLElement>('#am-interest-saved');
+    const splitEl = $<HTMLElement>('#am-split');
+    const tbodyEl = $<HTMLElement>('#am-tbody');
+    if (!principalEl || !aprEl || !monthsEl) return;
+
+    const num = (el: HTMLInputElement | null, fallback: number) => {
+      if (!el) return fallback;
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    // Mirror the build-time sampling exactly so the live render matches the server.
+    const sampleRows = (rows: AmortRow[]): AmortRow[] => {
+      if (rows.length <= 8) return rows;
+      const out: AmortRow[] = [];
+      const seen = new Set<number>();
+      const push = (i: number) => {
+        if (i >= 0 && i < rows.length && !seen.has(i)) {
+          seen.add(i);
+          out.push(rows[i]);
+        }
+      };
+      push(0);
+      for (let i = 5; i < rows.length - 1; i += 6) push(i);
+      push(rows.length - 1);
+      return out.sort((a, b) => a.m - b.m);
+    };
+
+    const render = () => {
+      const principal = num(principalEl, Number(root.dataset.principal) || 0);
+      const aprPct = num(aprEl, Number(root.dataset.apr) || 0);
+      let months = Math.round(num(monthsEl, Number(root.dataset.months) || 1));
+      if (months < 1) months = 1;
+      if (months > 480) months = 480;
+      const extra = num(extraEl, Number(root.dataset.extra) || 0);
+
+      const baseParams = { principal: toCents(principal), apr: aprPct / 100, months };
+      const sched = amortize({ ...baseParams, extra: extra ? toCents(extra) : undefined });
+      const baseline = amortize(baseParams);
+
+      if (paymentEl) paymentEl.textContent = format(sched.payment);
+      if (termEl) termEl.textContent = String(sched.months);
+      if (interestEl) interestEl.textContent = format(sched.totalInterest);
+
+      const monthsSaved = baseline.months - sched.months;
+      const interestSaved = (baseline.totalInterest - sched.totalInterest) as typeof sched.totalInterest;
+      if (savesEl) savesEl.hidden = monthsSaved <= 0;
+      if (monthsSavedEl) monthsSavedEl.textContent = String(monthsSaved);
+      if (interestSavedEl) interestSavedEl.textContent = format(interestSaved);
+
+      const samples = sched.rows.length ? sampleRows(sched.rows) : [];
+      const maxPay = samples.length ? Math.max(...samples.map((r) => r.pay)) : 1;
+      const pct = (part: number) => (maxPay > 0 ? (part / maxPay) * 100 : 0);
+
+      if (splitEl) {
+        splitEl.innerHTML = samples
+          .map(
+            (r) => `
+            <div class="split-bar" data-m="${r.m}">
+              <div class="split-seg split-seg--principal" style="width:${pct(r.principalPaid)}%" aria-label="Payment ${r.m} — Principal: ${format(r.principalPaid)}"><span class="seg-text">Principal</span></div>
+              <div class="split-seg split-seg--interest" style="width:${pct(r.interest)}%" aria-label="Payment ${r.m} — Interest: ${format(r.interest)}"><span class="seg-text">Interest</span></div>
+            </div>`
+          )
+          .join('');
+      }
+
+      if (tbodyEl) {
+        tbodyEl.innerHTML = samples
+          .map(
+            (r) => `<tr><td>${r.m}</td><td class="num">${format(r.interest)}</td><td class="num">${format(r.principalPaid)}</td><td class="num">${format(r.balance)}</td></tr>`
+          )
+          .join('');
+      }
+    };
+
+    [principalEl, aprEl, monthsEl, extraEl].forEach((el) => el && el.addEventListener('input', render));
+    // On load, reproduce the server render from the defaults (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. REUSES .split-bar / .split-seg / .cc-table from
+     CompoundCalc's island recipe (the split-bar was designed for this reuse, D-06). */
+  .am-calc { display: block; }
+
+  .am-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .am-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .am-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .am-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .am-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .am-headline {
+    margin: 0.4rem 0 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+  .am-payment { color: var(--accent); }
+  .am-after { color: var(--ink); }
+  .am-saves {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .am-split {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0.6rem 0;
+  }
+  .split-bar {
+    display: flex;
+    height: 1.4rem;
+    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .split-seg {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease;
+  }
+  .split-seg--principal { background: var(--line-strong); }
+  .split-seg--interest {
+    background: var(--accent);
+    /* Diagonal stripe so the two segments are distinguishable WITHOUT color. */
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 5px,
+      rgba(255, 255, 255, 0.28) 5px,
+      rgba(255, 255, 255, 0.28) 8px
+    );
+  }
+  .seg-text {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    padding: 0 0.4rem;
+    color: var(--paper);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .am-legend {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+  }
+  .legend-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .legend-swatch {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 3px;
+    border: 1px solid var(--line);
+  }
+  .legend-swatch--principal { background: var(--line-strong); }
+  .legend-swatch--interest {
+    background: var(--accent);
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.28) 3px,
+      rgba(255, 255, 255, 0.28) 5px
+    );
+  }
+
+  .am-table-wrap {
+    overflow-x: auto;
+    margin: 0 0 0.8rem;
+  }
+  .cc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .cc-table th,
+  .cc-table td {
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+  }
+  .cc-table th {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .cc-table td.num {
+    font-family: var(--font-mono);
+    text-align: right;
+  }
+
+  .am-caption {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .split-seg { transition: none; }
+  }
+</style>

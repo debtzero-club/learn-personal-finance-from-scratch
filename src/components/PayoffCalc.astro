@@ -1,0 +1,323 @@
+---
+// PayoffCalc.astro — the avalanche-vs-snowball debt-payoff island (CALC-06, lesson 8.6,
+// referenced from 8.8).
+//
+// Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
+// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// the SAME pure engine (src/calc/payoff.ts) at BUILD TIME (so the worked example is
+// correct with JS OFF — D-04) AND in the <script> (so the inputs are live) — one
+// source of math. Never re-derive the month loop here.
+//
+// Input is 3 FIXED, editable debt rows (D-08, no add/remove CRUD); output is BOTH
+// methods side-by-side (D-09) with the difference highlighted. Honest both-sides
+// framing: avalanche pays the LEAST interest; snowball clears your FIRST debt soonest.
+//
+// ⚠️ The default-set auto loan is an INSTALLMENT debt: its minimum is its 48-month
+// amortized payment ($211.37), computed via amortize() exactly as payoff.test.ts does.
+// Passing it as revolving would NOT reproduce the verified goldens (avalanche $2,209.33
+// vs snowball $2,308.90). The 'auto' row carries `installment: true` so the live
+// <script> reproduces this minimum the same way.
+
+import { payoff } from '../calc/payoff';
+import type { Debt } from '../calc/payoff';
+import { amortize } from '../calc/amortization';
+import { format, toCents } from '../lib/money';
+
+// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// The verified DIVERGENT set (Pitfall 4): smallest balance (store) ≠ highest APR (card).
+// Pinned golden (04-02-SUMMARY): avalanche $2,209.33 vs snowball $2,308.90, gap $99.57.
+const SEED_EXTRA = 200;
+const SEED_ROWS = [
+  { name: 'store', label: 'Store card', balance: 1200, aprPct: 20, installment: false, term: 0 },
+  { name: 'card', label: 'Credit card', balance: 5000, aprPct: 25.99, installment: false, term: 0 },
+  { name: 'auto', label: 'Auto loan', balance: 9000, aprPct: 6, installment: true, term: 48 },
+];
+
+// The auto loan's installment minimum = its 48-month amortized payment ($211.37 = 21137c),
+// computed from the SAME amortization engine the goldens use (payoff.test.ts line 34).
+function buildDebts(rows: typeof SEED_ROWS): Debt[] {
+  return rows.map((r) => {
+    const d: Debt = { name: r.name, balance: toCents(r.balance), apr: r.aprPct / 100 };
+    if (r.installment && r.term > 0) {
+      d.minPayment = amortize({ principal: toCents(r.balance), apr: r.aprPct / 100, months: r.term }).payment;
+    }
+    return d;
+  });
+}
+
+const seed = payoff({ debts: buildDebts(SEED_ROWS), extra: toCents(SEED_EXTRA) });
+const seedGap = (seed.snowball.totalInterest - seed.avalanche.totalInterest) as typeof seed.avalanche.totalInterest;
+const seedFirstSnowball = seed.snowball.order[0]; // 'store'
+const seedFirstSnowballLabel = SEED_ROWS.find((r) => r.name === seedFirstSnowball)?.label ?? seedFirstSnowball;
+---
+
+<div class="po-calc" data-extra={SEED_EXTRA}>
+  <h2 class="po-eyebrow">TWO WAYS OUT OF DEBT</h2>
+
+  <div class="po-rows">
+    {
+      SEED_ROWS.map((r) => (
+        <div
+          class="po-row"
+          data-name={r.name}
+          data-installment={r.installment ? '1' : '0'}
+          data-term={r.term}
+        >
+          <span class="po-row-name">{r.label}</span>
+          <label class="calc-field po-row-field">
+            <span class="po-label-text">Balance</span>
+            <span class="po-input-wrap">
+              <span class="po-unit" aria-hidden="true">$</span>
+              <input class="po-balance" type="number" inputmode="decimal" min="0" step="100" value={r.balance} />
+            </span>
+          </label>
+          <label class="calc-field po-row-field">
+            <span class="po-label-text">APR</span>
+            <span class="po-input-wrap">
+              <input class="po-apr" type="number" inputmode="decimal" min="0" step="0.1" value={r.aprPct} />
+              <span class="po-unit" aria-hidden="true">%</span>
+            </span>
+          </label>
+        </div>
+      ))
+    }
+    <label class="calc-field po-extra-field">
+      <span class="po-label-text">Extra payment / month</span>
+      <span class="po-input-wrap">
+        <span class="po-unit" aria-hidden="true">$</span>
+        <input id="po-extra" type="number" inputmode="decimal" min="0" step="25" value={SEED_EXTRA} />
+      </span>
+    </label>
+  </div>
+
+  <div class="po-output">
+    <div class="po-method po-method--avalanche">
+      <h3 class="po-method-title">Avalanche <span class="po-method-sub">highest APR first</span></h3>
+      <p class="po-method-line">
+        <span id="po-av-interest" class="po-method-figure">{format(seed.avalanche.totalInterest)}</span>
+        <span class="po-method-label"> total interest</span>
+      </p>
+      <p class="po-method-months">debt-free in <span id="po-av-months">{seed.avalanche.months}</span> months</p>
+    </div>
+    <div class="po-method po-method--snowball">
+      <h3 class="po-method-title">Snowball <span class="po-method-sub">smallest balance first</span></h3>
+      <p class="po-method-line">
+        <span id="po-sn-interest" class="po-method-figure">{format(seed.snowball.totalInterest)}</span>
+        <span class="po-method-label"> total interest</span>
+      </p>
+      <p class="po-method-months">debt-free in <span id="po-sn-months">{seed.snowball.months}</span> months</p>
+    </div>
+  </div>
+
+  <p class="po-diff" id="po-diff">
+    Avalanche saves <span id="po-gap" class="po-strong">{format(seedGap)}</span> total;
+    snowball clears your <span id="po-first">{seedFirstSnowballLabel}</span> first.
+  </p>
+
+  <p class="po-caption">
+    Avalanche (highest APR first) pays the least interest. Snowball (smallest balance first)
+    clears a debt sooner — the motivation win. Both clear everything; the budget you free up
+    rolls onto the next debt either way.
+  </p>
+</div>
+
+<script>
+  import { payoff } from '../calc/payoff';
+  import type { Debt } from '../calc/payoff';
+  import { amortize } from '../calc/amortization';
+  import { format, toCents } from '../lib/money';
+
+  document.querySelectorAll<HTMLElement>('.po-calc').forEach((root) => {
+    const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
+    const rowEls = Array.from(root.querySelectorAll<HTMLElement>('.po-row'));
+    const extraEl = $<HTMLInputElement>('#po-extra');
+    const avInterestEl = $<HTMLElement>('#po-av-interest');
+    const avMonthsEl = $<HTMLElement>('#po-av-months');
+    const snInterestEl = $<HTMLElement>('#po-sn-interest');
+    const snMonthsEl = $<HTMLElement>('#po-sn-months');
+    const gapEl = $<HTMLElement>('#po-gap');
+    const firstEl = $<HTMLElement>('#po-first');
+    if (!rowEls.length || !extraEl) return;
+
+    const num = (el: HTMLInputElement | null, fallback: number) => {
+      if (!el) return fallback;
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    // Map each row's internal name to its display label for the "clears X first" line.
+    const labels = new Map(rowEls.map((row) => [row.dataset.name || '', row.querySelector('.po-row-name')?.textContent || row.dataset.name || '']));
+
+    const render = () => {
+      const debts: Debt[] = rowEls.map((row) => {
+        const balanceEl = row.querySelector<HTMLInputElement>('.po-balance');
+        const aprEl = row.querySelector<HTMLInputElement>('.po-apr');
+        const balance = num(balanceEl, 0);
+        const aprPct = num(aprEl, 0);
+        const d: Debt = { name: row.dataset.name || '', balance: toCents(balance), apr: aprPct / 100 };
+        // Installment rows recompute their fixed minimum the SAME way as the goldens.
+        const term = Math.round(Number(row.dataset.term) || 0);
+        if (row.dataset.installment === '1' && term > 0) {
+          d.minPayment = amortize({ principal: toCents(balance), apr: aprPct / 100, months: term }).payment;
+        }
+        return d;
+      });
+      const extra = num(extraEl, Number(root.dataset.extra) || 0);
+
+      const res = payoff({ debts, extra: toCents(extra) });
+
+      if (avInterestEl) avInterestEl.textContent = format(res.avalanche.totalInterest);
+      if (avMonthsEl) avMonthsEl.textContent = String(res.avalanche.months);
+      if (snInterestEl) snInterestEl.textContent = format(res.snowball.totalInterest);
+      if (snMonthsEl) snMonthsEl.textContent = String(res.snowball.months);
+
+      const gap = (res.snowball.totalInterest - res.avalanche.totalInterest) as typeof res.avalanche.totalInterest;
+      if (gapEl) gapEl.textContent = format(gap);
+      const firstName = res.snowball.order[0] || '';
+      if (firstEl) firstEl.textContent = labels.get(firstName) || firstName;
+    };
+
+    rowEls.forEach((row) => {
+      row.querySelectorAll<HTMLInputElement>('input').forEach((el) => el.addEventListener('input', render));
+    });
+    extraEl.addEventListener('input', render);
+    // On load, reproduce the server render from the defaults (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. Reuses .calc-field from the shared island recipe. */
+  .po-calc { display: block; }
+
+  .po-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .po-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0 0 1.2rem;
+  }
+  .po-row {
+    display: grid;
+    grid-template-columns: minmax(7rem, 1fr) minmax(8rem, 1fr) minmax(6rem, 0.8fr);
+    gap: 0.6rem;
+    align-items: end;
+  }
+  .po-row-name {
+    font-family: var(--font-sans);
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: var(--ink);
+    padding-bottom: 0.5rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .po-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+  .po-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .po-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .po-extra-field { max-width: 18rem; }
+
+  .po-output {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin: 0 0 1rem;
+  }
+  .po-method {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+  }
+  .po-method--avalanche { border-left: 4px solid var(--accent); }
+  .po-method--snowball { border-left: 4px solid var(--line-strong); }
+  .po-method-title {
+    margin: 0 0 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .po-method-sub {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+  .po-method-line {
+    margin: 0 0 0.2rem;
+    font-family: var(--font-serif);
+    line-height: 1.1;
+  }
+  .po-method-figure {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .po-method-label {
+    font-size: 0.96rem;
+    color: var(--ink);
+  }
+  .po-method-months {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .po-diff {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .po-strong { color: var(--accent); font-weight: 600; }
+
+  .po-caption {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+</style>
