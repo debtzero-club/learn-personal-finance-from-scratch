@@ -97,3 +97,43 @@ describe('NUMBERS spot values — TY2026 (cents for money, decimals for rates)',
     expect(n.additionalMedicareRate.value).toBe(0.009);
   });
 });
+
+describe('NUMBERS spot values — Phase 5 D-09 additions', () => {
+  // Resolve a figure by exact key name (Plan 05-01 must match these names —
+  // content plans 05-03/05-04 bind them via figures[] frontmatter).
+  const n = NUMBERS as Record<string, Figure>;
+
+  it('Health FSA contribution limit === $3,400 (340000 cents)', () => {
+    expect(n.healthFsaContributionLimit.value).toBe(340000);
+  });
+
+  it('Student-loan interest deduction cap === $2,500 (250000 cents)', () => {
+    expect(n.studentLoanInterestDeductionCap.value).toBe(250000);
+  });
+
+  it('Self-employment tax rate === 15.3%', () => {
+    expect(n.selfEmploymentTaxRate.value).toBe(0.153);
+  });
+
+  it('SE Social Security portion === 12.4%', () => {
+    expect(n.selfEmploymentSocialSecurityRate.value).toBe(0.124);
+  });
+
+  it('SE Medicare portion === 2.9%', () => {
+    expect(n.selfEmploymentMedicareRate.value).toBe(0.029);
+  });
+
+  it('SE net-earnings factor === 92.35% (0.9235)', () => {
+    expect(n.selfEmploymentNetEarningsFactor.value).toBe(0.9235);
+  });
+
+  it('Roth IRA phase-out, Single === $153,000–$168,000 (15300000–16800000 cents)', () => {
+    expect(n.rothIraPhaseOutStartSingle.value).toBe(15300000);
+    expect(n.rothIraPhaseOutEndSingle.value).toBe(16800000);
+  });
+
+  it('Roth IRA phase-out, MFJ === $242,000–$252,000 (24200000–25200000 cents)', () => {
+    expect(n.rothIraPhaseOutStartMFJ.value).toBe(24200000);
+    expect(n.rothIraPhaseOutEndMFJ.value).toBe(25200000);
+  });
+});
