@@ -171,8 +171,8 @@ export const curriculum: Track[] = [
         title: 'Student Loans (US)',
         blurb: 'Know what you have, and how to pay it back without overpaying.',
         lessons: [
-          { id: '9.1', order: 1, title: 'Federal vs. private — know what you have', status: 'planned' },
-          { id: '9.2', order: 2, title: 'How student loan interest works (and capitalization)', status: 'planned', mechanics: true },
+          { id: '9.1', order: 1, title: 'Federal vs. private — know what you have', slug: '9-1-federal-vs-private', status: 'complete' },
+          { id: '9.2', order: 2, title: 'How student loan interest works (and capitalization)', slug: '9-2-how-student-loan-interest-works', status: 'complete', mechanics: true },
           { id: '9.3', order: 3, title: 'Repayment plans, explained (income-driven & standard)', status: 'planned' },
           { id: '9.4', order: 4, title: 'Forgiveness programs (PSLF and friends)', status: 'planned' },
           { id: '9.5', order: 5, title: 'Should you refinance your student loans?', status: 'planned' },
