@@ -1,0 +1,172 @@
+---
+// AprApyCalc.astro — the APR-to-APY explainer island (CALC-02, lesson 6.5).
+//
+// Smaller, single-responsibility sibling of CompoundCalc (D-14): no split-bar, just
+// the "same rate, two numbers" headline + a plain-English explainer. Reused later
+// by the Phase-4 credit lessons. Mirrors Quiz.astro / CompoundCalc.astro: server
+// markup + a module <script>, NO `client:` directive (D-05).
+//
+// Imports the SAME aprToApy engine (src/calc/apr.ts) at BUILD TIME (so the headline
+// is correct with JS OFF — D-04) AND in the <script> (so it recomputes live). The
+// "5.12" is DERIVED from aprToApy(0.05, 12), never hand-typed (the no-JS golden).
+
+import { aprToApy } from '../calc/apr';
+
+// Seed default: 5% APR, monthly compounding (12 periods). Pinned golden: 5.12% APY
+// (aprToApy(0.05, 12) = 0.051161897881732976). See 03-02-SUMMARY.
+const SEED = { ratePct: 5, periods: 12 };
+const apySeed = aprToApy(SEED.ratePct / 100, SEED.periods);
+const apyPct = (apySeed * 100).toFixed(2); // "5.12"
+---
+
+<div class="apr-apy-calc" data-rate={SEED.ratePct} data-periods={SEED.periods}>
+  <h2 class="aa-eyebrow">SAME RATE, TWO NUMBERS</h2>
+
+  <p class="aa-headline">
+    <span id="aa-apr">{SEED.ratePct}</span>% APR
+    <span class="aa-arrow" aria-hidden="true">→</span>
+    <span class="aa-apy"><span id="aa-apy">{apyPct}</span>% APY</span>
+  </p>
+
+  <div class="aa-inputs">
+    <label class="calc-field">
+      <span class="aa-label-text">Rate</span>
+      <span class="aa-input-wrap">
+        <input id="aa-rate" type="number" inputmode="decimal" min="0" step="0.1" value={SEED.ratePct} />
+        <span class="aa-unit" aria-hidden="true">%</span>
+      </span>
+    </label>
+    <label class="calc-field">
+      <span class="aa-label-text">Compounding</span>
+      <span class="aa-input-wrap">
+        <select id="aa-periods">
+          <option value="1">Yearly</option>
+          <option value="12" selected>Monthly</option>
+          <option value="365">Daily</option>
+        </select>
+      </span>
+    </label>
+  </div>
+
+  <p class="aa-explainer">
+    APR is the rate before compounding is folded in. APY is the rate after — and it's
+    the honest number. The more often interest compounds, the bigger the gap between
+    the two.
+  </p>
+</div>
+
+<script>
+  import { aprToApy } from '../calc/apr';
+
+  document.querySelectorAll<HTMLElement>('.apr-apy-calc').forEach((root) => {
+    const rateEl = root.querySelector<HTMLInputElement>('#aa-rate');
+    const periodsEl = root.querySelector<HTMLSelectElement>('#aa-periods');
+    const aprOut = root.querySelector<HTMLElement>('#aa-apr');
+    const apyOut = root.querySelector<HTMLElement>('#aa-apy');
+    if (!rateEl || !periodsEl || !aprOut || !apyOut) return;
+
+    const render = () => {
+      const rateFallback = Number(root.dataset.rate) || 0;
+      const periodsFallback = Number(root.dataset.periods) || 12;
+      const ratePct = (() => {
+        const v = parseFloat(rateEl.value);
+        return Number.isFinite(v) && v >= 0 ? v : rateFallback;
+      })();
+      const periods = (() => {
+        const v = parseInt(periodsEl.value, 10);
+        return Number.isFinite(v) && v >= 1 ? v : periodsFallback;
+      })();
+
+      const apy = aprToApy(ratePct / 100, periods);
+      // Trim a trailing ".0" / ".00" so e.g. "5%" reads cleanly while "5.12%" keeps precision.
+      aprOut.textContent = String(ratePct);
+      apyOut.textContent = (apy * 100).toFixed(2);
+    };
+
+    rateEl.addEventListener('input', render);
+    periodsEl.addEventListener('change', render);
+    // On load, reproduce the server headline from the defaults (no flicker).
+    render();
+  });
+</script>
+
+<style>
+  /* Token-only — dark mode is free. Weights 400/600; sizes within the 4 UI-SPEC roles. */
+  .apr-apy-calc { display: block; }
+
+  .aa-eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .aa-headline {
+    margin: 0 0 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .aa-arrow {
+    color: var(--ink-soft);
+    margin: 0 0.2rem;
+  }
+  .aa-apy { color: var(--accent); }
+
+  .aa-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .aa-label-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .aa-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .aa-unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .calc-field input,
+  .calc-field select {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.2rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+  }
+  .calc-field input:focus,
+  .calc-field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .aa-explainer {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+</style>
