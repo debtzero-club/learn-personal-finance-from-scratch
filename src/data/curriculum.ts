@@ -186,8 +186,8 @@ export const curriculum: Track[] = [
           { id: '10.1', order: 1, title: 'Your benefits packet, decoded', slug: '10-1-your-benefits-packet-decoded', status: 'complete' },
           { id: '10.2', order: 2, title: "The 401(k) match — don't leave free money behind", slug: '10-2-the-401k-match', status: 'complete' },
           { id: '10.3', order: 3, title: 'Roth vs. traditional, in plain English', slug: '10-3-roth-vs-traditional', status: 'complete' },
-          { id: '10.4', order: 4, title: 'HSAs and FSAs — the accounts nobody explains', status: 'planned' },
-          { id: '10.5', order: 5, title: 'Open enrollment without the panic', status: 'planned' },
+          { id: '10.4', order: 4, title: 'HSAs and FSAs — the accounts nobody explains', slug: '10-4-hsas-and-fsas', status: 'complete' },
+          { id: '10.5', order: 5, title: 'Open enrollment without the panic', slug: '10-5-open-enrollment-without-the-panic', status: 'complete' },
         ],
       },
       {
