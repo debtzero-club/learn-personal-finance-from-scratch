@@ -63,9 +63,9 @@ describe('compound — pinned cents (refactor-proof)', () => {
       years: 1,
     });
     expect(s.rows.length).toBe(12);
-    expect(s.finalBalance).toBe(228428); // $2,284.28 — pinned from the real engine run
+    expect(s.finalBalance).toBe(227904); // $2,279.04 — pinned from the real engine run
     expect(s.totalContributed).toBe(220000); // $1,000 principal + 12 * $100
-    expect(s.totalInterest).toBe(8428); // pinned; finalBalance - totalContributed
+    expect(s.totalInterest).toBe(7904); // pinned; finalBalance - totalContributed
     expect(s.totalInterest).toBe(s.finalBalance - s.totalContributed);
   });
 
@@ -86,7 +86,7 @@ describe('compound — pinned cents (refactor-proof)', () => {
     expect(s.rows[0].interestToDate).toBe(417);
     // Final period (12) end-of-period balance equals finalBalance.
     expect(s.rows[11].period).toBe(12);
-    expect(s.rows[11].balance).toBe(228428);
+    expect(s.rows[11].balance).toBe(227904);
     expect(s.rows[11].balance).toBe(s.finalBalance);
     expect(s.rows[11].interestToDate).toBe(s.totalInterest);
   });

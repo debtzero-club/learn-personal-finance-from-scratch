@@ -21,8 +21,13 @@ describe('aprToApy — nominal APR to effective APY', () => {
     expect(aprToApy(0.05, 12)).toBe(0.051161897881732976);
   });
 
-  it('annual compounding (n=1): APY === APR', () => {
-    expect(aprToApy(0.05, 1)).toBe(0.05);
+  it('annual compounding (n=1): APY equals APR (modulo one ULP of float **)', () => {
+    // Mathematically (1 + 0.05/1)^1 - 1 === 0.05, but the binary-float `- 1` step
+    // leaves one ULP of error (0.050000000000000044). We pin the engine's TRUE
+    // deterministic output exactly (toBe), per the "pin the real run" discipline —
+    // and confirm it is 0.05 to full display precision below.
+    expect(aprToApy(0.05, 1)).toBe(0.050000000000000044);
+    expect(aprToApy(0.05, 1)).toBeCloseTo(0.05, 12); // === 0.05 at any sane precision
   });
 
   it('0% APR is 0% APY (edge case)', () => {
