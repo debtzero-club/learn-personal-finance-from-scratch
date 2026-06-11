@@ -34,6 +34,14 @@ import path from 'node:path';
 const REAL_LESSON_DIR = fileURLToPath(new URL('../src/content/lessons/', import.meta.url));
 const FIXTURES_DIR = fileURLToPath(new URL('./fixtures/', import.meta.url));
 
+// Calculator islands a lesson may embed via `calculator:` frontmatter (D-03).
+// MUST stay in sync with the z.enum in src/content/config.ts and the CALCULATORS
+// registry in src/layouts/LessonLayout.astro. A declared name not in this list
+// fails the build (mirrors the figures[] resolves-to-registered check). The Zod
+// enum catches typos at schema time; this catches a name that parses but has no
+// registered component (e.g. a stale name after a calculator is removed).
+const REGISTERED_CALCULATORS = ['compound', 'apr-apy'];
+
 // --- tiny frontmatter reader (NO YAML dependency) --------------------------
 // We only need a few scalar fields plus the presence of a non-empty sources list and
 // the quiz block — Astro's Zod schema (src/content/config.ts) does the full validation
@@ -226,6 +234,15 @@ function checkContentSync(lessons, lessonDir) {
       if (!/https:\/\/(www\.)?(irs|ssa)\.gov/.test(fm.__block)) {
         errors.push(`[figures] ${l.id}: figure lesson must cite an IRS/SSA source`);
       }
+    }
+
+    // 8. calculator binding (Phase 3 / 03-02): if a lesson declares `calculator: <name>`,
+    //    that name must resolve to a REGISTERED island (same spirit as the figures[] key
+    //    check). The scalar `kv` reader in readFrontmatter already captures fm.calculator,
+    //    so no new parser is needed. The Zod enum in config.ts also guards typos at build
+    //    time; this validator gate is the standalone (npm run validate) proof.
+    if (fm.calculator && fm.calculator.trim() !== '' && !REGISTERED_CALCULATORS.includes(fm.calculator)) {
+      errors.push(`[calculator] ${l.id}: "${fm.calculator}" is not a registered calculator`);
     }
   }
 

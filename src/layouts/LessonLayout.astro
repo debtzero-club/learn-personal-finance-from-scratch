@@ -2,6 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import Quiz from '../components/Quiz.astro';
+import CompoundCalc from '../components/CompoundCalc.astro';
+import AprApyCalc from '../components/AprApyCalc.astro';
 import { curriculum } from '../data/curriculum';
 
 interface Props {
@@ -13,6 +15,14 @@ const { entry, prev = null, next = null } = Astro.props;
 const d = entry.data;
 const track = curriculum.find((t) => t.track === d.track);
 const phase = track?.phases.find((p) => p.phase === d.phase);
+
+// calculator name -> island component (D-01/D-02). A lesson opts in with
+// `calculator: compound` / `calculator: apr-apy` in frontmatter; the matching
+// island renders in the .lesson-calc slot below (after the body, before "Do it").
+// Keep these keys in sync with the z.enum in src/content/config.ts and
+// REGISTERED_CALCULATORS in scripts/validate-content.mjs.
+const CALCULATORS = { compound: CompoundCalc, 'apr-apy': AprApyCalc };
+const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
 ---
 
 <BaseLayout title={`${d.title} · Learn Personal Finance from Scratch`} description={d.summary}>
@@ -30,6 +40,14 @@ const phase = track?.phases.find((p) => p.phase === d.phase);
     <div class="lesson-body">
       <slot />
     </div>
+
+    {
+      Calculator && (
+        <section class="lesson-calc">
+          <Calculator />
+        </section>
+      )
+    }
 
     <section class="do-it">
       <h2>Do it</h2>
@@ -70,6 +88,21 @@ const phase = track?.phases.find((p) => p.phase === d.phase);
     </nav>
   </article>
 </BaseLayout>
+
+<style>
+  /* .lesson-calc is a card PEER of .do-it / .keep-this / .quiz / .sources — same
+     recipe (global.css line ~137) so it reads as part of the lesson loop, not a
+     foreign widget (UI-SPEC Spacing). The island itself adds its own scoped
+     internals; this wrapper supplies the shared card chrome. */
+  .lesson-calc {
+    margin: 2rem 0;
+    padding: 1.1rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--card);
+  }
+</style>
 
 <script>
   // Progress saved in the browser only — no signup, no server.

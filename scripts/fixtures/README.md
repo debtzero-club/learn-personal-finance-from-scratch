@@ -33,12 +33,13 @@ Each `curriculum.*.mjs` exports `allLessons()` and `curriculum` mirroring
 | --- | --- | --- |
 | `curriculum.good.mjs` + `lessons-good/9-1-good-fixture.md` | `9.1` complete, slug `9-1-good-fixture` | file exists; frontmatter `id: "9.1"` matches curriculum; slug obeys `${phase}-${order}-<kebab>`; ≥1 `sources[]` entry |
 | `curriculum.good.mjs` + `lessons-good/9-2-good-figures.md` | `9.2` complete, slug `9-2-good-figures` | `figures: [socialSecurityEmployeeRate]` resolves to a real leaf in `numbers.ts` AND the lesson cites an IRS source — passes the figures key-resolve + IRS/SSA-source check |
+| `curriculum.good.mjs` + `lessons-good/9-3-good-calculator.md` | `9.3` complete, slug `9-3-good-calculator` | `calculator: compound` is a REGISTERED calculator name — passes the `[calculator]` resolves-to-registered name-check (03-02) |
 
 **Expected exit code: 0**
 
 ## BAD tree — validator MUST reject (exit 1)
 
-`curriculum.bad.mjs` declares six complete lessons, each engineered to trip exactly ONE
+`curriculum.bad.mjs` declares seven complete lessons, each engineered to trip exactly ONE
 check. The lessons dir `lessons-bad/` supplies the markdown that triggers them.
 
 | Check (INFRA-01 / INFRA-04 / figures) | Curriculum entry | Markdown fixture | What's wrong |
@@ -49,6 +50,7 @@ check. The lessons dir `lessons-bad/` supplies the markdown that triggers them.
 | **[sync] complete but no file** | `9.4` (slug `9-4-missing`) | _(none — file intentionally absent)_ | curriculum marks the lesson `complete` but no markdown file exists at its slug |
 | **[figures] bogus key** | `9.5` (slug `9-5-bad-figure-key`) | `lessons-bad/9-5-bad-figure-key.md` (`figures: [notARealKey]` + valid IRS source) | a declared `figures` key does not resolve to a leaf/bracket-array in `numbers.ts` (the valid IRS source isolates the key failure) |
 | **[figures] non-IRS/SSA source** | `9.6` (slug `9-6-bad-figure-source`) | `lessons-bad/9-6-bad-figure-source.md` (resolvable key + CFPB-only source) | a figure-bearing lesson cites a source but none is IRS/SSA (the resolvable key isolates the source failure) |
+| **[calculator] unregistered calculator name** | `9.7` (slug `9-7-bad-calculator`) | `lessons-bad/9-7-bad-calculator.md` (`calculator: notacalc`) | a declared `calculator` name is not in `REGISTERED_CALCULATORS` — the only failure; everything else (id, slug, sources) is valid (03-02) |
 
 **Expected exit code: 1** (the validator should report ALL violations it finds, then
 `process.exit(1)` if `errors.length > 0`).
@@ -65,7 +67,8 @@ check. The lessons dir `lessons-bad/` supplies the markdown that triggers them.
 - **missing** (complete-but-no-file / sync) → `9.4` curriculum entry with no markdown file
 - **figures bogus-key** → `9-5-bad-figure-key.md` (a declared `figures` key does not resolve in `numbers.ts`)
 - **figures non-IRS/SSA source** → `9-6-bad-figure-source.md` (a figure lesson cites a source but none is IRS/SSA)
-- **good** → `9-1-good-fixture.md`; **good figures** → `9-2-good-figures.md` (resolvable key + IRS source)
+- **calculator unregistered name** → `9-7-bad-calculator.md` (a declared `calculator` name not in `REGISTERED_CALCULATORS`)
+- **good** → `9-1-good-fixture.md`; **good figures** → `9-2-good-figures.md` (resolvable key + IRS source); **good calculator** → `9-3-good-calculator.md` (registered `calculator: compound`)
 
 > **missing-figure-field** (INFRA-04 staleness: a figure lacking `taxYear`/`source`) is a
 > `numbers.ts` audit concern, not a curriculum/lesson concern. Plan 05 covers it with a

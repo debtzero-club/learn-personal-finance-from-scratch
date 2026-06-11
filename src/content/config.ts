@@ -36,6 +36,12 @@ const lessons = defineCollection({
       .default([]),
     // numbers.ts keys this lesson's prose depends on (validated by scripts/validate-content.mjs)
     figures: z.array(z.string()).default([]),
+    // Optional interactive calculator island this lesson embeds. A z.enum (NOT z.string)
+    // so a typo'd name is a Zod build error for free — complementing the validator's
+    // resolves-to-registered name-check (D-03). Must stay in sync with the CALCULATORS
+    // registry in src/layouts/LessonLayout.astro and REGISTERED_CALCULATORS in
+    // scripts/validate-content.mjs.
+    calculator: z.enum(['compound', 'apr-apy']).optional(),
   }),
 });
 
