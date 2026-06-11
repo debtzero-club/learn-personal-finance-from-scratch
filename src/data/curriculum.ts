@@ -231,9 +231,9 @@ export const curriculum: Track[] = [
         title: 'Growing Your Money',
         blurb: 'Investing & retirement — the basics, kept light on purpose.',
         lessons: [
-          { id: '14.1', order: 1, title: 'Why investing matters (compounding, now working for you)', status: 'planned' },
-          { id: '14.2', order: 2, title: 'Risk, time, and why beginners overthink it', status: 'planned' },
-          { id: '14.3', order: 3, title: 'Index funds: the boring answer that works', status: 'planned' },
+          { id: '14.1', order: 1, title: 'Why investing matters (compounding, now working for you)', slug: '14-1-why-investing-matters', status: 'complete' },
+          { id: '14.2', order: 2, title: 'Risk, time, and why beginners overthink it', slug: '14-2-risk-time-and-overthinking', status: 'complete' },
+          { id: '14.3', order: 3, title: 'Index funds: the boring answer that works', slug: '14-3-index-funds', status: 'complete' },
           { id: '14.4', order: 4, title: 'Retirement accounts recap (401k, IRA, Roth)', status: 'planned' },
           { id: '14.5', order: 5, title: 'Your first investment, step by step', status: 'planned' },
           { id: '14.6', order: 6, title: 'Avoiding hype, scams, and "get rich quick"', status: 'planned' },
