@@ -207,9 +207,9 @@ export const curriculum: Track[] = [
         title: 'Protecting Yourself (Insurance & Risk)',
         blurb: 'The cheap protection most people skip.',
         lessons: [
-          { id: '12.1', order: 1, title: 'What insurance is really for', status: 'planned' },
-          { id: '12.2', order: 2, title: 'Health insurance basics (premium, deductible, out-of-pocket)', status: 'planned' },
-          { id: '12.3', order: 3, title: 'Renters & auto insurance — cheap protection you skip', status: 'planned' },
+          { id: '12.1', order: 1, title: 'What insurance is really for', slug: '12-1-what-insurance-is-really-for', status: 'complete' },
+          { id: '12.2', order: 2, title: 'Health insurance basics (premium, deductible, out-of-pocket)', slug: '12-2-health-insurance-basics', status: 'complete' },
+          { id: '12.3', order: 3, title: 'Renters & auto insurance — cheap protection you skip', slug: '12-3-renters-and-auto-insurance', status: 'complete' },
           { id: '12.4', order: 4, title: 'Do I need life insurance yet?', status: 'planned' },
           { id: '12.5', order: 5, title: 'Identity theft and your financial safety', status: 'planned' },
         ],
