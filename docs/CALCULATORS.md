@@ -220,4 +220,133 @@ Reserve / IRS / SSA / FINRA Foundation.
 
 ---
 
-*Last reviewed: 2026-06-10 · Owner: the ⚙ calculator phases (6, 7, 8, 9, 14).*
+## 5. Card interest (average daily balance)
+
+The credit-card-interest engine (`src/calc/card-interest.ts`, CALC-03) is the
+"bucket-with-a-hole" calculator: it shows what a carried balance costs in one statement
+cycle, and the grace period is the visible toggle between "no leak" and "draining." It
+powers lesson **7.3** (grace ON → free) and **7.4** (grace OFF → the ADB charge). Like
+every engine here it is pure, framework-free, and routes all money through `money.ts`;
+only the **daily periodic rate** is a float (a rate is never money).
+
+### The formulas (D-01 / D-02)
+
+- **Daily periodic rate:** `DPR = APR ÷ 365` (CFPB en-46). The float rate, never money.
+- **Average daily balance:** build the balance day-by-day across the cycle, sum each day's
+  balance, then divide by the cycle length to whole cents — `ADB = (Σ daily balance) ÷ cycleDays`.
+  This is the **average daily balance** method (CFPB en-44): interest is charged on the
+  *average* the balance sat at, not the start or end balance.
+- **Cycle interest:** `interest = ADB × DPR × cycleDays`, rounded once to whole cents (half-up).
+- **Grace toggle (D-01, CFPB en-47):** `paidInFull = true` → you paid last statement in
+  full, so new purchases are interest-free until the due date → **$0 interest** this cycle
+  (grace works). `paidInFull = false` → you're carrying a balance, the grace period is lost,
+  and interest accrues via ADB × DPR × days (grace lost). **The toggle changes the
+  *computation*, not a label** — that contrast is lessons 7.3 vs 7.4 (the bucket-with-a-hole
+  moment: pay in full → no leak; carry a balance → it drains).
+- **Input model (D-02):** a *simplified* one-purchase / one-payment cycle, not a full
+  transaction ledger — beginner-legible, still real average-daily-balance math.
+
+### The engine API (`src/calc/card-interest.ts`)
+
+```ts
+export interface CardInterestParams {
+  start: Cents;          // balance carried into the cycle
+  purchase?: Cents;      // one optional mid-cycle purchase (D-02)
+  purchaseDay?: number;  // 1-based day it posts
+  payment?: Cents;       // one optional mid-cycle payment (D-02)
+  paymentDay?: number;   // 1-based day it posts
+  cycleDays: number;     // billing-cycle length in days (e.g. 30)
+  apr: number;           // nominal APR as a decimal, e.g. 0.24
+  paidInFull: boolean;   // "paid last statement in full?" grace toggle (D-01)
+}
+export interface CardInterestResult {
+  adb: Cents;            // average daily balance over the cycle
+  dpr: number;          // daily periodic rate = APR ÷ 365 (a float)
+  interest: Cents;      // cycle interest; $0 when grace is ON
+}
+export function cardInterest(p: CardInterestParams): CardInterestResult;
+```
+
+### Pinned golden figures (from `src/calc/card-interest.test.ts`)
+
+| Scenario | `adb` | `interest` | Note |
+|----------|-------|------------|------|
+| $5,000 flat carry, 30-day cycle, 24% APR, grace **OFF** | `500000` ($5,000.00) | `9863` ($98.63) | the $5k anchor's monthly card cost (lesson 7.4) |
+| $2,000 start, +$500 day 10, −$300 day 20, 30-day cycle, 24% APR, grace **OFF** | `224000` ($2,240.00) | `4419` ($44.19) | the true average daily balance — not start, not end |
+| Any scenario with `paidInFull = true` (grace **ON**) | `start` | `0` ($0.00) | the bucket doesn't leak |
+
+The DPR for a 24% APR is `0.24 / 365 ≈ 0.000657534` — asserted as a *rate*
+(`toBeCloseTo`), never as money.
+
+**Sources (authoritative-whitelist only):** CFPB — "How is my credit card interest
+calculated" (en-44), "What is a daily periodic rate" (en-46), "What is a grace period" (en-47).
+
+---
+
+## 6. Minimum-payment trap (interest + 1% / $35 floor)
+
+The minimum-payment engine (`src/calc/min-payment.ts`, CALC-04) answers the most expensive
+question on a card: *if I only ever pay the minimum, how long — and how much — does it take?*
+It powers lesson **7.5** (the trap) and **8.5** (the verified payoff horizon). Pure,
+framework-free, all money via `money.ts`; only the monthly rate is a float.
+
+### The formula (D-03)
+
+Each month the **minimum payment** is the **greater of**:
+
+```
+( that month's interest + 1% of the pre-interest principal )   OR   a fixed floor (~$35)
+```
+
+Interest posts first, then the payment applies; the final payment never overshoots the
+remaining balance.
+
+**Why this form (Pitfall 2).** The "interest + 1% of principal" rule always pays *all* the
+interest plus 1% of principal, so the balance **genuinely amortizes** and the payoff horizon
+is real. A flat-*percentage-of-balance* minimum (e.g. "2% of balance") is a *different*
+formula that, at ~24% APR — where the monthly rate ≈ the percentage — barely moves the
+balance and becomes a near-perpetuity (100+ years). The D-03 "interest + 1%" choice is
+precisely what **guarantees termination**. A `month < 1200` guard is still added so a
+pathological input can't infinite-loop the browser, but the **floor** (not the guard) is
+what actually ends the loan once the balance gets small.
+
+### The engine API (`src/calc/min-payment.ts`)
+
+```ts
+export interface MinPaymentParams {
+  balance: Cents;        // starting card balance
+  apr: number;           // nominal APR as a decimal, e.g. 0.24
+  floor: Cents;          // minimum-payment dollar floor (e.g. $35)
+  pctPrincipal: number;  // fraction of pre-interest principal, e.g. 0.01
+}
+export interface MinPaymentResult {
+  months: number;        // months to reach $0 paying only the minimum
+  years: number;         // months / 12 (a count, not money)
+  totalInterest: Cents;  // total interest paid over the life of the trap
+}
+export function minPaymentTrap(p: MinPaymentParams): MinPaymentResult;
+```
+
+### Pinned golden figures (from `src/calc/min-payment.test.ts`)
+
+| Scenario | `months` | `totalInterest` | Note |
+|----------|----------|-----------------|------|
+| $5,000 @ 24% APR, $35 floor, 1% principal | `201` (~16.8 yr) | `844170` ($8,441.70) | the D-04 anchor; total paid $13,441.70 |
+| $5,000 @ 25.99% APR, $35 floor, 1% principal | `204` (~17.0 yr) | `921150` ($9,211.50) | sensitivity — the floor governs the endgame |
+
+**This 201 months (~17 years) is the VERIFIED figure that governs lesson 8.5's title (D-04)**
+— the engine is the source of truth; **"27 years" was a placeholder** that assumed a flat-2%
+minimum on a smaller balance at lower APR. The D-03 "interest + 1%" rule amortizes far faster,
+so 8.5's title flexes to the real number.
+
+**Sources (authoritative-whitelist only):** CFPB — Regulation Z Appendix M1 (issuer
+min-payment formulas; the "% of balance or $X, whichever greater" pattern), the 3-year-payoff
+disclosure box (en-36), "How is my credit card interest calculated" (en-44), "What is a daily
+periodic rate" (en-46), "What is a grace period" (en-47).
+
+> **§7 / §8 reserved** for plan 04-02's amortization and payoff formulas. Plan 04-02 documents
+> its formulas in its own SUMMARY (it does not edit this file); §5/§6 here are this plan's.
+
+---
+
+*Last reviewed: 2026-06-11 · Owner: the ⚙ calculator phases (6, 7, 8, 9, 14).*
