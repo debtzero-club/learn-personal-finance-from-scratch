@@ -1,0 +1,32 @@
+# Finance-accuracy review gate (Phase 6 D-10).
+# These paths carry the course's correctness guarantees — changes require maintainer review.
+# CODEOWNERS is last-match-wins; owners must have write access once the repo exists
+# (until then entries are silently inert — verified on docs/LAUNCH-CHECKLIST.md).
+
+# Calculator math + golden tests
+/src/calc/                                            @usetoya/maintainers
+# Cents-based money engine (same accuracy class as the calculators)
+/src/lib/money.ts                                     @usetoya/maintainers
+# Yearly US figures (tax brackets, FICA, limits) — annually reviewed
+/src/data/numbers.ts                                  @usetoya/maintainers
+# The build-time content gate itself
+/scripts/validate-content.mjs                         @usetoya/maintainers
+# Protect the gate files (GitHub's own recommendation)
+/.github/                                             @usetoya/maintainers
+
+# The 14 mechanics (gear) lessons — the credibility spine, listed explicitly
+# (explicit files beat phase globs: 6-*.md would drag non-mechanics lessons in)
+/src/content/lessons/6-2-simple-vs-compound-interest.md        @usetoya/maintainers
+/src/content/lessons/6-3-compounding-seen.md                   @usetoya/maintainers
+/src/content/lessons/6-5-apr-vs-apy.md                         @usetoya/maintainers
+/src/content/lessons/7-2-how-a-credit-card-works.md            @usetoya/maintainers
+/src/content/lessons/7-3-the-grace-period.md                   @usetoya/maintainers
+/src/content/lessons/7-4-how-card-interest-is-calculated.md    @usetoya/maintainers
+/src/content/lessons/7-5-the-minimum-payment-trap.md           @usetoya/maintainers
+/src/content/lessons/7-10-buy-now-pay-later.md                 @usetoya/maintainers
+/src/content/lessons/8-1-types-of-debt.md                      @usetoya/maintainers
+/src/content/lessons/8-2-how-a-loan-works.md                   @usetoya/maintainers
+/src/content/lessons/8-3-amortization.md                       @usetoya/maintainers
+/src/content/lessons/8-5-the-17-year-problem.md                @usetoya/maintainers
+/src/content/lessons/8-7-why-extra-payments-crush-a-loan.md    @usetoya/maintainers
+/src/content/lessons/9-2-how-student-loan-interest-works.md    @usetoya/maintainers
