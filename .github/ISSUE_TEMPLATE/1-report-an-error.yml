@@ -1,0 +1,39 @@
+name: "Report an error"
+description: "A number, rate, or fact in a lesson is wrong or out of date."
+title: "[error] Lesson "
+labels: ["accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for catching this. Accuracy reports are some of the most valuable
+        contributions to the course — a wrong number can quietly mislead a beginner,
+        so we take these seriously.
+  - type: input
+    id: lesson-id
+    attributes:
+      label: "Lesson id"
+      description: "Shown under the lesson title."
+      placeholder: "e.g. 2.3"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: "What's wrong"
+      description: "Quote the sentence, number, or table cell."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: "Authoritative source URL"
+      description: "IRS, SSA, CFPB, Federal Reserve, FINRA Foundation, studentaid.gov, healthcare.gov, investor.gov/SEC, FTC, or HUD."
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: "Suggested fix (optional)"
+    validations:
+      required: false
