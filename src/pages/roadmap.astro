@@ -1,36 +1,67 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { curriculum, counts } from '../data/curriculum';
-const c = counts();
+import { curriculum } from '../data/curriculum';
 const phases = curriculum.flatMap((t) =>
-  t.phases.map((p) => {
-    const total = p.lessons.length;
-    const done = p.lessons.filter((l) => l.status === 'complete').length;
-    return { track: t.track, phase: p.phase, title: p.title, total, done, pct: Math.round((done / total) * 100) };
-  })
+  t.phases.map((p) => ({
+    phase: p.phase,
+    title: p.title,
+    total: p.lessons.length,
+    slugs: p.lessons.map((l) => l.slug).filter(Boolean).join(','),
+  }))
 );
+const totalLessons = curriculum.flatMap((t) => t.phases).reduce((n, p) => n + p.lessons.length, 0);
 ---
 
-<BaseLayout title="Roadmap · Learn Personal Finance from Scratch" description="What's written, what's next. The course grows over time, lesson by lesson.">
+<BaseLayout title="Roadmap · Learn Personal Finance from Scratch" description="Your journey through the course. Progress is saved in your browser — no account needed.">
   <div class="page">
     <p class="page-eyebrow">Roadmap</p>
-    <h1>What's done, what's next</h1>
+    <h1>Your journey</h1>
     <p>
-      {c.complete} of {c.total} lessons written so far. Like the course that inspired this one, lessons
-      ship when they're ready — accurate, plain-language, and sourced. Want to help?
+      All {totalLessons} lessons are written, accurate, and sourced — this page tracks how far
+      <em>you've</em> gotten. Progress saves right here in your browser: no account, no signup.
+      Want to help improve the course?
       <a href="https://github.com/usetoya/learn-personal-finance-from-scratch" rel="noopener" target="_blank">Contribute on GitHub</a>.
+    </p>
+
+    <p id="rollup" data-first-lesson="/lessons/1-1-what-this-course-is">
+      Just getting started? Begin with <a href="/lessons/1-1-what-this-course-is">lesson 1.1</a> —
+      each lesson takes 3–5 minutes.
     </p>
 
     {
       phases.map((p) => (
-        <div class="road-phase">
+        <div class="road-phase" data-slugs={p.slugs}>
           <div style="min-width: 13rem">
             <strong>Phase {p.phase}</strong> · {p.title}
           </div>
-          <div class="road-bar"><span style={`width:${p.pct}%`} /></div>
-          <div class="road-count">{p.done}/{p.total}</div>
+          <div class="road-bar"><span style="width:0%" /></div>
+          <div class="road-count">0/{p.total}</div>
         </div>
       ))
     }
   </div>
 </BaseLayout>
+
+<script>
+  // Learner progress only — read from the single pfs:done owner (PROG-01).
+  // Server renders 0/N (correct JS-off state, D-06); this fills the real numbers.
+  import { read } from '../lib/progress';
+  const done = new Set(read());
+  let total = 0;
+  let finished = 0;
+  document.querySelectorAll<HTMLElement>('.road-phase').forEach((row) => {
+    const slugs = (row.dataset.slugs || '').split(',').filter(Boolean);
+    const n = slugs.filter((s) => done.has(s)).length;
+    total += slugs.length;
+    finished += n;
+    const bar = row.querySelector<HTMLElement>('.road-bar > span');
+    if (bar) bar.style.width = `${Math.round((n / slugs.length) * 100)}%`;
+    const count = row.querySelector('.road-count');
+    if (count) count.textContent = `${n}/${slugs.length}`;
+  });
+  // D-07 headline when started; D-08 zero-state nudge stays as server-rendered.
+  const rollup = document.getElementById('rollup');
+  if (rollup && finished > 0) {
+    rollup.textContent = `You've finished ${finished} of ${total} lessons. Keep going — your progress saves in this browser.`;
+  }
+</script>
