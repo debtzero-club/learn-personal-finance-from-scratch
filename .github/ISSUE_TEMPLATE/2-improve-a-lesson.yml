@@ -1,0 +1,31 @@
+name: "Improve a lesson"
+description: "An explanation could be clearer, warmer, or more beginner-friendly."
+title: "[improve] Lesson "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If a lesson lost you, that's useful — beginners are exactly who this course
+        is for. Tell us where it got confusing and we'll make it clearer.
+  - type: input
+    id: lesson-id
+    attributes:
+      label: "Lesson id"
+      description: "Shown under the lesson title."
+      placeholder: "e.g. 2.3"
+    validations:
+      required: true
+  - type: textarea
+    id: what-could-be-clearer
+    attributes:
+      label: "What could be clearer"
+      description: "Which part lost you, and why? Plain-language critiques welcome."
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Your suggested wording (optional)"
+    validations:
+      required: false

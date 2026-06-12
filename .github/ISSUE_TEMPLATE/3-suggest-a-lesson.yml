@@ -1,0 +1,42 @@
+name: "Suggest a lesson"
+description: "A money topic beginners need that the course doesn't cover."
+title: "[suggest] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got a money topic a beginner runs into that we're missing? Pitch it here.
+        Lessons are short and follow a fixed shape, so a good suggestion names the
+        real situation and the one concept to teach.
+  - type: input
+    id: proposed-title
+    attributes:
+      label: "Proposed lesson title"
+    validations:
+      required: true
+  - type: textarea
+    id: the-situation
+    attributes:
+      label: "The real money moment"
+      description: "Every lesson starts with a real situation (see docs/LESSON-TEMPLATE.md). What's the moment where a beginner hits this?"
+    validations:
+      required: true
+  - type: textarea
+    id: one-concept
+    attributes:
+      label: "The one concept"
+      description: "Lessons teach exactly one concept in 3–5 minutes."
+    validations:
+      required: true
+  - type: checkboxes
+    id: fit
+    attributes:
+      label: "Course fit"
+      options:
+        - label: "US-specific (W-4, FICA, US credit scoring, etc.)"
+          required: true
+        - label: "Beginner everyday finance — not investing-heavy"
+          required: true
+        - label: "General education, not personalized advice"
+          required: true
