@@ -106,7 +106,10 @@ const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
      foreign widget (UI-SPEC Spacing). The island itself adds its own scoped
      internals; this wrapper supplies the shared card chrome. */
   .lesson-calc {
-    margin: 2rem 0;
+    /* margin-block (NOT the `margin` shorthand): the shorthand compiles with the
+       scoped [data-astro-cid] specificity AND resets margin-inline:0, which would
+       silently kill the global D-16 breakout rule (global.css). Pitfall 1. */
+    margin-block: 2rem;
     padding: 1.1rem 1.2rem;
     border-radius: 10px;
     border: 1px solid var(--line);

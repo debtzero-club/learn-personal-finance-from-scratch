@@ -12,6 +12,7 @@
   --warn: #b4541f;
   --card: #ffffff;
   --max: 760px;
+  --max-wide: 1000px;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-serif: "Iowan Old Style", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
@@ -134,6 +135,16 @@ main { min-height: 60vh; }
 .lesson-body th, .lesson-body td { border: 1px solid var(--line); padding: .5rem .6rem; text-align: left; }
 .lesson-body code { font-family: var(--font-mono); font-size: .88em; background: var(--accent-soft); padding: .1rem .35rem; border-radius: 4px; }
 
+/* ---------- two-tier width (D-16): prose stays at --max; calculators and
+   data-heavy tables break out to --max-wide on roomy viewports ---------- */
+@media (min-width: 1100px) {
+  .lesson-calc,
+  .lesson-body .table-wide {
+    width: var(--max-wide);
+    margin-inline: calc((100% - var(--max-wide)) / 2); /* negative — stays centered because .lesson is */
+  }
+}
+
 .do-it, .keep-this, .quiz, .sources { margin: 2rem 0; padding: 1.1rem 1.2rem; border-radius: 10px; border: 1px solid var(--line); background: var(--card); }
 .do-it { border-left: 4px solid var(--accent); background: var(--accent-soft); }
 .keep-this { border-left: 4px solid var(--line-strong); }
@@ -179,6 +190,17 @@ main { min-height: 60vh; }
 .glossary-term { border-bottom: 1px solid var(--line); padding: 1rem 0; }
 .glossary-term dt { font-weight: 700; font-size: 1.05rem; }
 .glossary-term dd { margin: .3rem 0 0; color: var(--ink-soft); }
+
+/* in-lesson glossary links: "definition, not navigation" (D-04) */
+.lesson-body a.glossary-link {
+  color: inherit;
+  text-decoration: underline dotted var(--accent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.lesson-body a.glossary-link:hover { color: var(--accent); text-decoration-style: solid; }
+.glossary-term { scroll-margin-top: 1rem; }
+.glossary-term:target { background: var(--accent-soft); border-radius: 8px; padding-inline: .6rem; }
 
 /* ---------- footer ---------- */
 .site-footer { max-width: var(--max); margin: 3rem auto 0; padding: 1.6rem clamp(1rem,4vw,1.5rem) 3rem; border-top: 1px solid var(--line); font-size: .82rem; color: var(--ink-soft); }
