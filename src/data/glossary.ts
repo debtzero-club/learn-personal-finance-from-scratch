@@ -8,6 +8,13 @@ export interface Term {
   related?: string[]; // lesson ids, e.g. "6.2"
 }
 
+/** Single owner of glossary anchor slugs — used by glossary.astro (id) and
+ *  rehype-glossary-links.mjs (href). Never duplicate this logic. */
+export const termSlug = (term: string): string =>
+  term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+// "APR (Annual Percentage Rate)" -> "apr-annual-percentage-rate"
+// "401(k) match" -> "401-k-match";  "50/30/20" -> "50-30-20"
+
 export const glossary: Term[] = [
   { term: 'APR (Annual Percentage Rate)', def: 'The yearly cost of borrowing money, shown as a percentage. On a credit card, your APR divided by 365 is roughly what you are charged per day on a balance.', related: ['6.5', '7.4'] },
   { term: 'APY (Annual Percentage Yield)', def: 'The yearly amount you earn on savings, including the effect of compounding. A higher APY means your money grows faster.', related: ['3.3', '6.5'] },

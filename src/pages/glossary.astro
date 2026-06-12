@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { glossary } from '../data/glossary';
+import { glossary, termSlug } from '../data/glossary';
 const terms = [...glossary].sort((a, b) => a.term.localeCompare(b.term));
 ---
 
@@ -12,7 +12,7 @@ const terms = [...glossary].sort((a, b) => a.term.localeCompare(b.term));
     <dl>
       {
         terms.map((t) => (
-          <div class="glossary-term">
+          <div class="glossary-term" id={termSlug(t.term)}>
             <dt>{t.term}</dt>
             <dd>{t.def}</dd>
           </div>
