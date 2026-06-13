@@ -3,9 +3,9 @@
 // lessons 7.3 grace ON / 7.4 grace OFF).
 //
 // Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
-// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// script that queries the DOM. NO `client:` directive (D-05). The island imports
 // the SAME pure engine (src/calc/card-interest.ts) at BUILD TIME (so the worked
-// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// example is correct with JS OFF — D-04) AND in the script (so the inputs are
 // live) — one source of math. Never re-derive the average-daily-balance loop here.
 //
 // The grace toggle (D-01) is the teaching moment: "Did you pay last statement in
@@ -15,7 +15,7 @@
 import { cardInterest } from '../calc/card-interest';
 import { format, toCents } from '../lib/money';
 
-// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// Seed default scenario — defined ONCE so the static render and the script agree.
 // $5,000 flat carry, 30-day cycle, 24% APR, grace OFF. Pinned golden (04-01-SUMMARY):
 // adb $5,000.00, interest $98.63. Toggle ON → $0.00 (the bucket-with-a-hole moment).
 const SEED = { start: 5000, purchase: 0, purchaseDay: 10, payment: 0, paymentDay: 20, cycleDays: 30, aprPct: 24 };

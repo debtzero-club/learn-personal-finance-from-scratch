@@ -1,10 +1,10 @@
 ---
 // CompoundCalc.astro — the snowball island (CALC-01, lesson 6.3 / optionally 6.2).
 //
-// Mirrors Quiz.astro: server-rendered markup + a module <script> that queries the
+// Mirrors Quiz.astro: server-rendered markup + a module script that queries the
 // DOM. NO `client:` directive (D-05). The island imports the SAME pure engine
 // (src/calc/compound.ts) at BUILD TIME (so the worked example is correct with JS
-// OFF — D-04, Pitfall 3) AND in the <script> (so the inputs are live) — one source
+// OFF — D-04, Pitfall 3) AND in the script (so the inputs are live) — one source
 // of math.
 //
 // The snowball is rendered as a SERIES (D-06): one .split-bar track PER SAMPLED
@@ -15,7 +15,7 @@
 import { compound } from '../calc/compound';
 import { format, toCents, fromCents } from '../lib/money';
 
-// Seed default scenario — defined ONCE so the static render and the <script> agree
+// Seed default scenario — defined ONCE so the static render and the script agree
 // (Pitfall 3). $1,000 start + $100/mo at 5%, monthly, 10 years. Pinned golden:
 // finalBalance = $17,175.26 (the no-JS dist-grep target, see 03-02-SUMMARY).
 const SEED = { principal: 1000, contribution: 100, ratePct: 5, years: 10 };

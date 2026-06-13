@@ -2,9 +2,9 @@
 // MinPaymentCalc.astro — the minimum-payment-trap island (CALC-04, lessons 7.5 / 8.5).
 //
 // Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
-// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// script that queries the DOM. NO `client:` directive (D-05). The island imports
 // the SAME pure engine (src/calc/min-payment.ts) at BUILD TIME (so the worked
-// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// example is correct with JS OFF — D-04) AND in the script (so the inputs are
 // live) — one source of math. Never re-derive the month loop here.
 //
 // The headline is the trap: paying only the minimum, the $5k anchor is in debt for
@@ -14,7 +14,7 @@
 import { minPaymentTrap } from '../calc/min-payment';
 import { format, toCents } from '../lib/money';
 
-// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// Seed default scenario — defined ONCE so the static render and the script agree.
 // $5,000 @ 24% APR, $35 floor, 1% of principal. Pinned golden (04-01-SUMMARY):
 // 201 months (~16.8 yr) / $8,441.70 total interest (total paid $13,441.70).
 const SEED = { balance: 5000, aprPct: 24, floor: 35, pctPrincipal: 1 };

@@ -4,10 +4,10 @@
 // Smaller, single-responsibility sibling of CompoundCalc (D-14): no split-bar, just
 // the "same rate, two numbers" headline + a plain-English explainer. Reused later
 // by the Phase-4 credit lessons. Mirrors Quiz.astro / CompoundCalc.astro: server
-// markup + a module <script>, NO `client:` directive (D-05).
+// markup + a module script, NO `client:` directive (D-05).
 //
 // Imports the SAME aprToApy engine (src/calc/apr.ts) at BUILD TIME (so the headline
-// is correct with JS OFF — D-04) AND in the <script> (so it recomputes live). The
+// is correct with JS OFF — D-04) AND in the script (so it recomputes live). The
 // "5.12" is DERIVED from aprToApy(0.05, 12), never hand-typed (the no-JS golden).
 
 import { aprToApy } from '../calc/apr';

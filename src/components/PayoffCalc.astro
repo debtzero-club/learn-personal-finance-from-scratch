@@ -3,9 +3,9 @@
 // referenced from 8.8).
 //
 // Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
-// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// script that queries the DOM. NO `client:` directive (D-05). The island imports
 // the SAME pure engine (src/calc/payoff.ts) at BUILD TIME (so the worked example is
-// correct with JS OFF — D-04) AND in the <script> (so the inputs are live) — one
+// correct with JS OFF — D-04) AND in the script (so the inputs are live) — one
 // source of math. Never re-derive the month loop here.
 //
 // Input is 3 FIXED, editable debt rows (D-08, no add/remove CRUD); output is BOTH
@@ -16,14 +16,14 @@
 // amortized payment ($211.37), computed via amortize() exactly as payoff.test.ts does.
 // Passing it as revolving would NOT reproduce the verified goldens (avalanche $2,209.33
 // vs snowball $2,308.90). The 'auto' row carries `installment: true` so the live
-// <script> reproduces this minimum the same way.
+// script reproduces this minimum the same way.
 
 import { payoff } from '../calc/payoff';
 import type { Debt } from '../calc/payoff';
 import { amortize } from '../calc/amortization';
 import { format, toCents } from '../lib/money';
 
-// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// Seed default scenario — defined ONCE so the static render and the script agree.
 // The verified DIVERGENT set (Pitfall 4): smallest balance (store) ≠ highest APR (card).
 // Pinned golden (04-02-SUMMARY): avalanche $2,209.33 vs snowball $2,308.90, gap $99.57.
 const SEED_EXTRA = 200;

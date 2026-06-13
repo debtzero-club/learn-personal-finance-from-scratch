@@ -3,9 +3,9 @@
 // 8.7, and the 0%-APR BNPL "pay in 4" of 7.10).
 //
 // Mirrors CompoundCalc.astro / Quiz.astro: server-rendered markup + a module
-// <script> that queries the DOM. NO `client:` directive (D-05). The island imports
+// script that queries the DOM. NO `client:` directive (D-05). The island imports
 // the SAME pure engine (src/calc/amortization.ts) at BUILD TIME (so the worked
-// example is correct with JS OFF — D-04) AND in the <script> (so the inputs are
+// example is correct with JS OFF — D-04) AND in the script (so the inputs are
 // live) — one source of math. Never re-derive the amortization loop here.
 //
 // The visual REUSES the .split-bar / .split-seg primitive from CompoundCalc (D-06):
@@ -17,7 +17,7 @@ import { amortize } from '../calc/amortization';
 import type { AmortRow } from '../calc/amortization';
 import { format, toCents } from '../lib/money';
 
-// Seed default scenario — defined ONCE so the static render and the <script> agree.
+// Seed default scenario — defined ONCE so the static render and the script agree.
 // $20,000 @ 7%, 60 months, no extra. Pinned golden (04-02-SUMMARY): payment $396.02,
 // total interest $3,761.48, 60 rows, $0.00 final. +$100/mo extra → 47 mo / $2,867.74.
 const SEED = { principal: 20000, aprPct: 7, months: 60, extra: 0 };
