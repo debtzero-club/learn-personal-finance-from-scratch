@@ -1,7 +1,7 @@
 # Finance-accuracy review gate (Phase 6 D-10).
 # These paths carry the course's correctness guarantees — changes require maintainer review.
 # CODEOWNERS is last-match-wins; owners must have write access once the repo exists
-# (until then entries are silently inert — verified on docs/LAUNCH-CHECKLIST.md).
+# (until then entries are silently inert — verified during the internal pre-launch review).
 
 # Calculator math + golden tests
 /src/calc/                                            @usetoya/maintainers

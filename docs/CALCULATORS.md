@@ -5,7 +5,7 @@
 > (Phase 7), debt + amortization (Phase 8), student loans (Phase 9), and investing
 > (Phase 14) all reuse the conventions locked here. Pin them once, obey them everywhere.
 
-This doc joins `MASTER-PLAN.md`, `LESSON-TEMPLATE.md`, and `ANNUAL-REVIEW.md` as a
+This doc joins `LESSON-TEMPLATE.md` and `ANNUAL-REVIEW.md` as a
 top-level operating doc. Its four sections are:
 
 1. [Conventions](#1-conventions) — frequency, contribution timing, rounding cadence, rate representation

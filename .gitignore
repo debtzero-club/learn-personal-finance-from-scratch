@@ -22,5 +22,5 @@ yarn-error.log*
 .vscode/
 *.local
 
-# GSD verification screenshots (transient)
-.planning/**/roadmap-*.png
+# internal GSD planning workflow (kept on disk locally, not published)
+.planning/
