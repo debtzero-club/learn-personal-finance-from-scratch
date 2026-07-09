@@ -7,37 +7,41 @@ title: "The standard deduction and when to itemize"
 summary: "Everyone gets a flat $16,100 (single, 2026) subtracted automatically; itemizing means adding up specific deductions instead — and it only wins when that total beats $16,100, which almost never happens on a first job."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Do the 60-second tally: add up your charitable donations, the state and local taxes you paid, and any mortgage interest (probably $0 if you rent) for this year. If the total is nowhere near $16,100, you have your answer — take the standard deduction with zero second-guessing."
 keepThis: "The standard deduction is a flat $16,100 (single, 2026), automatic and receipt-free. Itemize only when your specific deductions total more than that — renting with no big donations, they almost never do."
 quiz:
   - q: "What is the standard deduction?"
     options:
-      - "A flat amount of income that isn't taxed, subtracted automatically — no receipts needed"
       - "A fee the IRS charges for filing"
-      - "A deduction you have to apply for each year"
-    answer: 0
+      - "A credit that lowers your tax bill by a flat dollar amount"
+      - "A flat amount of income that isn't taxed, subtracted automatically — no receipts needed"
+      - "A deduction you have to apply for and requalify for each year"
+    answer: 2
     explain: "It's the no-paperwork default: a flat $16,100 (single, 2026) comes off your income before tax is figured. You met it doing the anchor's return in lesson 2.6."
   - q: "What does it mean to itemize?"
     options:
       - "To list every purchase you made this year"
       - "To add up specific deductible expenses (mortgage interest, state and local taxes, donations) and subtract that total instead of the flat amount"
       - "To take the standard deduction and your own deductions on top"
+      - "To spread one big deduction across several tax years"
     answer: 1
     explain: "Itemizing replaces the standard deduction — it's either/or, never both. You'd only do it when your itemized total is bigger than the flat amount."
   - q: "The anchor rents, donated about $1,200, and paid about $1,800 in state taxes. Standard deduction or itemize?"
     options:
-      - "Itemize — every deduction counts"
       - "Standard — their ~$3,000 itemized total is nowhere near $16,100"
+      - "Itemize — every little deduction counts and adds up"
+      - "Itemize — renters get a special housing deduction"
       - "Neither — first-job filers don't get deductions"
-    answer: 1
+    answer: 0
     explain: "~$3,000 of itemizable expenses versus a flat $16,100: the standard deduction wins by about $13,100. This is the typical first-job picture — no mortgage interest is what keeps most young filers far below the line."
   - q: "Where does the student loan interest deduction from lesson 11.1 fit into this choice?"
     options:
       - "You lose it if you take the standard deduction"
-      - "It's above-the-line, so it works on top of whichever you choose"
       - "It only works if you itemize"
-    answer: 1
+      - "It replaces the standard deduction entirely"
+      - "It's above-the-line, so it works on top of whichever you choose"
+    answer: 3
     explain: "Above-the-line deductions come off your income before the standard-vs-itemize fork. The anchor deducts their $1,755 of student loan interest AND takes the $16,100 standard deduction."
 sources:
   - label: "IRS — Tax inflation adjustments for tax year 2026 (incl. the standard deduction)"

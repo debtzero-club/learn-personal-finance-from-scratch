@@ -7,44 +7,49 @@ title: "Side income & 1099s — what you owe"
 summary: "Side income is taxable from the first dollar, nobody withholds for you, and self-employment tax adds 15.3% on top of income tax — which is why you set aside 25–30% of every side-gig dollar the day it lands."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "If you have any side income this year, set up the habit today: open (or designate) a separate savings account and move 25–30% of every side-gig payment into it the day it arrives. That money is taxes — it was never yours to spend."
 keepThis: "Side income is taxable from the first dollar. Self-employment tax is 15.3% on 92.35% of net earnings (owed once you net $400+ for the year), plus regular income tax on top — set aside 25–30%, and pay quarterly estimates if you'll owe $1,000 or more."
 quiz:
   - q: "From which dollar of side income do you owe tax?"
     options:
       - "Only after you get a tax form about it"
-      - "The first dollar — there's no minimum and no form requirement"
+      - "Only after you pass $600 for the year"
       - "Only above your standard deduction"
-    answer: 1
-    explain: "Income is income. Whether a form arrives or not, side earnings are taxable from dollar one — the durable rule that never changes, no matter how reporting thresholds move."
+      - "The first dollar — there's no minimum and no form requirement"
+    answer: 3
+    explain: "Income is income. Whether a form arrives or not, side earnings are taxable from dollar one — the durable rule that never changes, no matter how reporting thresholds move. ($600 is an old form-reporting threshold, not a tax-free floor.)"
   - q: "Why is self-employment tax 15.3% when a W-2 employee only sees 7.65% taken out?"
     options:
-      - "Side income is penalized at double rates"
+      - "Side income is penalized at a special double rate"
+      - "It already includes your federal income tax"
       - "On a side gig you're both employer and employee, so you owe both halves of Social Security and Medicare"
-      - "It includes federal income tax"
-    answer: 1
+      - "Self-employment income is taxed in a higher bracket than wages"
+    answer: 2
     explain: "A W-2 employer quietly pays the matching 7.65% for you (lesson 2.3). Self-employed, both halves are yours: 12.4% Social Security + 2.9% Medicare = 15.3% — and income tax is still on top of that."
   - q: "On $3,000 of net side income, the self-employment tax is about:"
     options:
       - "$45"
-      - "$424"
       - "$3,000"
-    answer: 1
-    explain: "SE tax applies to 92.35% of net earnings: $3,000 × 92.35% = $2,770.50, then × 15.3% ≈ $424."
+      - "$230 — just the 7.65% employee half"
+      - "$424"
+    answer: 3
+    explain: "SE tax applies to 92.35% of net earnings: $3,000 × 92.35% = $2,770.50, then × 15.3% ≈ $424. Both halves are yours, so it's the full 15.3%, not 7.65%."
   - q: "When are quarterly estimated tax payments generally required?"
     options:
-      - "Whenever you have any side income at all"
       - "When you expect to owe $1,000 or more for the year beyond what withholding covers"
+      - "Whenever you have any side income at all"
+      - "Only if you don't also have a W-2 job"
       - "Only for businesses with employees"
-    answer: 1
+    answer: 0
     explain: "The IRS expects to be paid as you earn, not just in April. The general trigger is expecting to owe $1,000+ for the year — though raising the withholding at your day job can cover the gap instead."
   - q: "A payment app never sends you a 1099-K for your side income. What do you owe?"
     options:
       - "Nothing — no form means no tax"
+      - "Only the amount above the app's reporting threshold"
       - "Exactly the same as if the form had arrived — the income was taxable from dollar one"
       - "Only the self-employment tax, not income tax"
-    answer: 1
+    answer: 2
     explain: "Forms are reporting paperwork, not permission slips. The threshold for when apps must send a 1099-K has changed repeatedly — your obligation never did."
 sources:
   - label: "IRS — Topic 554: Self-employment tax"

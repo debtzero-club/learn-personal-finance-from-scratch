@@ -7,38 +7,42 @@ title: "Tax-advantaged accounts recap — how to legally pay less"
 summary: "The three legal tax shelters you've already met — 401(k), IRA, HSA — side by side with their 2026 limits, and the order that usually makes sense: match first, then HSA if you're on an HDHP, then more as the budget allows."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Check three boxes in your benefits portal tonight: (1) is your 401(k) contribution at least enough for the full match? (2) are you on an HDHP — and if so, is your HSA actually open? (3) do you have an IRA anywhere? That's your entire tax-shelter inventory on one sticky note."
 keepThis: "Three legal tax shelters, 2026 limits: 401(k) $24,500 · IRA $7,500 · HSA $4,400 self-only. The usual order: full match first (free money), then HSA if you're on an HDHP, then more 401(k)/IRA as the budget allows."
 quiz:
   - q: "What do the 401(k), IRA, and HSA have in common?"
     options:
       - "They're all employer-only accounts"
-      - "They're all legal tax shelters — money inside them escapes some tax that normal money pays"
       - "They all require itemizing to use"
-    answer: 1
-    explain: "Each account shields money from some tax — on the way in, on the growth, on the way out, or (for the HSA) all three. That's the whole reason they exist, and using them is the legal way to pay less."
+      - "They're all legal tax shelters — money inside them escapes some tax that normal money pays"
+      - "They're all completely tax-free — you never pay a cent of tax on that money"
+    answer: 2
+    explain: "Each account shields money from some tax — on the way in, on the growth, on the way out, or (for the HSA) all three. But only the HSA skips all three: a traditional 401(k) or IRA is tax-deferred, not tax-free — you pay on the way out."
   - q: "What's the usual first move, before funding anything else?"
     options:
-      - "Maxing the IRA"
-      - "Contributing enough to the 401(k) to get the full employer match"
+      - "Maxing out the IRA"
+      - "Maxing the HSA for its triple tax advantage"
       - "Opening an HSA regardless of health plan"
-    answer: 1
-    explain: "The match is an instant 100% return — the anchor's 4% earns $1,920 of free money a year (lesson 10.2). No other account can offer that, so it outranks everything."
+      - "Contributing enough to the 401(k) to get the full employer match"
+    answer: 3
+    explain: "The match is an instant 100% return — the anchor's 4% earns $1,920 of free money a year (lesson 10.2). No other account can offer that, so it outranks everything, even the HSA's triple break."
   - q: "Which account is the only one with a triple tax advantage?"
     options:
-      - "The Roth 401(k)"
       - "The HSA — pre-tax in, grows untaxed, tax-free out for qualified medical costs"
+      - "The Roth 401(k)"
+      - "The Roth IRA"
       - "The traditional IRA"
-    answer: 1
-    explain: "The HSA is the only account in the US tax code that skips tax at all three points (lesson 10.4) — but it requires being on a high-deductible health plan."
+    answer: 0
+    explain: "The HSA is the only account in the US tax code that skips tax at all three points (lesson 10.4) — but it requires being on a high-deductible health plan. A Roth is tax-free on the way out, but its contributions are already-taxed money going in."
   - q: "What are the 2026 contribution limits, in order: 401(k), IRA, HSA (self-only)?"
     options:
-      - "$24,500 / $7,500 / $4,400"
       - "$7,500 / $24,500 / $4,400"
+      - "$23,000 / $7,000 / $4,150"
+      - "$24,500 / $7,500 / $4,400"
       - "$16,100 / $2,500 / $3,400"
-    answer: 0
-    explain: "401(k): $24,500. IRA: $7,500. HSA self-only: $4,400. For a first-job budget these are ceilings to grow into, not targets to hit this year."
+    answer: 2
+    explain: "401(k): $24,500. IRA: $7,500. HSA self-only: $4,400. For a first-job budget these are ceilings to grow into, not targets to hit this year. (The $23,000/$7,000 figures were the 2024 limits.)"
 sources:
   - label: "IRS — 2026 retirement contribution limits (401(k) and IRA, Notice 2025-67)"
     url: "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"

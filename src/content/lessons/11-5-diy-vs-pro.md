@@ -7,37 +7,41 @@ title: "When to DIY vs. get a pro"
 summary: "One W-2 plus the standard deduction is a free, one-hour DIY filing; side income, multiple states, or big life changes are when paying a professional starts paying for itself — match the tool to the complexity."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Count your complexity flags for this year: side income or 1099s, multiple states, itemizing, a major life change (marriage, a home, big investment sales). Zero flags? Bookmark the IRS free-filing page and plan to DIY. One or more? Check whether VITA covers you for free before paying anyone."
 keepThis: "One W-2 + the standard deduction = free DIY filing in about an hour. Side income, multiple states, or big life changes are when a pro can pay for itself. Never pay for complexity you don't have."
 quiz:
   - q: "Your year was one W-2 job and the standard deduction. What's the sensible filing route?"
     options:
-      - "A paid professional — taxes are always risky"
       - "Free DIY filing — the IRS's free options walk you through it line by line"
+      - "A paid professional — taxes are always risky"
+      - "Paid tax software — free versions can't handle a W-2"
       - "Skip filing — simple returns don't need to be filed"
-    answer: 1
+    answer: 0
     explain: "That's the simplest return there is — the reconciliation from lesson 2.6. Free filing tools handle it in about an hour, and the IRS itself lists free ways to e-file."
   - q: "What is VITA?"
     options:
       - "A paid tax-software subscription"
-      - "An IRS-sponsored program offering free tax preparation help if you're income-qualified"
       - "A type of tax form for volunteers"
-    answer: 1
+      - "A federal tax credit for doing volunteer work"
+      - "An IRS-sponsored program offering free tax preparation help if you're income-qualified"
+    answer: 3
     explain: "Volunteer Income Tax Assistance — IRS-certified volunteers prepare returns for free for people under the income threshold, which covers many first-jobbers. Free help from a human, not just free software."
   - q: "Which of these years most justifies paying a professional?"
     options:
       - "One W-2 and some student loan interest"
-      - "Side income with quarterly estimates, plus moving between two states mid-year"
       - "One W-2 and a $300 charitable donation"
-    answer: 1
+      - "Side income with quarterly estimates, plus moving between two states mid-year"
+      - "One W-2 and taking the standard deduction"
+    answer: 2
     explain: "Each flag — self-employment income, estimated payments, part-year residency in two states — adds real rules and real mistakes to avoid. That's when a pro's fee can be smaller than the errors it prevents."
   - q: "What should actually drive the DIY-vs-pro decision?"
     options:
-      - "How scary the ads make filing sound"
       - "The complexity of your situation — the number of moving parts in your tax year"
+      - "How scary the ads make filing sound"
+      - "The size of the refund you're expecting"
       - "Whether your friends use a pro"
-    answer: 1
+    answer: 0
     explain: "Fear is the marketing; complexity is the reality. A simple return doesn't get safer by paying someone — it just gets more expensive."
 sources:
   - label: "IRS — E-file: do your taxes for free"

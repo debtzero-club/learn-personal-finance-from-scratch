@@ -6,13 +6,36 @@ interface Q {
   explain?: string;
 }
 const { questions = [] } = Astro.props as { questions: Q[] };
+
+// Shuffle each question's options at BUILD TIME (this frontmatter runs in Astro's
+// server render, not in the browser) so the rendered HTML varies where the correct
+// answer sits. The review found the right answer sat at option B in ~80–100% of the
+// course's questions — gameable without reading. A plain Fisher–Yates over an index
+// array lets us reorder `options` AND remap `answer` to wherever the correct option
+// lands, keeping the client contract intact (data-answer = correct index, each option
+// carries its own data-index). Math.random() is fine here: a static build runs this
+// once, so every `npm run build` reshuffles.
+function shuffleQuestion(item: Q): Q {
+  const n = item.options.length;
+  const order = Array.from({ length: n }, (_, i) => i);
+  for (let i = n - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return {
+    ...item,
+    options: order.map((i) => item.options[i]),
+    answer: order.indexOf(item.answer),
+  };
+}
+const shuffled: Q[] = questions.map(shuffleQuestion);
 ---
 
 {
-  questions.length > 0 && (
+  shuffled.length > 0 && (
     <section class="quiz">
       <h2>Check yourself</h2>
-      {questions.map((item, qi) => (
+      {shuffled.map((item, qi) => (
         <div class="quiz-q" data-answer={item.answer}>
           <p class="quiz-prompt">
             {qi + 1}. {item.q}
@@ -20,14 +43,14 @@ const { questions = [] } = Astro.props as { questions: Q[] };
           <ul class="quiz-options">
             {item.options.map((opt, oi) => (
               <li>
-                <button type="button" class="quiz-opt" data-index={oi}>
+                <button type="button" class="quiz-opt" data-index={oi} aria-pressed="false">
                   {opt}
                 </button>
               </li>
             ))}
           </ul>
           {item.explain && (
-            <p class="quiz-explain" hidden>
+            <p class="quiz-explain" aria-live="polite" hidden>
               {item.explain}
             </p>
           )}
@@ -37,18 +60,57 @@ const { questions = [] } = Astro.props as { questions: Q[] };
   )
 }
 
+<style is:global>
+  /* Visually-hidden correctness label injected on answered options. Correct/incorrect
+     is otherwise conveyed only by color (data-state), which screen readers can't see.
+     is:global because the span is client-created and lacks Astro's scoping attribute
+     (same pitfall as the calculator split-bars — see global.css). */
+  .quiz-sr-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
 <script>
   document.querySelectorAll<HTMLElement>('.quiz-q').forEach((q) => {
     const answer = Number(q.getAttribute('data-answer'));
     const explain = q.querySelector<HTMLElement>('.quiz-explain');
+    const setStatus = (button: Element, label: string) => {
+      let s = button.querySelector('.quiz-sr-status');
+      if (!s) {
+        s = document.createElement('span');
+        s.className = 'quiz-sr-status';
+        button.appendChild(s);
+      }
+      s.textContent = ` — ${label}`;
+    };
     q.querySelectorAll<HTMLButtonElement>('.quiz-opt').forEach((btn) => {
       btn.addEventListener('click', () => {
         const idx = Number(btn.getAttribute('data-index'));
-        q.querySelectorAll('.quiz-opt').forEach((b) => b.removeAttribute('data-state'));
-        btn.setAttribute('data-state', idx === answer ? 'correct' : 'wrong');
-        if (idx !== answer) {
+        const right = idx === answer;
+        q.querySelectorAll('.quiz-opt').forEach((b) => {
+          b.removeAttribute('data-state');
+          b.setAttribute('aria-pressed', 'false');
+          const s = b.querySelector('.quiz-sr-status');
+          if (s) s.remove();
+        });
+        btn.setAttribute('data-state', right ? 'correct' : 'wrong');
+        btn.setAttribute('aria-pressed', 'true');
+        setStatus(btn, right ? 'Correct' : 'Incorrect');
+        if (!right) {
           const correct = q.querySelector(`.quiz-opt[data-index="${answer}"]`);
-          if (correct) correct.setAttribute('data-state', 'correct');
+          if (correct) {
+            correct.setAttribute('data-state', 'correct');
+            setStatus(correct, 'Correct answer');
+          }
         }
         if (explain) explain.hidden = false;
       });
