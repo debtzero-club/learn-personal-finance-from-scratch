@@ -1,6 +1,8 @@
 /* Learn Personal Finance from Scratch — Toya brand theme.
-   Light + dark via prefers-color-scheme. Cool-neutral monochrome; green is
-   SEMANTIC only (links, progress, correct answers, checkmarks). */
+   Light + dark via prefers-color-scheme. FULLY monochrome like usetoya.com:
+   --accent equals --ink (founder decision 2026-07-08 — no green). States stay
+   distinguishable without color: charts use lightness + stripes, quiz wrong
+   answers use strikethrough (plus --warn, the one semantic non-neutral). */
 
 :root {
   --paper: #f7f8fa;
@@ -8,8 +10,8 @@
   --ink-soft: #5a6270;
   --line: #e4e7ec;
   --line-strong: #c8cdd5;
-  --accent: #12805c;
-  --accent-soft: #e4f3ec;
+  --accent: #0b0d10;
+  --accent-soft: #eef0f3;
   --warn: #b4541f;
   --card: #ffffff;
   --on-accent: #ffffff;
@@ -27,8 +29,8 @@
     --ink-soft: #a6adb8;
     --line: #22262d;
     --line-strong: #333944;
-    --accent: #2fbf71;
-    --accent-soft: #0f231b;
+    --accent: #e9ebee;
+    --accent-soft: #1a1e24;
     --warn: #d98a5a;
     --card: #12151b;
     --on-accent: #0b0d10;
@@ -51,6 +53,17 @@ body {
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* Monochrome links need a shape affordance, not just color: always underline
+   inside running text (lesson bodies, sources, footer). Chrome/nav links keep
+   their hover-underline behavior. */
+.lesson-body a:not(.glossary-link), .sources a, .site-footer a {
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+.lesson-body a:not(.glossary-link):hover, .sources a:hover, .site-footer a:hover {
+  text-decoration-color: var(--ink);
+}
 
 main { min-height: 60vh; }
 
