@@ -7,10 +7,10 @@ title: "How student loan interest works (and capitalization)"
 summary: "Federal student loans charge simple interest every single day — about $4.81 a day on a $27,000 balance — and capitalization is the moment unpaid interest joins your principal, turning the snowball from Phase 6 against you."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: compound
 doIt: "Look up your loan's current balance and rate (StudentAid.gov or your servicer's site) and run the daily-interest math: balance × rate ÷ 365. That's what every day of waiting costs. Write the number somewhere you'll see it."
-keepThis: "Daily interest = balance × rate ÷ 365 — about $4.81 a day on $27,000 at ~6.5%. Capitalization means unpaid interest joins your principal: one unpaid year turns $27,000 into $28,755, which costs about $114 more interest every year after, until the loan is gone."
+keepThis: "Capitalization is permanent: one unpaid year on a $27,000 loan locks in about $114 of extra interest every year after, so pay at least the interest during any pause if you can."
 quiz:
   - q: "How does interest accrue on a federal student loan?"
     options:

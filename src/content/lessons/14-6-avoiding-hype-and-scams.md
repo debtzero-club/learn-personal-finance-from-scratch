@@ -7,9 +7,9 @@ title: "Avoiding hype, scams, and \"get rich quick\""
 summary: "Now that you're an investor, the hype will find you — crypto moonshots, meme stocks, options plays, day-trading gurus — so here's the field guide: why each one is where beginners get burned, the scam red flags the FTC and SEC warn about, and the boring defense that beats them all."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Set one personal rule right now and write it where you'll see it: 'I don't act on any investment pitch the day I hear it — ever.' Every red flag in this lesson depends on urgency to work; a 24-hour rule disarms all of them at once. (And if a pitch is real, it'll still be real tomorrow.)"
-keepThis: "If it sounds too good to be true, it is. 'Guaranteed' high returns are the math of a scam, not a market — even 2% a week compounds to almost triple your money in a year, dwarfing the ~10% historical long-run stock average from 14.1. Hype (crypto, meme stocks, options, day trading) is where beginners get burned; pressure to act NOW, pay-by-crypto-or-gift-card, and influencer 'free money' are where they get robbed. Real investing is decades-boring on purpose."
+keepThis: "If a pitch guarantees returns anywhere near or above the ~10% long-run stock market average, it's not investing — it's a scam."
 quiz:
   - q: "Why do crypto, meme stocks, options, and day trading show up in this course only as risk categories?"
     options:

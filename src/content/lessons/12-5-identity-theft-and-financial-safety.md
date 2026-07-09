@@ -7,9 +7,9 @@ title: "Identity theft and your financial safety"
 summary: "What identity theft looks like from the money side (accounts you didn't open, bills for things you didn't buy), the free prevention layer you control — a credit freeze at all three bureaus — and the four-step response playbook that starts at IdentityTheft.gov."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Freeze your credit at all three bureaus today — Equifax, Experian, and TransUnion each offer a free online freeze that takes about ten minutes. Then save IdentityTheft.gov in your notes as the first stop if your money life ever shows something you don't recognize."
-keepThis: "Prevention: a credit freeze is free at all three bureaus, blocks new accounts in your name, never touches your score, and lifts anytime. Response: report at IdentityTheft.gov for a free recovery plan, freeze or fraud-alert, dispute the fraudulent accounts, document everything."
+keepThis: "Protecting your identity costs $0: freeze your credit at all three bureaus today, and if fraud happens anyway, report it immediately at IdentityTheft.gov."
 quiz:
   - q: "Which of these is a classic money-side sign of identity theft?"
     options:

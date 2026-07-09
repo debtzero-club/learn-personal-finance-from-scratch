@@ -7,7 +7,7 @@ title: "Renting: leases, deposits, roommates"
 summary: "A lease is a contract, a security deposit is your money held hostage to documentation, and one shared lease means every roommate owes all the rent — three things to understand before you sign, not after."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "On move-in day (or today, if you already live there), walk the unit and photograph every room, wall, appliance, and existing scratch or stain — timestamped. Email the photos to yourself and your landlord. That ten-minute album is the evidence that gets your deposit back."
 keepThis: "A lease is a contract — read every line before signing. The deposit comes back only if you can prove the unit's condition, so photograph everything at move-in. And on one shared lease, every roommate is legally on the hook for ALL the rent, not just their share."
 quiz:
@@ -86,7 +86,7 @@ The advertised rent is never the real number. Here's the true monthly cost of a 
 | --- | ---: |
 | Rent ($1,400 ÷ 2) | $700 |
 | Utilities + internet (~$180 ÷ 2) | $90 |
-| Renters insurance (your own policy — lesson 12.3) | $15 |
+| Renters insurance (illustrative, ~$10–20/mo — your own policy, lesson 12.3) | ~$15 |
 | **True monthly cost** | **~$805** |
 
 That's about **15% more than the $700** you had in your head — every month. And move-in week costs more still: first month's rent plus the security deposit (often another full month, so ~$700 more for your half) due before you get keys.
