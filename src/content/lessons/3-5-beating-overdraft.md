@@ -7,7 +7,7 @@ title: "Beating overdraft and the $35 coffee"
 summary: "Overdraft 'coverage' lets a $4 coffee trigger a $35 fee — but it's optional, and turning it off (plus a savings backup) takes the trap off the table."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "In your bank app or by calling your bank, opt OUT of debit-card overdraft coverage. Then, if your bank offers it, link your savings account as free overdraft backup. Two settings, a few minutes, done."
 keepThis: "Overdraft is opt-in, not mandatory. A $35 fee on a $4 purchase is an 875% surcharge — turn the coverage off and a declined card costs you $0 instead."
 quiz:
@@ -58,7 +58,7 @@ Two settings take the trap off the table:
 
 ## By the numbers
 
-Picture the worst version of an on day: three small taps clear while your balance is short.
+Picture the worst version of an off day: three small taps clear while your balance is short.
 
 | Purchase | Overdraft fee |
 |----------|---------------|

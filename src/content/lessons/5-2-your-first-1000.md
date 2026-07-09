@@ -7,7 +7,7 @@ title: "Your first $1,000 (the starter fund)"
 summary: "Before the full emergency fund, aim at one concrete, reachable target: a $1,000 starter fund that covers most everyday surprises — and proves to you that saving works."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Set a single automatic transfer to your emergency savings on payday — even $25 or $50 a check. Then forget about it. The automation does the saving so you don't have to decide every time (see lesson 4.4)."
 keepThis: "The first milestone is $1,000 — a starter fund that covers most everyday emergencies. At ~$167 a paycheck it's about six checks away; at $50 a check, a few months. Either way, it's reachable."
 quiz:
@@ -66,7 +66,7 @@ A **starter fund** is a smaller, concrete first milestone on the way to your ful
 
 ## By the numbers
 
-Remember the automation from lesson 4.4 — splitting your paycheck so a fixed amount goes straight to savings before you can touch it. On the anchor profile ($48,000 a year, paid biweekly), that was about **$167 of every paycheck.** Watch how fast a small, boring number adds up:
+Remember the automation from lesson 4.4 — splitting your paycheck so a fixed amount goes straight to savings before you can touch it. On the anchor profile ($48,000 a year, paid biweekly), that was a realistic starter amount of about **$167 of every paycheck** — roughly 10% of the check, about half of the full 20% saving bucket from lesson 4.2. Watch how fast a small, boring number adds up:
 
 | Paychecks | Saved at $167/check |
 | --- | --- |

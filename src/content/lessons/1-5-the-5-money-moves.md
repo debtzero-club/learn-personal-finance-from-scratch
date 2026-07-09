@@ -7,7 +7,7 @@ title: "The 5 money moves that matter most"
 summary: "The whole course in one map. Five moves, in order — do them roughly in this sequence and you're ahead of most people."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-07"
+lastReviewed: "2026-07-08"
 doIt: "Find which of the 5 moves you're currently on. That's your starting line — and it tells you which phase of this course matters most for you right now."
 keepThis: "The order of operations: (1) starter $1,000, (2) grab the full 401(k) match, (3) kill high-interest debt, (4) 3–6 month emergency fund, (5) invest for the long term."
 quiz:
@@ -17,7 +17,7 @@ quiz:
       - "Grab the full employer match, then attack the 24% debt"
       - "Ignore both and save in checking"
     answer: 1
-    explain: "The match is an instant ~100% return (free money), so capture it — then high-interest debt is the next best 'return' you can get, guaranteed."
+    explain: "The match is an instant ~50–100% return (free money), so capture it — then high-interest debt is the next best 'return' you can get, guaranteed."
   - q: "Where does long-term investing fall in the order?"
     options:
       - "First — it's the most important"
@@ -38,7 +38,7 @@ There's so much money advice that the real problem isn't *information* — it's 
 Five moves, roughly in this sequence. "Roughly" because life isn't tidy — but this order is what most experts converge on, and it's built around one principle: **always take the highest guaranteed return first.**
 
 1. **Build a tiny starter cushion (~$1,000).** Before anything fancy, get a small buffer so the next flat tire doesn't become a new credit card balance. *(Phase 5)*
-2. **Grab the full employer 401(k) match.** If your job matches retirement contributions, that's an instant ~100% return — the best deal in finance. Contribute at least enough to get all of it. *(Phase 10)*
+2. **Grab the full employer 401(k) match.** If your job matches retirement contributions, that's an instant ~50–100% return — one of the best deals in finance. Contribute at least enough to get all of it. *(Phase 10)*
 3. **Kill high-interest debt.** Credit cards at 20–29% are a financial emergency. Paying them off is a *guaranteed* return equal to the interest rate — better than almost any investment. *(Phases 7 & 8)*
 4. **Grow the emergency fund to 3–6 months of expenses.** Now build the real safety net so a job loss isn't a catastrophe. *(Phase 5)*
 5. **Invest for the long term.** With the cushion built and toxic debt gone, put money to work — index funds, retirement accounts, time. *(Phase 14)*

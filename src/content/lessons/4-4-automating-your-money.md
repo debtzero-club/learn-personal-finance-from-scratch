@@ -7,7 +7,7 @@ title: "Automating your money so willpower isn't the plan"
 summary: "Set your savings and bills to move on their own — split direct deposit, auto-transfers, autopay — so the right thing happens every payday whether you remember it or not."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Set up one automatic transfer this week: have a fixed amount move from checking to savings the day after each paycheck lands. Start small if you need to — automating $25 beats meaning to save $200."
 keepThis: "Automation beats willpower. The money move you set up once happens every payday, even on the weeks you forget it exists."
 quiz:
@@ -39,7 +39,7 @@ sources:
 
 ## The situation
 
-You know you should save. You even know how much (the 20% from lesson 4.2) and when (payday, lesson 4.3). But "remember to log in and move $679 every two weeks" is a plan that depends on you being disciplined forever — and nobody is. So the move that needs to happen reliably is left to the part of you that's tired, busy, and easily distracted.
+You know you should save. You even know how much (the 20% from lesson 4.2) and when (payday, lesson 4.3). But "remember to log in and move $313 every two weeks" is a plan that depends on you being disciplined forever — and nobody is. So the move that needs to happen reliably is left to the part of you that's tired, busy, and easily distracted.
 
 ## The idea
 
@@ -57,13 +57,13 @@ One caution: automation is strong, not psychic. If your checking runs dry the da
 
 ## By the numbers
 
-Take the anchor profile: $48,000 a year, paid biweekly, about **$1,567 in take-home per paycheck.** Suppose you decide to send a clean **$167 of every check straight to savings** (that's roughly the 20% saving bucket, spread per paycheck). Here's the split:
+Take the anchor profile: $48,000 a year, paid biweekly, about **$1,567 in take-home per paycheck.** Suppose you decide to send a clean **$167 of every check straight to savings.** That's roughly **10% of the check — about half of the full 20% saving bucket from lesson 4.2** (which works out to about **$313 a check**). It's not the whole target yet, but it's a realistic starting point you can actually stick to. Here's the split:
 
 | Where it goes | Per paycheck |
 |---------------|--------------|
 | Checking (what you live on) | **$1,400** |
 | Savings (auto, untouched) | **$167** |
 
-You set that split **once.** Then it just runs. Over a year — 26 paychecks — that quiet $167 becomes about **$4,300 in savings** without a single act of monthly discipline. You didn't have to feel motivated 26 times. You had to set it up once.
+You set that split **once.** Then it just runs. Over a year — 26 paychecks — that quiet $167 becomes about **$4,300 in savings** without a single act of monthly discipline. You didn't have to feel motivated 26 times. You had to set it up once. When you're ready to hit the full 20% bucket, bump the transfer up toward $313 a check — same automation, just a bigger number.
 
 That's the whole trick: willpower is a terrible savings plan, but it's a great *one-time* setup tool. Spend it on the setup, then let the automation carry the rest.

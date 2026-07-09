@@ -7,7 +7,7 @@ title: "Debit vs. credit — what's really happening"
 summary: "A debit card spends your own money; a credit card borrows the bank's — and when fraud hits, those two cards protect you very differently."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Check which of your cards is debit and which is credit (it's usually printed on the front). For online and travel purchases — where fraud risk is higher — lean on the card with the stronger protection."
 keepThis: "Debit spends your money now; credit borrows and bills you later. If a card number gets stolen, credit fraud is the bank's money to chase — debit fraud is your checking account that gets drained first."
 quiz:
@@ -55,7 +55,7 @@ The difference you can feel today is **fraud protection.** They're not the same:
 |----------------------------------|-----------|-------------|
 | Whose money is spent? | **Yours** — straight out of checking | **The bank's** — it's a loan |
 | Risk while you sort it out | Rent/bills can bounce on a drained balance | Your cash is untouched |
-| Your legal liability | Capped — but smaller and faster if you report quickly | Capped at **$50**, and often **$0** in practice |
+| Your legal liability | **$50** if you report within 2 business days, up to **$500** within 60 — potentially everything after that | Capped at **$50**, and often **$0** in practice |
 
 The pattern: **with credit fraud, it's the bank's money on the line and yours stays safe; with debit fraud, your real checking balance gets emptied first and you wait to get it back.**
 

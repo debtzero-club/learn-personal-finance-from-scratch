@@ -7,7 +7,7 @@ title: "The account fees quietly draining you"
 summary: "Monthly maintenance, ATM, and minimum-balance fees add up to real money every year — and fee-free accounts exist, so you never have to pay them."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Pull up your last bank statement and search it for the words 'fee,' 'service charge,' and 'maintenance.' Add up everything you find. That total is money you can almost certainly stop paying."
 keepThis: "A $12/month maintenance fee is $144 a year — for nothing. Fee-free checking accounts exist, so a fee is a choice you can opt out of."
 quiz:
@@ -64,4 +64,4 @@ Let's price out one common combo for someone earning around the $48,000 single-f
 | One minimum-balance slip | $25 × 2 | **$50** |
 | **Total** | | **$278/yr** |
 
-That's most of a whole paycheck — gone, every year, to fees you can opt out of by switching to a fee-free account. Setting up a no-fee account takes an afternoon and pays you back $278 a year, every year. Few money moves are that cheap or that permanent.
+That's nearly a fifth of a paycheck — gone, every year, to fees you can opt out of by switching to a fee-free account. Setting up a no-fee account takes an afternoon and pays you back $278 a year, every year. Few money moves are that cheap or that permanent.
