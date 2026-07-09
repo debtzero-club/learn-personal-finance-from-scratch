@@ -332,46 +332,8 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
     gap: 0.3rem;
     margin: 0 0 0.6rem;
   }
-  .split-bar {
-    display: flex;
-    height: 1.4rem;
-    width: 100%;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .split-seg {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: width 0.3s ease;
-  }
-  .split-seg--principal { background: var(--line-strong); }
-  .split-seg--interest {
-    background: var(--accent);
-    /* Diagonal stripe so the two segments are distinguishable WITHOUT color
-       (grayscale / colorblind). The data table is the canonical encoding. */
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent 0,
-      transparent 5px,
-      rgba(255, 255, 255, 0.28) 5px,
-      rgba(255, 255, 255, 0.28) 8px
-    );
-  }
-  .seg-text {
-    font-family: var(--font-mono);
-    font-size: 0.66rem;
-    padding: 0 0.4rem;
-    color: var(--paper);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  /* Principal segments sit on --line-strong; var(--paper) there is ~1.58:1.
-     Use ink for readable labels (interest segments keep paper on --accent). */
-  .split-seg--principal .seg-text { color: var(--ink); }
+  /* .split-bar / .split-seg / .seg-text live in global.css (unscoped): the client
+     re-render rebuilds them via innerHTML without Astro's scoping attribute. */
 
   .cc-legend {
     display: flex;
@@ -404,37 +366,11 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
     overflow-x: auto;
     margin: 0 0 0.8rem;
   }
-  .cc-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.92rem;
-  }
-  .cc-table th,
-  .cc-table td {
-    border: 1px solid var(--line);
-    padding: 0.4rem 0.6rem;
-    text-align: left;
-  }
-  .cc-table th {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .cc-table td.num {
-    font-family: var(--font-mono);
-    text-align: right;
-  }
+  /* .cc-table also lives in global.css (tbody rows are client-rebuilt). */
 
   .cc-caption {
     margin: 0;
     font-size: 0.92rem;
     color: var(--ink-soft);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .split-seg { transition: none; }
   }
 </style>

@@ -148,6 +148,77 @@ main { min-height: 60vh; }
   }
 }
 
+/* ---------- calculator island shared primitives ----------
+   UNSCOPED on purpose: the Compound/Amortization islands rebuild these nodes via
+   innerHTML on every input, which drops Astro's data-astro-cid scoping attribute —
+   scoped copies of these rules can never match the client-rendered DOM. */
+.split-bar {
+  display: flex;
+  height: 1.4rem;
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.split-seg {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+.split-seg--principal { background: var(--line-strong); }
+.split-seg--interest {
+  background: var(--accent);
+  /* Diagonal stripe so the two segments are distinguishable WITHOUT color
+     (grayscale / colorblind). The data table is the canonical encoding. */
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 5px,
+    rgba(255, 255, 255, 0.28) 5px,
+    rgba(255, 255, 255, 0.28) 8px
+  );
+}
+.seg-text {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  padding: 0 0.4rem;
+  color: var(--paper);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+/* Principal segments sit on --line-strong; var(--paper) there is ~1.58:1.
+   Use ink for readable labels (interest segments keep paper on --accent). */
+.split-seg--principal .seg-text { color: var(--ink); }
+.cc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.cc-table th,
+.cc-table td {
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.cc-table th {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.cc-table td.num {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+@media (prefers-reduced-motion: reduce) {
+  .split-seg { transition: none; }
+}
+
 .do-it, .keep-this, .quiz, .sources { margin: 2rem 0; padding: 1.1rem 1.2rem; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
 .do-it { border-left: 4px solid var(--accent); background: var(--accent-soft); }
 .keep-this { border-left: 4px solid var(--line-strong); }
