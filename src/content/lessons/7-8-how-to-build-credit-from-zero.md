@@ -7,7 +7,7 @@ title: "How to build credit from zero"
 summary: "If you have no credit history, you can start one with tools built for exactly that — a secured card, becoming an authorized user, or a credit-builder loan — and then the same two habits do the rest: pay on time, keep balances low."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Pick one starting tool that fits your situation — a secured card, becoming an authorized user on a trusted family member's card, or a credit-builder loan from a credit union — and look into the specifics this week."
 keepThis: "You build credit from zero with a starter tool (secured card, authorized-user status, or credit-builder loan), then on-time payments and low utilization do the work over time. There's no shortcut — credit is built with consistency, not speed."
 quiz:
@@ -46,10 +46,8 @@ quiz:
 sources:
   - label: "CFPB — How do I get and keep a good credit score?"
     url: "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/"
-  - label: "CFPB — What is a secured credit card?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-credit-card-en-1571/"
-  - label: "CFPB — Building credit from scratch"
-    url: "https://www.consumerfinance.gov/about-us/blog/how-establish-build-credit-history/"
+  - label: "CFPB — What are some ways to start or rebuild a good credit history?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-are-some-ways-to-start-or-rebuild-a-good-credit-history-en-2155/"
 ---
 
 ## The situation

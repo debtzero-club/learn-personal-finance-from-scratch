@@ -48,8 +48,8 @@ sources:
     url: "https://www.identitytheft.gov/"
   - label: "FTC — What To Know About Identity Theft"
     url: "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
-  - label: "FTC — What To Know About Credit Freezes and Fraud Alerts"
-    url: "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts"
+  - label: "FTC — Credit freezes and fraud alerts"
+    url: "https://consumer.ftc.gov/articles/credit-freezes-and-fraud-alerts"
 ---
 
 ## The situation

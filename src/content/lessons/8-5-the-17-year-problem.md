@@ -46,9 +46,9 @@ quiz:
     explain: "This course only quotes numbers it can show you live in a calculator. 17 years is bad enough on its own — there's no need to reach for a bigger, unverifiable myth to make the point."
 sources:
   - label: "CFPB — A box on my credit card bill says I'll pay off the balance in three years..."
-    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-this-mean-en-1427/"
-  - label: "CFPB — How is my credit card interest calculated?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-is-my-credit-card-interest-calculated-en-44/"
+    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/"
+  - label: "CFPB — How does my credit card company calculate the amount of interest I owe?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
   - label: "CFPB — Regulation Z, Appendix M1 (Repayment Disclosures)"
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1026/m1/"
 ---

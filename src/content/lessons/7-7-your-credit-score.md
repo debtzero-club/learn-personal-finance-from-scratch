@@ -7,7 +7,7 @@ title: "Your credit score: what actually moves it"
 summary: "A credit score is a number lenders use to judge your reliability, and it's driven mostly by two things: paying on time and not using too much of your available credit."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Find your credit score for free — many banks and card apps show it on the dashboard, no cost or hard inquiry. Then notice which of the factors below you can already influence this month."
 keepThis: "Two factors do most of the work in a credit score: payment history (paying on time) and credit utilization (how much of your available credit you're using — keep it well under 30%). Length of history, credit mix, and new inquiries matter less."
 quiz:
@@ -46,10 +46,10 @@ quiz:
 sources:
   - label: "CFPB — What is a credit score?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/"
-  - label: "CFPB — What affects my credit scores?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-affects-my-credit-scores-en-319/"
-  - label: "CFPB — Credit utilization and your credit score"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-should-i-keep-my-credit-card-balance-below-to-keep-my-credit-score-strong-en-1781/"
+  - label: "CFPB — How do I get and keep a good credit score?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/"
+  - label: "CFPB — Will paying off my credit card balance every month improve my credit score?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/will-paying-off-my-credit-card-balance-every-month-improve-my-score-en-1293/"
 ---
 
 ## The situation

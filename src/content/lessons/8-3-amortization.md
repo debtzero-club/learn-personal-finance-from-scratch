@@ -7,7 +7,7 @@ title: "Amortization — why your early payments are almost all interest"
 summary: "Your loan payment is the same every month, but how it splits isn't: on the $20,000 auto loan, payment one is $116.67 interest and only $279.35 principal — early payments barely dent the balance, and the split-bar shows exactly why."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: amortization
 doIt: "Pull up your own loan's amortization schedule (your lender almost always has one online). Look at payment one vs. a payment near the end. Seeing how much of an early payment is interest is the fastest way to understand why paying extra early matters so much."
 keepThis: "Amortization means your fixed payment is split between interest and principal — and the split shifts. On the $20,000 loan, payment one is $116.67 interest / $279.35 principal; late payments flip to almost all principal. Early payments barely touch the balance, which is exactly why extra payments early are so powerful."
@@ -45,8 +45,8 @@ quiz:
     answer: 1
     explain: "An extra dollar early reduces the balance immediately, which lowers next month's interest, which means more of every future payment hits principal. Early extra payments compound in your favor — the topic of lesson 8.7."
 sources:
-  - label: "CFPB — What is amortization?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-amortization-en-101/"
+  - label: "CFPB — What is amortization and how could it affect my auto loan?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-amortization-and-how-could-it-affect-my-auto-loan-en-771/"
   - label: "CFPB — Understanding the costs of an auto loan"
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---

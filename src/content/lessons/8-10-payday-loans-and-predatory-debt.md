@@ -6,7 +6,7 @@ order: 10
 title: "Payday loans & predatory debt — what to avoid and why"
 summary: "Payday loans, car-title loans, and similar products charge triple-digit APRs and are built so most borrowers can't repay on time — they roll the debt over, fee after fee. Knowing the warning signs (and the cheaper alternatives) is how you stay out of the trap."
 status: complete
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "If you're ever tempted by a payday or title loan, stop and look at the APR, not the flat fee. A '$15 per $100 for two weeks' fee is about 400% APR. Then check the alternatives below first — almost anything beats it."
 keepThis: "Payday and car-title loans charge triple-digit APRs (a typical payday loan is around 400% APR) and are designed around rollovers, so a short-term fix becomes a months-long debt. The warning signs: a flat fee hiding a huge APR, no real check that you can repay, and access to your bank account or car title. Try every alternative first."
 quiz:
@@ -45,8 +45,8 @@ quiz:
 sources:
   - label: "CFPB — What is a payday loan?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-payday-loan-en-1567/"
-  - label: "CFPB — What is a car title loan?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-car-title-loan-en-1567/"
+  - label: "CFPB — Research finds one-in-five auto title loan borrowers have their vehicle seized"
+    url: "https://www.consumerfinance.gov/about-us/blog/research-finds-one-five-auto-title-loan-borrowers-have-their-vehicle-seized/"
   - label: "CFPB — Payday loans and consumer protection"
     url: "https://www.consumerfinance.gov/consumer-tools/payday-loans/"
 ---

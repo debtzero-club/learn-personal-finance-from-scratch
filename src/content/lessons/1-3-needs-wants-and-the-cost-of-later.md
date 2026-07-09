@@ -7,7 +7,7 @@ title: "Needs, wants, and the cost of \"later\""
 summary: "The two most useful money habits a beginner can build: telling needs from wants, and seeing the hidden cost of every dollar you spend."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-07"
+lastReviewed: "2026-07-08"
 doIt: "Look at your last 5 purchases. Label each one N (need) or W (want). No judgment — just notice the split. Awareness is the whole exercise."
 keepThis: "Every dollar has a second price: what it could have done instead (opportunity cost). You don't have to cut all wants — you just have to spend them on purpose."
 quiz:
@@ -25,8 +25,8 @@ quiz:
     answer: 1
     explain: "A want you chose on purpose is fine. The trap is the want you didn't even notice you were buying."
 sources:
-  - label: "CFPB — Making a budget"
-    url: "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget/"
+  - label: "CFPB — Budgeting: How to create a budget and stick with it"
+    url: "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
 ---
 
 ## The situation

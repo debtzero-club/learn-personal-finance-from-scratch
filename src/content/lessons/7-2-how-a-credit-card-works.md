@@ -7,7 +7,7 @@ title: "How a credit card actually works (statement, balance, due date)"
 summary: "A credit card runs on a monthly cycle: you spend, then once a month it freezes a statement showing what you owe, and you get a few weeks to pay before interest can kick in."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Open your card's app or last statement and find three dates: when the statement closed, the due date, and the statement balance. Knowing those three things is the whole game."
 keepThis: "A credit card cycles monthly: it closes a statement showing your statement balance, then gives you until the due date to pay. Pay the full statement balance every cycle and you stay in the free zone; pay less and you become a 'revolver' who gets charged interest."
 quiz:
@@ -46,8 +46,8 @@ quiz:
 sources:
   - label: "CFPB — What does it mean if a credit card has a grace period?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/"
-  - label: "CFPB — How is my credit card interest calculated?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-is-my-credit-card-interest-calculated-en-44/"
+  - label: "CFPB — How does my credit card company calculate the amount of interest I owe?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
 ---
 
 ## The situation

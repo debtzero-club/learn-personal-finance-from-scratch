@@ -45,10 +45,10 @@ quiz:
     answer: 1
     explain: "Compounding rewards time more than anything. Try it in the calculator: pushing the years out makes a far bigger difference at the end than small changes elsewhere. Starting early is the cheat code."
 sources:
-  - label: "CFPB — What is compound interest?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-compound-interest-en-1809/"
-  - label: "FINRA — The power of compound interest (start early)"
-    url: "https://www.finra.org/investors/insights/power-compound-interest"
+  - label: "CFPB — How does compound interest work?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/"
+  - label: "SEC Investor.gov — Compound interest calculator"
+    url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
 ---
 
 ## The situation

@@ -7,7 +7,7 @@ title: "Setting a money goal you'll actually hit"
 summary: "Vague goals like 'save more' quietly fail. A good goal has a number, a deadline, and an automatic first step."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-07"
+lastReviewed: "2026-07-08"
 doIt: "Write one money goal in this exact shape: \"$____ for ____ by ____.\" Example: \"$1,000 emergency fund by next March.\" Keep it where you'll see it."
 keepThis: "A goal needs a number + a date, or it's just a wish. Then shrink the first step until it's almost too easy to skip."
 quiz:
@@ -26,8 +26,8 @@ quiz:
     answer: 1
     explain: "A tiny, automatic first step (even $10/week) builds the habit. You can always increase it — but only if you start."
 sources:
-  - label: "CFPB — Setting financial goals"
-    url: "https://www.consumerfinance.gov/an-illustrated-financial-guide/"
+  - label: "CFPB — Set a goal and start a savings habit"
+    url: "https://www.consumerfinance.gov/about-us/blog/set-a-goal-and-start-a-savings-habit/"
 ---
 
 ## The situation

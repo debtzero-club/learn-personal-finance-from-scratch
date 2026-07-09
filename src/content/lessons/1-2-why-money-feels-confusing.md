@@ -7,7 +7,7 @@ title: "Why money feels confusing — and why it's not your fault"
 summary: "The reason money feels overwhelming isn't a you problem. It's a system that never taught you and profits from the confusion."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-07"
+lastReviewed: "2026-07-08"
 doIt: "Write down the one money thing that stresses you out most right now (debt, no savings, taxes, just not knowing). Keep it somewhere — a future lesson will tackle it directly."
 keepThis: "Confusion about money is the default, not a personal failing. The fog clears one small concept at a time — and you only need a handful of them."
 quiz:
@@ -25,7 +25,7 @@ quiz:
     explain: "Plenty of fine print exists because clarity would cost the company money. Naming that is the first step to not getting caught by it."
 sources:
   - label: "FINRA Foundation — National Financial Capability Study"
-    url: "https://finrafoundation.org/knowledge-we-gain-share/nfcs"
+    url: "https://www.finrafoundation.org/national-financial-capability-study"
 ---
 
 ## The situation

@@ -7,7 +7,7 @@ title: "The two faces of compounding: friend when saving, enemy in debt"
 summary: "The exact engine that snowballs your savings is the same one that snowballs your debt — so the goal is simple: get compounding working for you, and stop it from working against you."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Name your two faces: write down one place compounding is working FOR you (a savings account) and one place it's working AGAINST you (any balance you carry). Seeing both on one page is the whole point of this phase."
 keepThis: "Compounding is one engine with two faces: a friend on your savings, an enemy on your debt. Every dollar of high-rate debt you kill flips a dollar from the enemy side to the friend side. That's why paying off costly debt is one of the best 'returns' there is."
 quiz:
@@ -44,8 +44,8 @@ quiz:
     answer: 1
     explain: "That's the entire game. Put the snowball on your side (saving) and take it off the other side (high-rate debt). Everything in the next phases is a tool for doing exactly that."
 sources:
-  - label: "CFPB — What is compound interest?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-compound-interest-en-1809/"
+  - label: "CFPB — How does compound interest work?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/"
 ---
 
 ## The situation

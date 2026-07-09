@@ -7,7 +7,7 @@ title: "Fixed vs. variable rates — what changes, and when it bites"
 summary: "A fixed rate stays put for the life of the loan or account; a variable rate moves up and down with an index — so a variable rate can quietly cost you more when rates rise."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Pull up one account or loan and find whether its rate is fixed or variable — it's on the agreement, often near the APR. If it says 'variable,' you now know your payment can change without you doing anything."
 keepThis: "Fixed = locked for the whole term; predictable. Variable = tied to an index, so it can rise or fall. Almost every credit card is variable — which is why a card's rate can climb even when you did nothing wrong."
 quiz:
@@ -44,8 +44,8 @@ quiz:
     answer: 1
     explain: "Predictability has value. A fixed rate means your cost is locked, so a rising-rate environment can't surprise you. You trade a possibly-lower starting rate for certainty."
 sources:
-  - label: "CFPB — What is a variable interest rate? (credit cards)"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-variable-interest-rate-and-how-can-it-affect-my-credit-card-balance-en-43/"
+  - label: "CFPB — What is the difference between a fixed APR and a variable APR?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/"
 ---
 
 ## The situation

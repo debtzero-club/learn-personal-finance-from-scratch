@@ -6,7 +6,7 @@ order: 11
 title: "Dealing with debt in collections"
 summary: "If a debt goes to collections, you have real legal rights: the collector must prove the debt is yours, can't harass or threaten you, and must stop contact if you ask in writing. Knowing those rights — and asking for written validation first — turns a scary call into a manageable process."
 status: complete
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "If a collector contacts you, don't admit to or pay anything on the first call. Within 30 days, send a written request for debt validation — proof the debt is yours and the amount is right. Keep copies of everything."
 keepThis: "In collections you have rights under federal law (the FDCPA): the collector must validate the debt in writing if you ask within 30 days, can't harass or threaten you, can't call at unreasonable hours, and must stop contact if you request it in writing. Always get validation before paying anything."
 quiz:
@@ -45,8 +45,8 @@ quiz:
 sources:
   - label: "CFPB — What should I do when a debt collector contacts me?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-when-a-debt-collector-contacts-me-en-1695/"
-  - label: "CFPB — What is a debt validation notice?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-validation-notice-en-2109/"
+  - label: "CFPB — What information does a debt collector have to give me about the debt they're trying to collect from me?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/"
   - label: "CFPB — Debt collection key terms and your rights"
     url: "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
 ---

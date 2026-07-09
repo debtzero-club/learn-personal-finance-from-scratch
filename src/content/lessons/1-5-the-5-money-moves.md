@@ -25,8 +25,10 @@ quiz:
     answer: 1
     explain: "Investing is powerful, but a cushion and clearing high-interest debt come first. A 24% debt beats almost any investment return."
 sources:
-  - label: "Bankrate — Financial order of operations"
-    url: "https://www.bankrate.com/investing/financial-order-of-operations/"
+  - label: "CFPB — How to save for emergencies and the future"
+    url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
+  - label: "CFPB — An essential guide to building an emergency fund"
+    url: "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
 ---
 
 ## The situation

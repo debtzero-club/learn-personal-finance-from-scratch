@@ -6,7 +6,7 @@ order: 6
 title: "Avalanche vs. snowball — two ways to pay it down"
 summary: "When you owe on several debts, two methods compete: avalanche (highest rate first) saves the most money, while snowball (smallest balance first) gives you a faster first win. On the sample debts, avalanche saves $99.57 — but snowball clears the first debt sooner, and there's no single right answer."
 status: complete
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: payoff
 doIt: "List your debts. Order them two ways — by interest rate (highest first) and by balance (smallest first). Pick the order you'll actually stick with: the math-best plan only wins if you keep going."
 keepThis: "Avalanche (highest APR first) pays the least interest; snowball (smallest balance first) gives the fastest first win for motivation. On the sample set, avalanche costs $2,209.33 vs snowball's $2,308.90 — avalanche saves $99.57, but snowball clears the first debt sooner. The best method is the one you'll finish."
@@ -47,7 +47,7 @@ sources:
   - label: "CFPB — How to reduce your debt"
     url: "https://www.consumerfinance.gov/about-us/blog/how-reduce-your-debt/"
   - label: "CFPB — A box on my credit card bill says I'll pay off the balance in three years..."
-    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-this-mean-en-1427/"
+    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/"
 ---
 
 ## The situation

@@ -44,8 +44,8 @@ quiz:
     answer: 1
     explain: "Fast doubling is wonderful when you're earning it and painful when you're paying it. Same math, opposite feelings, depending on which side of the rate you're on."
 sources:
-  - label: "FINRA — The Rule of 72 (compounding and the time it takes money to double)"
-    url: "https://www.finra.org/investors/insights/comparing-rule-72-rule-114-and-rule-144"
+  - label: "SEC Investor.gov — What is compound interest? (includes the Rule of 72)"
+    url: "https://www.investor.gov/additional-resources/information/youth/teachers-classroom-resources/what-compound-interest"
 ---
 
 ## The situation

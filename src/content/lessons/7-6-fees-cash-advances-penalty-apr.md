@@ -7,7 +7,7 @@ title: "Fees, cash advances & penalty APR — the expensive fine print"
 summary: "Beyond regular interest, cards carry traps in the fine print: cash advances that start charging interest the instant you take them, late fees, and a penalty APR that can jack your rate up after a single missed payment."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Pull up your card's terms (the 'Schedule of Fees' or cardholder agreement) and find three things: the cash-advance APR, the late-payment fee, and whether there's a penalty APR. Knowing they exist is how you avoid them."
 keepThis: "Cash advances skip the grace period — interest starts the moment you take the cash, often at a higher APR. A single late payment can trigger a penalty APR (often around 29.99%) on your balance. The fine print is where cards get expensive fast."
 quiz:
@@ -44,12 +44,14 @@ quiz:
     answer: 1
     explain: "The penalty APR is triggered by late payments, so autopay (even just for the minimum, as a safety net) is the simplest guard. On-time payments keep you out of penalty territory entirely."
 sources:
-  - label: "CFPB — What fees do credit cards charge?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-fees-do-credit-cards-typically-charge-en-44/"
-  - label: "CFPB — What is a cash advance?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-cash-advance-en-44/"
+  - label: "CFPB — When can my credit card company increase my interest rate?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/when-can-my-credit-card-company-increase-my-interest-rate-what-can-i-do-to-get-the-rate-back-down-en-69/"
+  - label: "CFPB — Cash advances (withdrawing money from your credit card)"
+    url: "https://www.consumerfinance.gov/ask-cfpb/can-i-withdraw-money-from-my-credit-card-at-an-atm-en-34/"
   - label: "CFPB — What does it mean if a credit card has a grace period?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/"
+  - label: "CFPB — Credit card answers"
+    url: "https://www.consumerfinance.gov/consumer-tools/credit-cards/answers/"
 ---
 
 ## The situation

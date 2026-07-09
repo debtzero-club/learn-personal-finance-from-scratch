@@ -43,7 +43,7 @@ sources:
   - label: "IRS — Topic No. 751, Social Security and Medicare withholding rates"
     url: "https://www.irs.gov/taxtopics/tc751"
   - label: "SSA — Retirement benefits (what Social Security funds)"
-    url: "https://www.ssa.gov/benefits/retirement/"
+    url: "https://www.ssa.gov/retirement"
 figures:
   - socialSecurityWageBase
   - socialSecurityEmployeeRate

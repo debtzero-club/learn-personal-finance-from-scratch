@@ -7,7 +7,7 @@ title: "The minimum-payment trap — how it's calculated and why it keeps you pa
 summary: "The minimum payment is designed to barely dent your balance — paying only the minimum on a $5,000 card at 24% keeps you in debt for 201 months and costs $8,441.70 in interest, more than the original balance."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: min-payment
 doIt: "On your own card, find the minimum payment and the full balance. Then promise yourself one rule: always pay more than the minimum. Even a little extra above it cuts years off the trap."
 keepThis: "Paying only the minimum on $5,000 at 24% APR takes 201 months (about 17 years) and costs $8,441.70 in interest — you'd pay back about $13,441.70 for a $5,000 balance. The minimum is the slowest, most expensive way out."
@@ -54,9 +54,9 @@ quiz:
     explain: "Anything above the minimum goes straight at the principal, and it compounds in your favor. Try it in the calculator: a fixed payment a bit above the minimum collapses both the years and the interest."
 sources:
   - label: "CFPB — A box on my credit card bill says I'll pay off the balance in three years..."
-    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-this-mean-en-1427/"
-  - label: "CFPB — How is my credit card interest calculated?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-is-my-credit-card-interest-calculated-en-44/"
+    url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/"
+  - label: "CFPB — How does my credit card company calculate the amount of interest I owe?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
   - label: "CFPB — Regulation Z, Appendix M1 (Repayment Disclosures)"
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1026/m1/"
 ---

@@ -6,7 +6,7 @@ order: 12
 title: "Staying out of debt for good"
 summary: "Getting out of debt is half the battle; staying out is the other half. The same two habits from earlier phases — an emergency fund and a working budget — are what keep a one-time payoff from becoming a cycle, by covering the surprises that send people back to the cards."
 status: complete
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Once a debt is paid off, redirect its old payment somewhere on purpose — into your emergency fund first, then toward savings or the next goal. Don't let it quietly become extra spending. Automate the transfer the same day the debt clears."
 keepThis: "Stay out of debt by building the emergency fund (Phase 5) that covers surprises, running a budget (Phase 4) so spending fits your income, and redirecting each cleared debt's payment on purpose. Most debt cycles restart from an unplanned expense — a funded buffer is what breaks the loop."
 quiz:
@@ -46,7 +46,7 @@ sources:
   - label: "CFPB — How to reduce your debt"
     url: "https://www.consumerfinance.gov/about-us/blog/how-reduce-your-debt/"
   - label: "FINRA Foundation — Managing debt and building financial capability"
-    url: "https://www.finrafoundation.org/knowledge-we-gain-share/nfcs"
+    url: "https://www.finrafoundation.org/national-financial-capability-study"
 ---
 
 ## The situation

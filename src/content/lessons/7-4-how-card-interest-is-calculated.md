@@ -7,7 +7,7 @@ title: "How card interest is calculated (APR → daily rate → average daily ba
 summary: "Card interest isn't one yearly charge — it's your APR split into a tiny daily rate, applied to the average balance you carried each day of the cycle, which is why a $5,000 balance costs about $98.63 a month."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: card-interest
 doIt: "Find your card's APR (it's on your statement). Divide it by 365 to see your daily rate, then play with the calculator below to watch what your real average balance costs you each month."
 keepThis: "Card interest = your average daily balance × (APR ÷ 365) × days in the cycle. A $5,000 balance at 24% APR costs about $98.63 every single month it sits there — roughly $1,184 a year just to carry it."
@@ -45,8 +45,8 @@ quiz:
     answer: 1
     explain: "Interest is charged on the average daily balance. Pay some off partway through and your balance is lower for the remaining days, which pulls the average down — and a lower average means less interest. Paying earlier in the cycle helps more."
 sources:
-  - label: "CFPB — How is my credit card interest calculated?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-is-my-credit-card-interest-calculated-en-44/"
+  - label: "CFPB — How does my credit card company calculate the amount of interest I owe?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
   - label: "CFPB — What is a daily periodic rate on a credit card?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/"
   - label: "CFPB — What does it mean if a credit card has a grace period?"

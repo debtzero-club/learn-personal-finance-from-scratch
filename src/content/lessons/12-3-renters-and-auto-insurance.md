@@ -7,7 +7,7 @@ title: "Renters & auto insurance — cheap protection you skip"
 summary: "The landlord's policy covers the building, never your stuff — renters insurance covers your belongings and your liability. Auto insurance splits the same way: liability (required nearly everywhere) pays for harm you cause others; collision and comprehensive pay for your own car."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "If you rent without renters insurance: walk your place with your phone, photograph each room, and total what re-buying everything would cost — that number is currently 100% unprotected. If you drive: pull your policy's declarations page and check two things — your liability limits, and whether your deductible is a number your emergency fund could actually cover."
 keepThis: "The landlord's policy covers the building — never your stuff. Auto liability (the legally required part) pays for harm you cause others; collision/comprehensive pay for your own car. On both policies, the deductible you choose trades directly against the premium."
 quiz:
@@ -46,8 +46,8 @@ quiz:
 sources:
   - label: "CFPB — What kind of auto insurance options are available when financing a car?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-kind-of-auto-insurance-options-are-available-when-financing-a-car-en-731/"
-  - label: "CFPB — What is insurance? (Building Blocks handout: renter's insurance, deductibles, premiums)"
-    url: "https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_what-is-insurance_handout.pdf"
+  - label: "CFPB — Learning about insurance (youth financial education activity)"
+    url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
 ---
 
 ## The situation

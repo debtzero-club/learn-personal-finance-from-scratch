@@ -7,7 +7,7 @@ title: "What insurance is really for"
 summary: "Insurance is one trade: you pay a small, known cost (the premium) so a rare, catastrophic cost can't ruin you — insure what you can't afford to replace, and let your emergency fund handle the rest."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Make a two-column list. Left: money shocks your emergency fund could absorb (a car repair, a vet visit, a flight home). Right: the ones it couldn't (a hospital stay, a totaled car, harm you accidentally cause someone else). The right column is what insurance exists for — and it's your checklist for the next three lessons."
 keepThis: "Insurance is a small, known cost that caps a rare, catastrophic one — protection from ruin, not a discount on routine life. Insure what you can't afford to replace; skip insuring what you can."
 quiz:
@@ -48,8 +48,6 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/understanding-how-insurance-works-lucy/"
   - label: "CFPB — Learning about insurance (youth financial education activity)"
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
-  - label: "CFPB — What is insurance? (Building Blocks handout)"
-    url: "https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_what-is-insurance_handout.pdf"
 ---
 
 ## The situation

@@ -7,7 +7,7 @@ title: "How a loan actually works: principal, interest, term"
 summary: "A loan is just three numbers — principal, interest rate, and term — and once you see how they combine into one fixed payment, the $20,000 auto loan stops being a mystery: $396.02 a month for 60 months, $3,761.48 of it interest."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: amortization
 doIt: "Find one of your own installment loans (auto, student, personal). Write down its three numbers: the principal (what you borrowed), the rate (APR), and the term (months). Those three set your payment — and the total interest you'll pay."
 keepThis: "A loan is principal + interest rate + term. On a $20,000 auto loan at 7% APR over 60 months, the payment is $396.02/month and you pay $3,761.48 in interest — about 19% on top of what you borrowed. Shorter term = higher payment but far less total interest."
@@ -48,7 +48,7 @@ sources:
   - label: "CFPB — Understanding the costs of an auto loan"
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
   - label: "CFPB — What is the difference between a fixed APR and a variable APR?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-43/"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/"
 ---
 
 ## The situation

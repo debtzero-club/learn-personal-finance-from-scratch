@@ -7,7 +7,7 @@ title: "Simple vs. compound interest — the difference that changes your life"
 summary: "Simple interest only ever earns on your original amount; compound interest earns on your original amount plus all the interest already added — and over years, that one difference is enormous."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 doIt: "Find out whether something you have compounds — your savings APY almost certainly does, and so does any card balance. If interest is being added to interest, you're in compound-interest territory (which is almost always)."
 keepThis: "Simple interest earns only on the original amount. Compound interest earns on the original amount plus the interest already added — interest earning interest. Real-world savings and debt nearly always compound, and that's why the gap grows the longer you wait."
 quiz:
@@ -44,8 +44,8 @@ quiz:
     answer: 1
     explain: "Compound interest builds on a bigger and bigger base every year, while simple interest always builds on the same original amount. The longer the timeline, the wider the gap — which is why starting early matters so much."
 sources:
-  - label: "CFPB — What is compound interest?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-compound-interest-en-1809/"
+  - label: "CFPB — How does compound interest work?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/"
 ---
 
 ## The situation

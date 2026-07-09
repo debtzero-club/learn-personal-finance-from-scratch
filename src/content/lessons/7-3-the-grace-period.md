@@ -7,7 +7,7 @@ title: "The grace period — how to borrow for free (if you do it right)"
 summary: "If you pay your full statement balance by the due date, the grace period means new purchases are charged zero interest — but the moment you carry a balance, that free window disappears."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: card-interest
 doIt: "Set up autopay for the FULL statement balance (not the minimum) on your card. That one setting keeps your grace period alive automatically, every month, without you having to remember."
 keepThis: "Pay your full statement balance by the due date and the grace period charges you $0 interest on purchases. Carry even part of it, and you lose the grace period — interest starts on new purchases from the day you buy them."
@@ -47,8 +47,8 @@ quiz:
 sources:
   - label: "CFPB — What does it mean if a credit card has a grace period?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/"
-  - label: "CFPB — How is my credit card interest calculated?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-is-my-credit-card-interest-calculated-en-44/"
+  - label: "CFPB — How does my credit card company calculate the amount of interest I owe?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
 ---
 
 ## The situation

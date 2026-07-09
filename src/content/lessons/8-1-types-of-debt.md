@@ -44,10 +44,10 @@ quiz:
     answer: 1
     explain: "A card is revolving (nothing forces it to a zero balance) and unsecured (no collateral, so the rate is high). With no schedule pushing you forward, a balance can sit and grow for years."
 sources:
-  - label: "CFPB — What is revolving credit?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-revolving-credit-en-44/"
-  - label: "CFPB — What is a secured loan?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-loan-en-110/"
+  - label: "CFPB — Credit card contract definitions"
+    url: "https://www.consumerfinance.gov/data-research/credit-card-data/know-you-owe-credit-cards/credit-card-contract-definitions/"
+  - label: "CFPB — Differentiating between secured and unsecured loans"
+    url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/differentiating-secured-unsecured-loans/"
   - label: "CFPB — Auto loans (installment credit example)"
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---

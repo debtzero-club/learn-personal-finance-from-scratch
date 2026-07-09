@@ -7,7 +7,7 @@ title: "Do I need life insurance yet?"
 summary: "Life insurance replaces your income for people who depend on it — so the question isn't your age, it's whether anyone depends on your income. For many single first-jobbers the honest answer is 'not yet' — but the free employer policy is worth claiming, and naming a beneficiary takes two minutes."
 status: complete
 mechanics: false
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Open your benefits portal and check two things: whether your employer includes free group life coverage (often about one year's salary), and whether you've named a beneficiary on it. If any policy or account of yours has no beneficiary on file, fix that today — it takes two minutes and costs nothing."
 keepThis: "If someone depends on your income, you need life insurance; if not, you probably don't yet. Term = pure coverage for a set period — protection only, which is why it costs less. Whole = coverage plus an investment component, far costlier and more complex."
 quiz:
@@ -44,8 +44,8 @@ quiz:
     answer: 1
     explain: "Free employer group life is part of the compensation you already read about in lesson 10.1 — claiming it and naming a beneficiary costs you nothing. Whether you ever need coverage beyond it depends on whether someone depends on your income."
 sources:
-  - label: "CFPB — What is insurance? (Building Blocks handout: life insurance, term vs. whole, beneficiary)"
-    url: "https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_what-is-insurance_handout.pdf"
+  - label: "CFPB — Understanding how insurance works: A case study about Lucy (youth financial education activity)"
+    url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/understanding-how-insurance-works-lucy/"
   - label: "CFPB — Learning about insurance (youth financial education activity)"
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
 ---

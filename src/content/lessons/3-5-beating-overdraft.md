@@ -33,8 +33,8 @@ quiz:
     answer: 1
     explain: "Many banks let you link savings as overdraft backup for free (or a tiny transfer fee far below $35). It's a safety net without the trap."
 sources:
-  - label: "CFPB — How do I avoid or minimize overdraft fees?"
-    url: "https://www.consumerfinance.gov/ask-cfpb/how-do-i-avoid-or-minimize-overdraft-fees-en-979/"
+  - label: "CFPB — What is an overdraft?"
+    url: "https://www.consumerfinance.gov/ask-cfpb/what-is-an-overdraft-en-1035/"
   - label: "CFPB — How can I avoid debit card overdrafts?"
     url: "https://www.consumerfinance.gov/ask-cfpb/how-can-i-avoid-debit-card-overdrafts-en-1053/"
 ---
