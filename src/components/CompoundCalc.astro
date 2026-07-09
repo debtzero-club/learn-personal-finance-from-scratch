@@ -13,7 +13,7 @@
 // color (texture + in-bar text + aria-label) and backed by a data table.
 
 import { compound } from '../calc/compound';
-import { format, toCents, fromCents } from '../lib/money';
+import { format, toCents, add, type Cents } from '../lib/money';
 
 // Seed default scenario — defined ONCE so the static render and the script agree
 // (Pitfall 3). $1,000 start + $100/mo at 5%, monthly, 10 years. Pinned golden:
@@ -29,13 +29,13 @@ const seed = compound({
 
 // Sample the LAST period of each year (rows are 1-based periods; monthly => every
 // 12th: index 11, 23, ... plus the final row). Keeps a 50-year case readable.
-function yearlySamples(rows: typeof seed.rows, principalCents: number) {
-  const out: { year: number; yourMoney: number; interest: number; balance: number }[] = [];
+function yearlySamples(rows: typeof seed.rows, principalCents: Cents) {
+  const out: { year: number; yourMoney: Cents; interest: Cents; balance: Cents }[] = [];
   for (let i = 11; i < rows.length; i += 12) {
     const r = rows[i];
     out.push({
       year: (i + 1) / 12,
-      yourMoney: principalCents + r.contributed, // principal + contributions to date
+      yourMoney: add(principalCents, r.contributed), // principal + contributions to date
       interest: r.interestToDate,
       balance: r.balance,
     });
@@ -45,7 +45,7 @@ function yearlySamples(rows: typeof seed.rows, principalCents: number) {
   if (rows.length && (rows.length % 12 !== 0)) {
     out.push({
       year: Math.ceil(rows.length / 12),
-      yourMoney: principalCents + last.contributed,
+      yourMoney: add(principalCents, last.contributed),
       interest: last.interestToDate,
       balance: last.balance,
     });
@@ -93,7 +93,7 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
     </label>
   </div>
 
-  <p class="cc-headline">
+  <p class="cc-headline" aria-live="polite">
     <span id="cc-balance" class="cc-balance">{format(seed.finalBalance)}</span>
     <span class="cc-after"> after <span id="cc-years-label">{SEED.years}</span> years</span>
   </p>
@@ -102,21 +102,19 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
     It earned <span id="cc-interest">{format(seed.totalInterest)}</span> in interest.
   </p>
 
-  <div class="cc-snowball" id="cc-snowball" role="img" aria-label="The interest band grows wider each year — that growing band is the snowball.">
+  <div class="cc-snowball" id="cc-snowball" role="img" aria-label="Bar chart: your money versus interest earned each year — the interest band grows wider every year. Full data in the table below.">
     {
       samples.map((s) => (
         <div class="split-bar" data-year={s.year}>
           <div
             class="split-seg split-seg--principal"
             style={`width:${pct(s.yourMoney)}%`}
-            aria-label={`Year ${s.year} — Your money: ${format(s.yourMoney as any)}`}
           >
             <span class="seg-text">Your money</span>
           </div>
           <div
             class="split-seg split-seg--interest"
             style={`width:${pct(s.interest)}%`}
-            aria-label={`Year ${s.year} — Interest earned: ${format(s.interest as any)}`}
           >
             <span class="seg-text">Interest earned</span>
           </div>
@@ -145,9 +143,9 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
           samples.map((s) => (
             <tr>
               <td>{s.year}</td>
-              <td class="num">{format(s.yourMoney as any)}</td>
-              <td class="num">{format(s.interest as any)}</td>
-              <td class="num">{format(s.balance as any)}</td>
+              <td class="num">{format(s.yourMoney)}</td>
+              <td class="num">{format(s.interest)}</td>
+              <td class="num">{format(s.balance)}</td>
             </tr>
           ))
         }
@@ -163,7 +161,7 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
 
 <script>
   import { compound } from '../calc/compound';
-  import { format, toCents } from '../lib/money';
+  import { format, toCents, add, type Cents } from '../lib/money';
 
   document.querySelectorAll<HTMLElement>('.compound-calc').forEach((root) => {
     const $ = <T extends HTMLElement>(id: string) => root.querySelector<T>(id);
@@ -208,14 +206,14 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
 
       // Re-sample yearly rows (one per year), mirroring the build-time logic.
       const rows = sched.rows;
-      const samples: { year: number; yourMoney: number; interest: number; balance: number }[] = [];
+      const samples: { year: number; yourMoney: Cents; interest: Cents; balance: Cents }[] = [];
       for (let i = 11; i < rows.length; i += 12) {
         const r = rows[i];
-        samples.push({ year: (i + 1) / 12, yourMoney: principalCents + r.contributed, interest: r.interestToDate, balance: r.balance });
+        samples.push({ year: (i + 1) / 12, yourMoney: add(principalCents, r.contributed), interest: r.interestToDate, balance: r.balance });
       }
       if (rows.length && rows.length % 12 !== 0) {
         const last = rows[rows.length - 1];
-        samples.push({ year: Math.ceil(rows.length / 12), yourMoney: principalCents + last.contributed, interest: last.interestToDate, balance: last.balance });
+        samples.push({ year: Math.ceil(rows.length / 12), yourMoney: add(principalCents, last.contributed), interest: last.interestToDate, balance: last.balance });
       }
       const maxBalance = samples.length ? Math.max(...samples.map((s) => s.balance)) : 1;
       const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
@@ -226,8 +224,8 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
           .map(
             (s) => `
             <div class="split-bar" data-year="${s.year}">
-              <div class="split-seg split-seg--principal" style="width:${pct(s.yourMoney)}%" aria-label="Year ${s.year} — Your money: ${format(s.yourMoney as any)}"><span class="seg-text">Your money</span></div>
-              <div class="split-seg split-seg--interest" style="width:${pct(s.interest)}%" aria-label="Year ${s.year} — Interest earned: ${format(s.interest as any)}"><span class="seg-text">Interest earned</span></div>
+              <div class="split-seg split-seg--principal" style="width:${pct(s.yourMoney)}%"><span class="seg-text">Your money</span></div>
+              <div class="split-seg split-seg--interest" style="width:${pct(s.interest)}%"><span class="seg-text">Interest earned</span></div>
             </div>`
           )
           .join('');
@@ -237,7 +235,7 @@ const pct = (part: number) => (maxBalance > 0 ? (part / maxBalance) * 100 : 0);
       if (tbodyEl) {
         tbodyEl.innerHTML = samples
           .map(
-            (s) => `<tr><td>${s.year}</td><td class="num">${format(s.yourMoney as any)}</td><td class="num">${format(s.interest as any)}</td><td class="num">${format(s.balance as any)}</td></tr>`
+            (s) => `<tr><td>${s.year}</td><td class="num">${format(s.yourMoney)}</td><td class="num">${format(s.interest)}</td><td class="num">${format(s.balance)}</td></tr>`
           )
           .join('');
       }

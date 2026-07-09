@@ -99,7 +99,7 @@ const interestSaved = baseline.totalInterest - seed.totalInterest;
     </label>
   </div>
 
-  <p class="am-headline">
+  <p class="am-headline" aria-live="polite">
     <span id="am-payment" class="am-payment">{format(seed.payment)}</span>
     <span class="am-after"> / month · pays off in <span id="am-term">{seed.months}</span> months ·
     <span id="am-interest">{format(seed.totalInterest)}</span> total interest</span>
@@ -109,21 +109,19 @@ const interestSaved = baseline.totalInterest - seed.totalInterest;
     <span id="am-interest-saved">{format(interestSaved)}</span> in interest.
   </p>
 
-  <div class="am-split" id="am-split" role="img" aria-label="Each bar is one payment split into principal and interest — early payments are mostly interest, later ones mostly principal.">
+  <div class="am-split" id="am-split" role="img" aria-label="Bar chart: each payment split into principal and interest — early payments are mostly interest, later ones mostly principal. Full data in the table below.">
     {
       samples.map((r) => (
         <div class="split-bar" data-m={r.m}>
           <div
             class="split-seg split-seg--principal"
             style={`width:${pct(r.principalPaid)}%`}
-            aria-label={`Payment ${r.m} — Principal: ${format(r.principalPaid)}`}
           >
             <span class="seg-text">Principal</span>
           </div>
           <div
             class="split-seg split-seg--interest"
             style={`width:${pct(r.interest)}%`}
-            aria-label={`Payment ${r.m} — Interest: ${format(r.interest)}`}
           >
             <span class="seg-text">Interest</span>
           </div>
@@ -244,8 +242,8 @@ const interestSaved = baseline.totalInterest - seed.totalInterest;
           .map(
             (r) => `
             <div class="split-bar" data-m="${r.m}">
-              <div class="split-seg split-seg--principal" style="width:${pct(r.principalPaid)}%" aria-label="Payment ${r.m} — Principal: ${format(r.principalPaid)}"><span class="seg-text">Principal</span></div>
-              <div class="split-seg split-seg--interest" style="width:${pct(r.interest)}%" aria-label="Payment ${r.m} — Interest: ${format(r.interest)}"><span class="seg-text">Interest</span></div>
+              <div class="split-seg split-seg--principal" style="width:${pct(r.principalPaid)}%"><span class="seg-text">Principal</span></div>
+              <div class="split-seg split-seg--interest" style="width:${pct(r.interest)}%"><span class="seg-text">Interest</span></div>
             </div>`
           )
           .join('');

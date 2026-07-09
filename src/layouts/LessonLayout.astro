@@ -9,13 +9,16 @@ import MinPaymentCalc from '../components/MinPaymentCalc.astro';
 import AmortizationCalc from '../components/AmortizationCalc.astro';
 import PayoffCalc from '../components/PayoffCalc.astro';
 import { curriculum } from '../data/curriculum';
+import { CALCULATOR_NAMES } from '../data/calculators';
 
 interface Props {
   entry: CollectionEntry<'lessons'>;
   prev?: CollectionEntry<'lessons'> | null;
   next?: CollectionEntry<'lessons'> | null;
+  /** Estimated read time in minutes, computed from the body word count by [...slug].astro. */
+  readMinutes?: number;
 }
-const { entry, prev = null, next = null } = Astro.props;
+const { entry, prev = null, next = null, readMinutes = 4 } = Astro.props;
 const d = entry.data;
 const track = curriculum.find((t) => t.track === d.track);
 const phase = track?.phases.find((p) => p.phase === d.phase);
@@ -23,8 +26,10 @@ const phase = track?.phases.find((p) => p.phase === d.phase);
 // calculator name -> island component (D-01/D-02). A lesson opts in with
 // `calculator: <name>` in frontmatter; the matching island renders in the
 // .lesson-calc slot below (after the body, before "Do it").
-// Keep these keys in sync with the z.enum in src/content/config.ts and
-// REGISTERED_CALCULATORS in scripts/validate-content.mjs (THREE-PLACES-IN-SYNC, Phase 4 D-14).
+// This map must import its components (that's why it can't live in the shared
+// calculators.ts data module), but its KEYS must exactly equal CALCULATOR_NAMES —
+// the single source of truth that config.ts's z.enum and validate-content.mjs also
+// derive from (Phase 4 D-14). The assertion below fails the build if they drift.
 const CALCULATORS = {
   compound: CompoundCalc,
   'apr-apy': AprApyCalc,
@@ -33,6 +38,17 @@ const CALCULATORS = {
   amortization: AmortizationCalc,
   payoff: PayoffCalc,
 };
+const calcKeys = Object.keys(CALCULATORS);
+if (
+  calcKeys.length !== CALCULATOR_NAMES.length ||
+  !CALCULATOR_NAMES.every((name) => Object.prototype.hasOwnProperty.call(CALCULATORS, name))
+) {
+  throw new Error(
+    `LessonLayout CALCULATORS registry keys [${calcKeys.join(', ')}] must exactly equal ` +
+      `CALCULATOR_NAMES [${CALCULATOR_NAMES.join(', ')}] (src/data/calculators.ts). ` +
+      `Add the missing island component or remove the stale key.`
+  );
+}
 const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
 ---
 
@@ -46,7 +62,7 @@ const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
       {d.mechanics && <span class="gear" title="How it actually works">⚙</span>}
     </h1>
     <p class="lesson-summary">{d.summary}</p>
-    <p class="lesson-meta">Lesson {d.id} · Last reviewed {d.lastReviewed} · ~4 min read</p>
+    <p class="lesson-meta">Lesson {d.id} · Last reviewed {d.lastReviewed} · ~{readMinutes} min read</p>
 
     <div class="lesson-body">
       <slot />

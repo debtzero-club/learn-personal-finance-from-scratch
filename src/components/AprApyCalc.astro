@@ -22,7 +22,7 @@ const apyPct = (apySeed * 100).toFixed(2); // "5.12"
 <div class="apr-apy-calc" data-rate={SEED.ratePct} data-periods={SEED.periods}>
   <h2 class="aa-eyebrow">SAME RATE, TWO NUMBERS</h2>
 
-  <p class="aa-headline">
+  <p class="aa-headline" aria-live="polite">
     <span id="aa-apr">{SEED.ratePct}</span>% APR
     <span class="aa-arrow" aria-hidden="true">→</span>
     <span class="aa-apy"><span id="aa-apy">{apyPct}</span>% APY</span>

@@ -27,6 +27,7 @@
 
 import { allLessons } from '../src/data/curriculum.ts'; // .ts extension is REQUIRED (Node 24)
 import { NUMBERS } from '../src/data/numbers.ts';
+import { CALCULATOR_NAMES } from '../src/data/calculators.ts'; // single source of truth (D-14)
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
@@ -35,20 +36,14 @@ const REAL_LESSON_DIR = fileURLToPath(new URL('../src/content/lessons/', import.
 const FIXTURES_DIR = fileURLToPath(new URL('./fixtures/', import.meta.url));
 
 // Calculator islands a lesson may embed via `calculator:` frontmatter (D-03).
-// MUST stay in sync with the z.enum in src/content/config.ts and the CALCULATORS
-// registry in src/layouts/LessonLayout.astro (THREE-PLACES-IN-SYNC, Phase 4 D-14).
-// A declared name not in this list fails the build (mirrors the figures[]
-// resolves-to-registered check). The Zod enum catches typos at schema time; this
-// catches a name that parses but has no registered component (e.g. a stale name
-// after a calculator is removed).
-const REGISTERED_CALCULATORS = [
-  'compound',
-  'apr-apy',
-  'card-interest',
-  'min-payment',
-  'amortization',
-  'payoff',
-];
+// Imported from the SINGLE source of truth (src/data/calculators.ts) that the
+// z.enum in src/content/config.ts and the CALCULATORS registry in
+// src/layouts/LessonLayout.astro also derive from (Phase 4 D-14). A declared name
+// not in this list fails the build (mirrors the figures[] resolves-to-registered
+// check). The Zod enum catches typos at schema time; this catches a name that
+// parses but has no registered component (e.g. a stale name after a calculator is
+// removed).
+const REGISTERED_CALCULATORS = CALCULATOR_NAMES;
 
 // --- tiny frontmatter reader (NO YAML dependency) --------------------------
 // We only need a few scalar fields plus the presence of a non-empty sources list and

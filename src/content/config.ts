@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { CALCULATOR_NAMES } from '../data/calculators';
 
 /**
  * Every lesson is one markdown file in src/content/lessons/.
@@ -38,12 +39,11 @@ const lessons = defineCollection({
     figures: z.array(z.string()).default([]),
     // Optional interactive calculator island this lesson embeds. A z.enum (NOT z.string)
     // so a typo'd name is a Zod build error for free — complementing the validator's
-    // resolves-to-registered name-check (D-03). Must stay in sync with the CALCULATORS
-    // registry in src/layouts/LessonLayout.astro and REGISTERED_CALCULATORS in
-    // scripts/validate-content.mjs (THREE-PLACES-IN-SYNC — Phase 4 D-14).
-    calculator: z
-      .enum(['compound', 'apr-apy', 'card-interest', 'min-payment', 'amortization', 'payoff'])
-      .optional(),
+    // resolves-to-registered name-check (D-03). The enum is DERIVED from the single
+    // source of truth (src/data/calculators.ts), which the LessonLayout CALCULATORS
+    // registry and scripts/validate-content.mjs also consume (Phase 4 D-14, now
+    // one-source-of-truth instead of THREE-PLACES-IN-SYNC).
+    calculator: z.enum(CALCULATOR_NAMES).optional(),
   }),
 });
 
