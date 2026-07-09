@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found · Learn Personal Finance from Scratch" description="This page doesn't exist — but the course still does.">
+  <div class="page not-found">
+    <p class="page-eyebrow">404</p>
+    <h1>That page moved, or never existed.</h1>
+    <p>No worries — nothing about your money got lost. Just this link.</p>
+    <div class="not-found-cta">
+      <a class="btn" href="/">Go home →</a>
+      <a class="btn btn-ghost" href="/catalog">Browse the catalog</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding-block: 3rem;
+  }
+  .not-found-cta {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+</style>

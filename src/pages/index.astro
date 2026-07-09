@@ -3,11 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { curriculum, counts } from '../data/curriculum';
 const c = counts();
 const FIRST = '1-1-what-this-course-is';
+const year = new Date().getFullYear();
 ---
 
 <BaseLayout title="Learn Personal Finance from Scratch — free, open-source money basics">
   <section class="hero">
-    <p class="eyebrow">Free · Open source · US · 2026</p>
+    <p class="eyebrow">Free · Open source · US · {year}</p>
     <h1>Learn Personal Finance<br /><em>from Scratch</em></h1>
     <p class="lede">
       The beginner's guide to money the internet forgot to write. {c.total} lessons across 14 phases —

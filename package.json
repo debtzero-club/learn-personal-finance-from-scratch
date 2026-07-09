@@ -19,6 +19,7 @@
     "astro": "^4.16.18"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/dm-sans": "^5.2.8",
     "@fontsource-variable/outfit": "^5.2.8",
     "vitest": "^3.2.6"

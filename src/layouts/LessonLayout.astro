@@ -36,7 +36,7 @@ const CALCULATORS = {
 const Calculator = d.calculator ? CALCULATORS[d.calculator] : null;
 ---
 
-<BaseLayout title={`${d.title} · Learn Personal Finance from Scratch`} description={d.summary}>
+<BaseLayout title={`${d.title} · Learn Personal Finance from Scratch`} description={d.summary} ogType="article">
   <article class="lesson">
     <p class="lesson-eyebrow">
       <a href="/catalog">Track {d.track} · {track?.name}</a> &nbsp;→&nbsp; Phase {d.phase}: {phase?.title}

@@ -8,11 +8,17 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogType?: string;
 }
 const {
   title,
   description = "A free, open-source course that teaches you money from the ground up — built for your first paycheck, not your stock portfolio.",
+  ogType = 'website',
 } = Astro.props;
+// Canonical/og:url derived from Astro.url resolved against the configured site
+// (astro.config.mjs `site:`) so every page — including lesson pages — gets a
+// stable absolute URL. No og:image yet (deliberately deferred, no asset exists).
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -22,9 +28,12 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
