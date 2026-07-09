@@ -232,45 +232,21 @@ balance), the **minimum-payment trap**, loan **amortization**, and **avalanche-v
 all reuse the same integer-cents engine. See [docs/CALCULATORS.md](docs/CALCULATORS.md) for the math
 and the pinned golden figures.
 
-## Quickstart
+## How to take the course
 
-Requires **Node 24+**.
+No setup, no install — the course is designed to be read.
 
-```bash
-git clone https://github.com/debtzero-club/learn-personal-finance-from-scratch.git
-cd learn-personal-finance-from-scratch
-npm install
+- **Right here on GitHub.** Start at
+  [lesson 1.1 — What this course is (and isn't)](src/content/lessons/1-1-what-this-course-is.md) and
+  follow the **next →** link at the bottom of every lesson. Or jump anywhere from the
+  [curriculum index](#curriculum) above.
+- **On the website** — the hosted version (with the live, interactive calculators) is coming soon
+  under the [Toya](https://usetoya.com) domain; the link will land here when it's up.
+- Prefer offline? Clone the repo and read the same markdown files in any editor:
+  `git clone https://github.com/debtzero-club/learn-personal-finance-from-scratch.git`
 
-npm run dev      # local dev server at http://localhost:4321
-npm run build    # static build to dist/ (runs the content validator first)
-npm run preview  # preview the production build
-npm test         # run the calculator + content test suite (72 tests)
-```
-
-You can also run the content validator on its own with `npm run validate`.
-
-## How it works
-
-It's a static [Astro](https://astro.build) site with **zero runtime dependencies beyond Astro** — no
-backend, no database, no accounts.
-
-- **Content collections.** Each lesson is a Markdown file in `src/content/lessons/`, with frontmatter
-  validated at build time by a Zod schema in `src/content/config.ts` (the six-part loop is enforced
-  by that schema).
-- **One source of truth for the outline.** [`src/data/curriculum.ts`](src/data/curriculum.ts) lists
-  every lesson, its phase, and whether it's a ⚙ mechanics lesson. Pages (home, catalog, roadmap) read
-  from it.
-- **Calculator engines + islands.** Pure engines live in `src/calc/` and route every money step
-  through the integer-cents helpers in `src/lib/money.ts`. Each has an exact-value golden test. The
-  matching `*Calc.astro` component server-renders a correct example from the engine, then a small
-  `<script>` re-runs the *same* engine to make inputs live.
-- **The build-time gate.** `scripts/validate-content.mjs` runs on `prebuild`: it checks
-  curriculum ↔ file sync, requires sources on every lesson, and warns when a yearly tax figure has
-  gone stale (see [docs/ANNUAL-REVIEW.md](docs/ANNUAL-REVIEW.md)).
-- **Progress** is stored in `localStorage` only — nothing leaves the browser.
-
-Deploy target: the site will live under the Toya domain (as a subpath) — **deploy pending**, no final
-URL yet. Being static, it hosts anywhere (Vercel, Netlify, Cloudflare Pages, GitHub Pages).
+Want to run or build the site itself (contributors)? See
+[CONTRIBUTING.md](CONTRIBUTING.md) — dev setup is three commands.
 
 ## Contributing
 
@@ -289,7 +265,6 @@ A few non-negotiables to know before you write:
 
 ## Project docs
 
-- **[CLAUDE.md](CLAUDE.md)** — the master operating doc (rules, architecture, how to add a lesson).
 - **[docs/LESSON-TEMPLATE.md](docs/LESSON-TEMPLATE.md)** — copy this to write a new lesson.
 - **[docs/CALCULATORS.md](docs/CALCULATORS.md)** — the binding contract for every calculator.
 - **[docs/ANNUAL-REVIEW.md](docs/ANNUAL-REVIEW.md)** — the yearly re-verification of tax figures.

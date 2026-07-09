@@ -46,8 +46,8 @@ opening an issue first is appreciated so we can agree on the shape.
 
 ## How to add or edit a lesson
 
-1. Read [CLAUDE.md](CLAUDE.md) → "How to add a lesson" and copy
-   [docs/LESSON-TEMPLATE.md](docs/LESSON-TEMPLATE.md).
+1. Copy [docs/LESSON-TEMPLATE.md](docs/LESSON-TEMPLATE.md) — it carries the full
+   lesson shape with inline guidance.
 2. Create `src/content/lessons/<slug>.md` (slug = `` `${phase}-${order}-<kebab-title>` ``,
    e.g. `2-1-gross-vs-net`).
 3. Fill in **all** frontmatter required by `src/content/config.ts` (`id`, `track`, `phase`, `order`,

@@ -6,7 +6,7 @@ import { CALCULATOR_NAMES } from '../data/calculators';
  * The frontmatter below enforces the "lesson loop" structurally:
  * the markdown body holds The Situation / The Idea / By the Numbers,
  * and these fields hold Do It, Check Yourself (quiz), and Keep This.
- * See CLAUDE.md → "How to add a lesson".
+ * See CONTRIBUTING.md → "How to add or edit a lesson".
  */
 const lessons = defineCollection({
   type: 'content',

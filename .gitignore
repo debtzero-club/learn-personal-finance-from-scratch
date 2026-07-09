@@ -24,3 +24,6 @@ yarn-error.log*
 
 # internal GSD planning workflow (kept on disk locally, not published)
 .planning/
+
+# Internal operating doc (local only)
+CLAUDE.md

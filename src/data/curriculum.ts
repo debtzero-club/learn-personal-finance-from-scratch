@@ -6,7 +6,7 @@
  * - status: 'planned'   -> not written yet; shows in the catalog/roadmap but does not link.
  * - mechanics: true      -> a ⚙ "how it actually works" lesson (the credibility spine).
  *
- * To author a planned lesson (see CLAUDE.md):
+ * To author a planned lesson (see CONTRIBUTING.md):
  *   1) create src/content/lessons/<slug>.md  (slug convention: `${phase}-${order}-<kebab-title>`)
  *   2) here, set that lesson's status to 'complete' and fill in its `slug`.
  */

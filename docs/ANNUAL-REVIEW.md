@@ -4,7 +4,7 @@
 > Every figure the course quotes (tax brackets, the FICA wage base, contribution limits)
 > changes year-to-year, so once a year someone re-verifies each one against its
 > authoritative IRS/SSA source and bumps it forward. Doing this keeps the lessons
-> trustworthy — accuracy + sourcing is a project non-negotiable (see `../CLAUDE.md`).
+> trustworthy — accuracy + sourcing is a project non-negotiable (see the whitelist in `../CONTRIBUTING.md`).
 
 ---
 
