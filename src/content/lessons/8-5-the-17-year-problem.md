@@ -7,51 +7,43 @@ title: "Why minimum payments cost so much (the 17-year problem)"
 summary: "Paying only the minimum on a $5,000 card at 24% APR isn't a slow path out of debt — it's a 17-year sentence: 201 months and $8,441.70 in interest, more than the original balance. The calculator pins the real number."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: min-payment
 doIt: "On your own card, find the minimum payment and the full balance. Then set a fixed payment a bit above the minimum and never let it drop. That one rule converts the 17-year trap into a short detour."
 keepThis: "Minimum-only on $5,000 at 24% APR takes 201 months — about 17 years — and costs $8,441.70 in interest, more than the $5,000 you borrowed. The minimum is engineered to be the slowest, most expensive way out. Always pay more than it asks."
 quiz:
-  - q: "Paying only the minimum on $5,000 at 24% APR, how long until it's gone?"
+  - q: "You may have heard the minimum-payment trap takes about 27 years to escape. Where does that bigger, scarier number actually come from?"
     options:
-      - "About 2 years"
-      - "About 5 years"
-      - "201 months — roughly 17 years"
-      - "A few months"
+      - "It's the number this lesson's calculator gives for the $5,000-at-24%-APR example"
+      - "It only applies to auto loans, not credit cards"
+      - "A different, gentler minimum-payment formula than the one most major card issuers actually use"
+      - "It includes late fees stacked on top of the minimum"
     answer: 2
-    explain: "The engine pins it at 201 months, about 17 years. Because the minimum shrinks as the balance shrinks, the payoff drags on far longer than anyone expects."
-  - q: "How much interest does that minimum-only path cost on the $5,000 balance?"
+    explain: "The 27-year figure floats around from a different, often flat-percentage, minimum formula. With the 'interest + 1% of principal' formula most major cards actually use, the golden-tested engine pins our $5,000-at-24%-APR example at 201 months — about 17 years, not 27."
+  - q: "For a $5,000 balance at 24% APR, paying only the minimum every month, what does the golden-tested engine actually show?"
     options:
-      - "About $500"
-      - "About $1,200"
-      - "$8,441.70 — more than the original balance"
-      - "Nothing"
-    answer: 2
-    explain: "$8,441.70 in interest on a $5,000 balance — you'd pay back about $13,441.70 total. The interest alone costs more than what you originally borrowed."
-  - q: "How is this typical minimum payment calculated?"
-    options:
-      - "A flat $10 a month"
-      - "The greater of (that month's interest + about 1% of the balance) or a small floor like $35"
-      - "Half the balance"
-      - "Whatever you feel like paying"
+      - "27 years and about $15,000 in interest"
+      - "201 months — about 17 years — and $8,441.70 in interest"
+      - "5 years and about $500 in interest"
+      - "It never fully pays off"
     answer: 1
-    explain: "A common formula is the greater of [the month's interest plus about 1% of principal] or a dollar floor (often around $35). It covers the interest and barely chips the balance — by design."
-  - q: "Why does the minimum trap you for so long?"
+    explain: "201 months (about 17 years) and $8,441.70 in interest — pinned to the same calculator you can run below. It's still a long time, just not the inflated folklore number."
+  - q: "Why is the minimum payment formula (that month's interest + about 1% of principal) designed to barely reduce your balance?"
     options:
-      - "The bank freezes your account"
-      - "The minimum shrinks as the balance shrinks, so progress slows down just when you'd hope to speed up"
-      - "Interest is illegal"
-      - "It doesn't — minimums pay off fast"
-    answer: 1
-    explain: "The minimum is a percentage that falls as the balance falls, so the payoff crawls. Combined with early payments being mostly interest, the math is built to keep you paying as long as possible."
-  - q: "What's the simplest way to beat the trap?"
+      - "It's a glitch in how issuers compute statements"
+      - "It's designed to pay the balance off as fast as possible"
+      - "It stops reducing the balance entirely after the first year"
+      - "It guarantees the debt technically pays off, but routes nearly all of each early payment to interest — maximizing how long, and how much, you pay"
+    answer: 3
+    explain: "The formula always covers the interest first, then chips off about 1% of principal. That's enough to make the loan eventually end (unlike a flat-percentage minimum, which can run for decades), but it's tuned to end as slowly and expensively as possible while still technically working."
+  - q: "Why does this lesson use the verified 17-year figure instead of the scarier 27-year folklore number, even though 17 years is still a long time?"
     options:
-      - "Pay even a little more than the minimum, consistently"
-      - "Pay exactly the minimum every time"
-      - "Stop paying entirely"
-      - "Open a second card"
+      - "Because every number in this course is pinned to the actual golden-tested calculator — a scarier, unverifiable number would break trust"
+      - "Because minimum payments got more generous in recent years"
+      - "Because 27 years was a simple rounding error"
+      - "Because a smaller number is better marketing"
     answer: 0
-    explain: "Anything above the minimum goes straight at the principal and snowballs in your favor. Try it in the calculator: a fixed payment a bit above the minimum collapses both the years and the interest."
+    explain: "This course only quotes numbers it can show you live in a calculator. 17 years is bad enough on its own — there's no need to reach for a bigger, unverifiable myth to make the point."
 sources:
   - label: "CFPB — A box on my credit card bill says I'll pay off the balance in three years..."
     url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-this-mean-en-1427/"

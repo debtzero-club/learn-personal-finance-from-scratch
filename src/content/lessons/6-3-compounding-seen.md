@@ -7,7 +7,7 @@ title: "Compounding, seen: how a little becomes a lot"
 summary: "Watch the snowball happen: $1,000 plus $100 a month at 5%, compounded monthly, grows to about $17,175 over ten years — and most of the back-end growth is interest earning interest."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-09"
+lastReviewed: "2026-07-08"
 calculator: compound
 doIt: "Play with the live calculator below. Change one number at a time — push the years from 10 to 20, or nudge the rate — and watch the 'interest earned' band grow. Feeling the curve is worth more than reading about it."
 keepThis: "$1,000 + $100/month at 5%, compounded monthly for 10 years ≈ $17,175. You put in $13,000; interest added about $4,175 on top. The interest band starts tiny and snowballs — this is the snowball every later phase points back to."
@@ -73,11 +73,11 @@ Over those ten years you personally deposit **$13,000** — the original $1,000 
 
 | After... | Your money in | Interest earned | Balance |
 | --- | ---: | ---: | ---: |
-| Year 1 | $2,200 | about $50 | about $2,250 |
-| Year 5 | $7,000 | about $930 | about $7,930 |
+| Year 1 | $2,200 | about $79 | about $2,279 |
+| Year 5 | $7,000 | about $1,084 | about $8,084 |
 | **Year 10** | **$13,000** | **about $4,175** | **about $17,175** |
 
-Read the interest column top to bottom. About $50 in year one — a rounding error. By year ten the interest has snowballed to roughly **$4,175**, money you never deposited. The ending balance lands near **$17,175.26**: your $13,000 of deposits, plus about $4,175 the snowball built on top. **Most of that bonus shows up in the back half** — which is exactly why time is the most powerful input.
+Read the interest column top to bottom. About $79 in year one — small, because there's barely any balance yet. By year five the interest has already climbed past **$1,000**. By year ten it has snowballed to roughly **$4,175**, money you never deposited. The ending balance lands near **$17,175.26**: your $13,000 of deposits, plus about $4,175 the snowball built on top. **Most of that bonus shows up in the back half** — which is exactly why time is the most powerful input.
 
 Now stop reading and **try it yourself.** The calculator below starts on this exact scenario, so the number you see matches the one above. Then change things: push the years to 20, raise the rate, drop your monthly amount. Watch the interest band grow. The point isn't the precise figure — it's the *shape* of the curve, and that it bends harder the longer you give it.
 

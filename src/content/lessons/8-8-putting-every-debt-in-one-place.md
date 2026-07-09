@@ -6,7 +6,7 @@ order: 8
 title: "Putting every debt in one place (your payoff picture)"
 summary: "A debt plan starts with one simple list: every debt, its balance, its rate, and its minimum, all in one view. Once you can see the whole picture, the avalanche-or-snowball order becomes obvious and the plan runs itself."
 status: complete
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "Make your payoff picture today. One row per debt, four columns: name, balance, APR, minimum payment. Total the minimums, add whatever extra you can spare, and circle your first target debt. That single page is your whole plan."
 keepThis: "List every debt in one place — balance, APR, minimum — and you can see exactly what you owe and which to attack first. The payoff picture turns a vague dread into a concrete, ordered plan you can actually run."
 quiz:
@@ -78,11 +78,11 @@ Here's our cardholder's payoff picture — every debt they carry, on one page, t
 
 | Debt | Balance | APR | Minimum |
 | --- | ---: | ---: | ---: |
-| Credit card | $5,000 | 24% | ~$135 |
+| Credit card | $5,000 | 24% | ~$150 |
 | Auto loan | $20,000 | 7% | $396 |
-| **Totals** | **$25,000** | — | **~$531** |
+| **Totals** | **$25,000** | — | **~$546** |
 
-Now read the plan straight off the table. The minimums total about **$531/month** — that's the floor they must cover. Say they free up an extra **$150** on top. Where does it go? The **APR column** answers instantly: the credit card at **24%** is more than three times as expensive as the auto loan at **7%**, so avalanche sends the extra $150 there first. The auto loan keeps getting its $396, marching to zero on its own schedule, while the extra firepower demolishes the high-rate card.
+Now read the plan straight off the table. The minimums total about **$546/month** — that's the floor they must cover. Say they free up an extra **$150** on top. Where does it go? The **APR column** answers instantly: the credit card at **24%** is more than three times as expensive as the auto loan at **7%**, so avalanche sends the extra $150 there first. The auto loan keeps getting its $396, marching to zero on its own schedule, while the extra firepower demolishes the high-rate card.
 
 That's the whole plan, visible in one glance: cover the minimums, aim the extra at the 24% card, watch both balances fall. No fog, no juggling — just a page you update each month and a target you can see. Build yours today; it's the difference between hoping the debt goes away and *making* it go away.
 

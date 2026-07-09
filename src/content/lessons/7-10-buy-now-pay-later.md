@@ -7,7 +7,7 @@ title: "Buy Now, Pay Later (Klarna, Afterpay) — how it really works"
 summary: "Buy Now, Pay Later splits a purchase into four interest-free payments — a $200 buy becomes four payments of $50.00 with $0 interest — but late fees and stacking several plans at once are where it bites."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 calculator: amortization
 doIt: "Before using a 'pay in 4' option, count how many other BNPL plans you already have running. Add up all their payments. If the total of every plan's due-this-month amount would strain your budget, that's the real risk — not the interest."
 keepThis: "BNPL 'pay in 4' splits a purchase into four equal interest-free payments ($200 → four payments of $50.00, $0 interest). The danger isn't interest — it's late fees and stacking multiple plans until the combined payments overwhelm your budget."
@@ -76,7 +76,7 @@ Here's the calculator — the same amortization engine from Phase 8, set to the 
 
 | Payment | Amount | Interest | Balance after |
 | --- | ---: | ---: | ---: |
-| 1 (at checkout) | $50.00 | $0.00 | $150.00 |
+| 1 (timing simplified) | $50.00 | $0.00 | $150.00 |
 | 2 | $50.00 | $0.00 | $100.00 |
 | 3 | $50.00 | $0.00 | $50.00 |
 | 4 | $50.00 | $0.00 | $0.00 |

@@ -7,7 +7,7 @@ title: "The types of debt, and how each works (revolving vs. installment, secure
 summary: "Before you can pay debt down, you have to know what kind you have — revolving vs. installment, secured vs. unsecured — because each behaves differently and asks for a different plan."
 status: complete
 mechanics: true
-lastReviewed: "2026-06-11"
+lastReviewed: "2026-07-08"
 doIt: "List your debts on one line each. Next to each, write two words: 'revolving' or 'installment,' and 'secured' or 'unsecured.' That tiny label tells you how each one behaves."
 keepThis: "Two questions sort every debt: Does the balance reset each month (revolving) or pay down on a schedule (installment)? Is something backing it (secured) or not (unsecured)? Revolving + unsecured — credit cards — is usually the most dangerous combination."
 quiz:
@@ -48,7 +48,7 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-revolving-credit-en-44/"
   - label: "CFPB — What is a secured loan?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-loan-en-110/"
-  - label: "CFPB — Loan basics: installment vs. revolving"
+  - label: "CFPB — Auto loans (installment credit example)"
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---
 
