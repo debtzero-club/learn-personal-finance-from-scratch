@@ -29,6 +29,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/financial-well-being-resources/"
 ---
 
+# What this course is (and isn't)
+
+> A 60-second orientation: who this is for, how each lesson works, and the one promise we make.
+
 ## The situation
 
 You've probably been told "you should really learn about money" about a hundred times, usually right before someone starts talking about stocks and your eyes glaze over. Here's the thing nobody admits: the people who feel behind on money aren't dumb. They were just never taught the basics — how a paycheck works, what a credit card actually does, why your savings account pays you almost nothing.
@@ -60,3 +64,5 @@ You don't need to finish all 92 lessons. Even Track 1 (the first 7 phases) will 
 ## Where to start
 
 If you're brand new: just go in order, starting with the next lesson. If you already have debt weighing on you, you can jump to **Track 2 → Phase 8 (Getting Out of Debt)** any time — but the Foundations track will make it all click faster.
+
+<p class="lesson-md-nav"><a href="../../../README.md#curriculum">Contents</a> · <a href="./1-2-why-money-feels-confusing.md">1.2 Why money feels confusing — and why it's not your fault →</a></p>

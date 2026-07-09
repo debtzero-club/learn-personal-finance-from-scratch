@@ -39,6 +39,10 @@ sources:
     url: "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_spending_tracker_2018-11_ADA.pdf"
 ---
 
+# Where did my money go? (tracking, painlessly)
+
+> You can't manage money you can't see. Tracking your spending for one week — no spreadsheet, no guilt — is the cheapest, fastest way to find the leaks.
+
 ## The situation
 
 You get to the end of the month and the money's gone, but if someone asked you to explain where, you'd have to shrug. Not because you did anything reckless — there was no single big purchase. It just slipped out in pieces, and the pieces are invisible until you go looking for them.
@@ -60,3 +64,5 @@ Back in lesson 1.3 we met the quiet leak: a $25 want you barely remember, three 
 The thing is, you'd never notice that $3,900 by feel. It never shows up as one scary number. It only shows up when you write the small numbers down and add them up. That's the whole magic of tracking: it turns a hundred invisible $25s into one visible $3,900 you can actually do something about.
 
 You're not committing to a forever-system yet. Later lessons give you the easy ones — a simple split (4.2), paying yourself first (4.3), automation that does the work for you (4.4). This week is just the snapshot. Look first; decide later.
+
+<p class="lesson-md-nav"><a href="./3-6-keeping-your-money-safe.md">← 3.6 Keeping your money safe (fraud, scams, 2FA)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-2-the-50-30-20-starting-point.md">4.2 The 50/30/20 starting point →</a></p>

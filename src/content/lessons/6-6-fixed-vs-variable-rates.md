@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/"
 ---
 
+# Fixed vs. variable rates — what changes, and when it bites
+
+> A fixed rate stays put for the life of the loan or account; a variable rate moves up and down with an index — so a variable rate can quietly cost you more when rates rise.
+
 ## The situation
 
 You got a credit card a year ago at 22%, paid attention to nothing, and one day you notice the rate is now 24.5%. You didn't miss a payment. You didn't call anyone. The number just… moved. That's not a glitch and it's not personal — it's a *variable* rate doing exactly what variable rates do, and knowing the difference saves you from nasty surprises.
@@ -81,3 +85,5 @@ Same starting point, same balance, same year. The fixed card holds at 22% no mat
 ## The takeaway
 
 Whenever you take on anything with a rate, find the one word that tells you the whole story: *fixed* or *variable*. Fixed buys you predictability. Variable buys you a rate that can drift — sometimes in your favor, sometimes not. Either way, you'll never be blindsided by a number that "moved on its own" again. Next: why this same engine that grows your savings is the exact thing that makes debt so hard to escape.
+
+<p class="lesson-md-nav"><a href="./6-5-apr-vs-apy.md">← 6.5 APR vs. APY — why the same "rate" isn't the same number</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-7-the-two-faces-of-compounding.md">6.7 The two faces of compounding: friend when saving, enemy in debt →</a></p>

@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
 ---
 
+# How a credit card actually works (statement, balance, due date)
+
+> A credit card runs on a monthly cycle: you spend, then once a month it freezes a statement showing what you owe, and you get a few weeks to pay before interest can kick in.
+
 ## The situation
 
 You swipe your card for coffee, groceries, a $40 shirt. Nothing leaves your bank account. Then, weeks later, a statement appears asking for a number you only half recognize, with a due date attached, and a much smaller "minimum" you *could* pay instead. To use a card well, you need to know what that machine is actually doing between the swipe and the bill.
@@ -94,3 +98,5 @@ Notice the statement balance locked at **$200** on March 30 and never moved, eve
 ## Where this fits
 
 Three dates and two balances — that's the skeleton of every credit card. Once you can find your statement date, your due date, and your statement balance, the rest of this phase is just learning what happens when you do (and don't) pay that balance in full. Next: the grace period — the rule that lets a transactor borrow for free.
+
+<p class="lesson-md-nav"><a href="./7-1-what-credit-is.md">← 7.1 What credit even is — and why it matters</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-3-the-grace-period.md">7.3 The grace period — how to borrow for free (if you do it right) →</a></p>

@@ -30,6 +30,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/set-a-goal-and-start-a-savings-habit/"
 ---
 
+# Setting a money goal you'll actually hit
+
+> Vague goals like 'save more' quietly fail. A good goal has a number, a deadline, and an automatic first step.
+
 ## The situation
 
 "I really need to start saving." You've said it. Maybe you meant it. And then three months passed and the balance looked about the same. That's not a willpower failure — it's a goal-design failure. "Start saving" gives your brain nothing to grab onto.
@@ -65,3 +69,5 @@ Same goal, two timelines, two very different weekly numbers — and now you can 
 ## Pick one, not five
 
 You might have a dozen money goals. For now, choose **one**. Beginners who chase five goals at once usually finish zero. One clear goal, one automatic transfer, one deadline. Hit it, feel the win, then set the next. Momentum is the real asset you're building here.
+
+<p class="lesson-md-nav"><a href="./1-3-needs-wants-and-the-cost-of-later.md">← 1.3 Needs, wants, and the cost of "later"</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./1-5-the-5-money-moves.md">1.5 The 5 money moves that matter most →</a></p>

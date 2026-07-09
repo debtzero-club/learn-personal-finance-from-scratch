@@ -56,6 +56,10 @@ figures:
   - healthFsaContributionLimit
 ---
 
+# HSAs and FSAs — the accounts nobody explains
+
+> An HSA is yours forever, rolls over, and is triple tax-advantaged but requires a high-deductible health plan; an FSA is use-it-or-lose-it — know which your employer offers before you put a dollar in either.
+
 ## The situation
 
 The enrollment portal offers you an "HSA" with one health plan and an "FSA" with the other, both described as "tax-advantaged accounts for medical expenses." They sound identical. They are not even close — one is arguably the best account in the US tax code, and the other quietly deletes your money if you overfund it.
@@ -92,3 +96,5 @@ For the anchor: choosing the HDHP unlocks the HSA, the employer's **$500** seed 
 ## Where this fits
 
 This is the third money decision in the benefits packet, after the match (10.2) and the tax-timing dropdown (10.3). Whether the HDHP itself is the right health plan for you — premiums versus deductibles versus out-of-pocket maximums — is Phase 12's health-insurance lesson. Next up: the once-a-year window where all of these choices actually get made.
+
+<p class="lesson-md-nav"><a href="./10-3-roth-vs-traditional.md">← 10.3 Roth vs. traditional, in plain English</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./10-5-open-enrollment-without-the-panic.md">10.5 Open enrollment without the panic →</a></p>

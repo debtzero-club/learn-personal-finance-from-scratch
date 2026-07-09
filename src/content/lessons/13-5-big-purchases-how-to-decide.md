@@ -58,6 +58,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
 ---
 
+# Big purchases: how to decide
+
+> For anything over about $500, five questions turn an impulse into a decision: cost-per-use, a wait scaled to the price, whether your emergency fund survives it, sinking fund vs. financing, and what else the money could do.
+
 ## The situation
 
 The thing costs $800. You've watched the reviews, you've imagined owning it, and the site says the sale ends tonight. Your thumb is hovering over Buy Now. This is the exact moment this course has been building toward since the 24-hour rule in Phase 4 — because everything over about $500 deserves more than a hover. It deserves five questions.
@@ -102,3 +106,5 @@ If the want is still alive after the wait, it was probably real all along — bu
 ## Where this fits
 
 That closes the decision frames: a lease you can read (13.1), a car you can price (13.2), a move you can fund (13.3), a someday-home you can discuss calmly (13.4), and now a five-question filter for everything else. One arc remains in this course — the money you *don't* spend, and how it grows. Phase 14, Growing Your Money, brings the snowball from Phase 6 back one last time — finally working for you.
+
+<p class="lesson-md-nav"><a href="./13-4-the-home-buying-conversation.md">← 13.4 The home-buying conversation (someday, not scary)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-1-why-investing-matters.md">14.1 Why investing matters (compounding, now working for you) →</a></p>

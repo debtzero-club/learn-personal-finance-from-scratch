@@ -29,6 +29,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
 ---
 
+# Needs, wants, and the cost of "later"
+
+> The two most useful money habits a beginner can build: telling needs from wants, and seeing the hidden cost of every dollar you spend.
+
 ## The situation
 
 Payday hits. Two weeks later the money's mostly gone and you genuinely can't say where. Not because you blew it on anything dramatic — it just kind of… evaporated, $12 and $30 and $8 at a time. That evaporation is the thing we're going to make visible.
@@ -52,3 +56,5 @@ The fix isn't "never spend $25." It's "spend the $25 on the want you actually ca
 ## The mindset
 
 You're not trying to become a person who denies themselves everything. You're trying to become a person who *decides*. Needs covered, wants chosen on purpose, and the leftover doing a job you picked. That's it — that's the entire game, and the rest of this course is just tools to play it.
+
+<p class="lesson-md-nav"><a href="./1-2-why-money-feels-confusing.md">← 1.2 Why money feels confusing — and why it's not your fault</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./1-4-setting-a-money-goal.md">1.4 Setting a money goal you'll actually hit →</a></p>

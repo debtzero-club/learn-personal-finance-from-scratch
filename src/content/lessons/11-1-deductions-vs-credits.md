@@ -60,6 +60,10 @@ figures:
   - studentLoanInterestDeductionCap
 ---
 
+# Deductions vs. credits — and which beat which
+
+> A deduction shrinks the income that gets taxed, so it's only worth your marginal rate; a credit cuts the tax bill itself dollar-for-dollar — which is why a $2,500 credit saves $2,500 but a $2,500 deduction saves about $300.
+
 ## The situation
 
 Your filing software flashes the good news: *"We found you a $2,500 deduction!"* Your brain hears **$2,500 back**. Then the refund number barely moves. Nobody lied to you — a deduction was just never worth its face value. The difference between a **deduction** and a **credit** is the highest-leverage piece of tax vocabulary you'll ever learn, and it takes two sentences.
@@ -103,3 +107,5 @@ Same headline number; the credit is worth more than eight times as much. That's 
 ## Where this fits
 
 Deductions shrink the income pile; credits shrink the bill. Next up is the biggest deduction decision on every return — the standard deduction, and the rare case where adding up your own beats it.
+
+<p class="lesson-md-nav"><a href="./10-5-open-enrollment-without-the-panic.md">← 10.5 Open enrollment without the panic</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./11-2-standard-deduction-and-itemizing.md">11.2 The standard deduction and when to itemize →</a></p>

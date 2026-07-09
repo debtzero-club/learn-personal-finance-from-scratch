@@ -54,6 +54,10 @@ figures:
   - rothIraPhaseOutStartSingle
 ---
 
+# Roth vs. traditional, in plain English
+
+> The whole choice is when the tax hits: traditional skips tax now and pays it in retirement; Roth pays tax now and never again — and a low early-career bracket is the cheapest time tax will ever hit.
+
 ## The situation
 
 Right under the contribution percentage from the last lesson, there's one more dropdown: *"Contribution type: Traditional (pre-tax) or Roth (after-tax)."* Same paycheck, same investments either way — yet the internet treats this like a life-defining fork in the road. It's actually one question, and you already have the tools to answer it.
@@ -100,3 +104,5 @@ One footnote you can file away: Roth IRA eligibility starts phasing out at $153,
 ## Where this fits
 
 Match first (10.2), tax timing second (this lesson). The third money decision in the packet is the pair of health accounts everyone nods along about and nobody explains — HSAs and FSAs, next.
+
+<p class="lesson-md-nav"><a href="./10-2-the-401k-match.md">← 10.2 The 401(k) match — don't leave free money behind</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./10-4-hsas-and-fsas.md">10.4 HSAs and FSAs — the accounts nobody explains →</a></p>

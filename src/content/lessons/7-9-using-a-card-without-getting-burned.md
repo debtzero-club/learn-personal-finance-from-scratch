@@ -52,6 +52,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
 ---
 
+# Using a credit card without getting burned
+
+> A credit card is a great tool if you follow a few simple rules: pay in full every month, keep your balance well under 30% of the limit, set up autopay, and start with just one card.
+
 ## The situation
 
 By now you know how the card machine works — the cycle, the grace period, the interest math, the traps. So the practical question is the one that matters: how do you actually *use* one of these things day to day without getting burned? It turns out the whole playbook fits on a sticky note.
@@ -84,3 +88,5 @@ Same card, same purchases — one person pays *nothing* and builds their score; 
 ## Where this fits
 
 A credit card isn't dangerous *if* you run it on the four-rule playbook: pay in full, stay under 30%, automate, start with one. Set autopay today and you've enforced the most important rule without having to think about it again. Next: a newer cousin of the credit card — "buy now, pay later" — and how its pay-in-4 math really works.
+
+<p class="lesson-md-nav"><a href="./7-8-how-to-build-credit-from-zero.md">← 7.8 How to build credit from zero</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-10-buy-now-pay-later.md">7.10 Buy Now, Pay Later (Klarna, Afterpay) — how it really works →</a></p>

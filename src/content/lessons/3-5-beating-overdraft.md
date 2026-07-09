@@ -39,6 +39,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/how-can-i-avoid-debit-card-overdrafts-en-1053/"
 ---
 
+# Beating overdraft and the $35 coffee
+
+> Overdraft 'coverage' lets a $4 coffee trigger a $35 fee — but it's optional, and turning it off (plus a savings backup) takes the trap off the table.
+
 ## The situation
 
 You grab a $4 coffee, tap your debit card, and it goes through. You think nothing of it — until the statement shows a **$35 overdraft fee** because your balance was a few dollars short. The coffee just cost you $39. None of that is a character flaw. It's a system designed to let the charge clear so the fee can land.
@@ -68,3 +72,5 @@ Picture the worst version of an off day: three small taps clear while your balan
 | **$19 spent** | **$105 in fees** |
 
 You spent **$19** and paid **$105** to do it — more than five times the purchases, in a single afternoon. With overdraft turned off, all three simply decline and you pay **$0** in fees. Same low balance, completely different outcome. The only thing that changed was a setting you control.
+
+<p class="lesson-md-nav"><a href="./3-4-debit-vs-credit.md">← 3.4 Debit vs. credit — what's really happening</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-6-keeping-your-money-safe.md">3.6 Keeping your money safe (fraud, scams, 2FA) →</a></p>

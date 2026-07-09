@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
 ---
 
+# Dealing with debt in collections
+
+> If a debt goes to collections, you have real legal rights: the collector must prove the debt is yours, can't harass or threaten you, and must stop contact if you ask in writing. Knowing those rights — and asking for written validation first — turns a scary call into a manageable process.
+
 ## The situation
 
 The phone rings from a number you don't know, and a voice says you owe money — maybe more than you remember, maybe on something you'd half-forgotten. Your heart pounds. The instinct is either to panic-pay to make it stop, or to freeze and never answer again. Both are mistakes. Debt collection feels like the moment you have the least power, but it's actually a moment where federal law hands you specific, usable rights. Knowing them changes everything about that call.
@@ -92,3 +96,5 @@ Notice that every smart move is **slow, written, and documented** — the opposi
 ## Where this fits
 
 Collections is survivable, and the law is more on your side than it feels in the moment: validate first, refuse harassment, put everything in writing. With that, you've handled debt at its hardest edge. The final lesson zooms back out — once you're free of debt (or close), how do you stay out for good?
+
+<p class="lesson-md-nav"><a href="./8-10-payday-loans-and-predatory-debt.md">← 8.10 Payday loans &amp; predatory debt — what to avoid and why</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-12-staying-out-of-debt.md">8.12 Staying out of debt for good →</a></p>

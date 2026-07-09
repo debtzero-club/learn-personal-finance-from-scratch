@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/data-research/research-reports/buy-now-pay-later-market-trends-and-consumer-impacts/"
 ---
 
+# Buy Now, Pay Later (Klarna, Afterpay) — how it really works
+
+> Buy Now, Pay Later splits a purchase into four interest-free payments — a $200 buy becomes four payments of $50.00 with $0 interest — but late fees and stacking several plans at once are where it bites.
+
 ## The situation
 
 You're checking out online for a $200 pair of shoes, and instead of paying the whole thing, a little option pops up: "4 interest-free payments of $50.00." It feels almost free — a fraction now, the rest spread out, no interest. Buy Now, Pay Later is everywhere, and it really *is* interest-free in the simple case. The catch isn't where you'd expect.
@@ -86,3 +90,5 @@ Four payments of **$50.00,** **$0 interest,** balance reconciled cleanly to zero
 ## Where this fits
 
 BNPL is a 0% installment loan — the kindest math in the whole credit-and-debt world — but its softness is exactly why it's easy to overuse. Watch the late fees and, above all, count your plans. Next, the last piece of the credit picture: pulling your credit report for free and fixing what's wrong on it.
+
+<p class="lesson-md-nav"><a href="./7-9-using-a-card-without-getting-burned.md">← 7.9 Using a credit card without getting burned</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-11-checking-your-credit-report.md">7.11 Checking your credit report (free) and fixing errors →</a></p>

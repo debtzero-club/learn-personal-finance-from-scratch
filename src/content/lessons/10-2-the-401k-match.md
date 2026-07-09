@@ -52,6 +52,10 @@ figures:
   - contributionLimit401k
 ---
 
+# The 401(k) match — don't leave free money behind
+
+> An employer match is an instant 100% return: contribute 4% of a $48,000 salary and the employer adds the same $1,920 a year — skip it and that money simply never gets paid to you.
+
 ## The situation
 
 The enrollment screen asks one question: "Contribution percentage: ____%." Next to it, a line you might scroll past: *"Employer match: 100% of the first 4% of eligible pay."* You're starting out, retirement feels like another planet, and every dollar of your paycheck already has a job. Here's the number that should decide this screen.
@@ -90,3 +94,5 @@ One housekeeping number: for 2026 the IRS caps what you can put into a 401(k) at
 ## Where this fits
 
 Getting the match is decision one, and it doesn't depend on anything else. Decision two is the dropdown right next to it — *traditional or Roth?* — which is entirely about when the tax hits. That's the next lesson.
+
+<p class="lesson-md-nav"><a href="./10-1-your-benefits-packet-decoded.md">← 10.1 Your benefits packet, decoded</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./10-3-roth-vs-traditional.md">10.3 Roth vs. traditional, in plain English →</a></p>

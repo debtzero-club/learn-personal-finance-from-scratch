@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
 ---
 
+# The 24-hour rule and other anti-impulse tricks
+
+> Impulse buys beat willpower because they're fast. Adding a little friction — a 24-hour wait, an unsaved card, a one-out-one-in rule — lets the urge pass before the money does.
+
 ## The situation
 
 You weren't planning to buy anything. You were just scrolling. Then there it was — on sale, one tap away, your card already saved — and thirty seconds later it was yours. By the time it arrives you've half forgotten you ordered it. The purchase happened faster than the decision did.
@@ -64,3 +68,5 @@ $80 × 12 = **$960 a year.**
 Nearly a thousand dollars, from a single habit that costs you nothing but a one-day wait. And recall opportunity cost from lesson 1.3: that $960 isn't just "saved." It's a starter emergency fund (Phase 5), or a real dent in a credit card balance (Phase 8) — the second, invisible price tag that every spent dollar carries.
 
 The point isn't to never buy the $80 thing. It's to make sure that when you do, it's because you decided to — not because the checkout button was faster than you were.
+
+<p class="lesson-md-nav"><a href="./4-5-sinking-funds.md">← 4.5 Sinking funds: saving for what you know is coming</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-7-budgeting-when-your-income-is-irregular.md">4.7 Budgeting when your income is irregular →</a></p>

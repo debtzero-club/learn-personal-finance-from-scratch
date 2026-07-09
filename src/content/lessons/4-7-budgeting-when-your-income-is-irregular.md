@@ -37,6 +37,10 @@ sources:
     url: "https://files.consumerfinance.gov/f/documents/cfpb_creating-cash-flow-budget_tool_2021-08.pdf"
 ---
 
+# Budgeting when your income is irregular
+
+> Tips, gig work, freelancing, commission — when your pay jumps around, budget off your lowest expected month and let the good months build a buffer instead of new spending.
+
 ## The situation
 
 The budgets in this phase assume a steady paycheck. But maybe yours isn't steady. You wait tables and tips swing wildly, or you drive for an app, or you freelance, or you work on commission. One month is great, the next is scary, and a "50/30/20 on your monthly take-home" plan falls apart when there *is* no reliable monthly take-home. None of this means budgeting isn't for you. It just means you budget a little differently.
@@ -69,3 +73,5 @@ Don't budget on the $3,000 average. Budget your needs around the **$2,200 floor*
 | Busy | $3,800 | $2,200 | ~$600 |
 
 Over a few months, those good-month deposits build a cushion big enough to cover a lean month's gap — so a slow stretch becomes a non-event instead of a panic. You can't control when the money shows up. You *can* control which month you budget around, and choosing the floor is what keeps an irregular income from running your life.
+
+<p class="lesson-md-nav"><a href="./4-6-the-24-hour-rule.md">← 4.6 The 24-hour rule and other anti-impulse tricks</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./5-1-why-an-emergency-fund-first.md">5.1 Why an emergency fund comes before almost everything →</a></p>

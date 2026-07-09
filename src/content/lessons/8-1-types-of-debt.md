@@ -52,6 +52,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---
 
+# The types of debt, and how each works (revolving vs. installment, secured vs. unsecured)
+
+> Before you can pay debt down, you have to know what kind you have — revolving vs. installment, secured vs. unsecured — because each behaves differently and asks for a different plan.
+
 ## The situation
 
 You're staring at a few balances — a credit card from the holidays, the auto loan on your car, maybe a "pay in 4" plan. They all feel like one big lump called *debt*, and the lump feels hopeless. But these aren't the same animal. One of them quietly pays itself down every month; another can sit there charging you for a decade if you let it. Before you can make a plan, you need to know which is which.
@@ -90,3 +94,5 @@ Same two debts, two completely different behaviors. That's why "I have debt" isn
 ## Where this fits
 
 You now have the vocabulary to label anything you owe. Keep that little two-word tag in mind — it decides everything that follows. Next: we crack open the installment loan and see exactly where each payment goes, using that $20,000 auto loan as our example.
+
+<p class="lesson-md-nav"><a href="./7-11-checking-your-credit-report.md">← 7.11 Checking your credit report (free) and fixing errors</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-2-how-a-loan-works.md">8.2 How a loan actually works: principal, interest, term →</a></p>

@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
 ---
 
+# Do I need life insurance yet?
+
+> Life insurance replaces your income for people who depend on it — so the question isn't your age, it's whether anyone depends on your income. For many single first-jobbers the honest answer is 'not yet' — but the free employer policy is worth claiming, and naming a beneficiary takes two minutes.
+
 ## The situation
 
 An ad says "lock in your rate while you're young." A relative mentions a "great policy" their advisor sold them. And you're left wondering if you're behind on something. Here's the honest, pressure-free version of the life-insurance question — which, for many people at your stage, has a perfectly good answer: *not yet.*
@@ -92,3 +96,5 @@ No premium prices here — just the decision math, with our anchor as the worked
 ## Where this fits
 
 That's three policies decoded — health (12.2), renters and auto (12.3), and the one you can probably wait on. The last protection lesson covers the threat that doesn't arrive as a bill at all: someone pretending to be you.
+
+<p class="lesson-md-nav"><a href="./12-3-renters-and-auto-insurance.md">← 12.3 Renters &amp; auto insurance — cheap protection you skip</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./12-5-identity-theft-and-financial-safety.md">12.5 Identity theft and your financial safety →</a></p>

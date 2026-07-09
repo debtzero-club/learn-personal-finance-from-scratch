@@ -50,6 +50,10 @@ sources:
     url: "https://www.investor.gov/introduction-investing/retirement-plans/self-directed-plans-individual-retirement-accounts-iras"
 ---
 
+# Retirement accounts recap (401k, IRA, Roth)
+
+> The account and the investment are two different things: a 401(k) or IRA is the tax-advantaged container, and the index fund from 14.3 is what goes inside it — recapping the Phase 10 toolkit and the order most people fill it: match first, then a Roth IRA, then more 401(k).
+
 ## The situation
 
 You know what to buy now — the broad index fund from lesson 14.3. But when you go to actually buy it, the first question isn't *what*, it's *where*: 401(k)? IRA? Roth-something? You met all of these in Phase 10 and they made sense one at a time. This lesson lines them up on one page, because there's a single idea that snaps them all into place.
@@ -95,3 +99,5 @@ Read the middle row again. The match alone *doubles* their contribution before t
 ## Where this fits
 
 Contents chosen (14.3), container chosen (this lesson). What's left is purely mechanical — actually opening the account and making the first purchase — and that's the next lesson, step by step.
+
+<p class="lesson-md-nav"><a href="./14-3-index-funds.md">← 14.3 Index funds: the boring answer that works</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-5-your-first-investment.md">14.5 Your first investment, step by step →</a></p>

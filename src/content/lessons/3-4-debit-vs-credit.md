@@ -39,6 +39,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/am-i-responsible-for-unauthorized-charges-if-my-credit-cards-are-lost-or-stolen-en-29/"
 ---
 
+# Debit vs. credit — what's really happening
+
+> A debit card spends your own money; a credit card borrows the bank's — and when fraud hits, those two cards protect you very differently.
+
 ## The situation
 
 Two cards in your wallet look almost identical — same logo, same chip, same tap. But they do opposite things with your money, and the difference really matters the day someone steals your card number. (This lesson is about the *mechanics*; how credit cards actually charge interest and build your score is a whole phase later — Phase 7, Credit.)
@@ -67,3 +71,5 @@ Imagine a stolen number racks up **$800** in fake charges over a weekend.
 - **On a credit card:** the $800 shows up on your statement, you report it, and you're not on the hook for it (liability is capped at $50, frequently $0). Your checking account never moved.
 
 **The rule of thumb: for online shopping and travel — where stolen numbers are most common — a credit card you pay off in full is the safer tool.** Debit is great for everyday in-person spending and for people who'd rather not have a credit card at all. Just know which protection you're carrying before fraud finds out for you. Next up: the fee that makes debit risky in a different way — overdraft.
+
+<p class="lesson-md-nav"><a href="./3-3-high-yield-savings.md">← 3.3 High-yield savings: same money, more of it</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-5-beating-overdraft.md">3.5 Beating overdraft and the $35 coffee →</a></p>

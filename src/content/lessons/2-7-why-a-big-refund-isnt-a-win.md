@@ -44,6 +44,10 @@ sources:
     url: "https://www.irs.gov/refunds"
 ---
 
+# Why a big refund isn't the win it feels like
+
+> A fat refund feels like a bonus, but it's really your own money handed back interest-free after a year-long, zero-interest loan to the government.
+
 ## The situation
 
 Tax refund hits and it feels like winning a small lottery. People plan trips around it, treat it as the moment they finally get ahead. And look — getting a chunk of cash isn't *bad*. But the story you've been told about it is backwards, and seeing it straight can quietly hand you a couple hundred dollars a month.
@@ -82,3 +86,5 @@ That last column is the *opportunity cost* from lesson 1.3 — the second price 
 The lever is the **W-4**. If your refund is routinely large, dial your withholding *down* (the IRS estimator from lesson 2.4 tells you exactly how) so that money rides in your paychecks instead.
 
 One catch worth naming: a bigger paycheck only helps if the extra goes somewhere on purpose. For a lot of people a refund works as forced savings precisely *because* it's out of reach — and that's a fair reason to keep it. The grown-up version is to **recover the money** *and* **automate it**: shrink the refund, then auto-move the recovered $200/month into savings on payday (we build that exact habit in the budgeting and saving phases). Same forced-savings effect — but now it's earning for you, not for the IRS.
+
+<p class="lesson-md-nav"><a href="./2-6-your-first-tax-return.md">← 2.6 Your first tax return, demystified</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-1-checking-vs-savings.md">3.1 Checking vs. savings — what each is for →</a></p>

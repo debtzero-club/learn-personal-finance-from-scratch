@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
 ---
 
+# What credit even is — and why it matters
+
+> Credit is borrowing money you promise to pay back, and your track record of paying it back is a reputation that follows you into apartments, car loans, and sometimes even jobs.
+
 ## The situation
 
 You're standing at a checkout and the card reader asks "credit or debit?" You're filling out an apartment application and it asks to "run your credit." A car dealer says you "qualify" — or you don't. The word *credit* is everywhere, quietly deciding what you can do, and nobody ever sat you down and explained what it actually is.
@@ -83,3 +87,5 @@ Same person, same paycheck — but the *reputation* attached to that $5,000 bala
 ## Where this fits
 
 This phase pulls the cover off credit cards completely: how a statement works, how interest is actually charged, the minimum-payment trap, your score, and how to use a card without getting burned. You don't need to fear credit — you need to *understand* it, because understood credit is a tool, and misunderstood credit is a leak. Next up: how a credit card actually works, statement to due date.
+
+<p class="lesson-md-nav"><a href="./6-7-the-two-faces-of-compounding.md">← 6.7 The two faces of compounding: friend when saving, enemy in debt</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-2-how-a-credit-card-works.md">7.2 How a credit card actually works (statement, balance, due date) →</a></p>

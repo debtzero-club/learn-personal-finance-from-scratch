@@ -34,6 +34,10 @@ sources:
     url: "https://www.irs.gov/individuals/tax-withholding-estimator"
 ---
 
+# Gross vs. net: why your paycheck is smaller than your salary
+
+> One-sentence promise of what the reader will understand after this lesson.
+
 ## The situation
 
 A real money moment, 1–2 sentences. Make the reader feel seen.
@@ -50,7 +54,15 @@ interactive calculator goes (build as a small Astro component).
 ## (Optional extra section)
 
 A short reframe, a "where this fits", or a pointer to the next lesson by id.
+
+<p class="lesson-md-nav"><a href="./2-0-prev-slug.md">← 2.0 Previous lesson</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-2-next-slug.md">2.2 Next lesson →</a></p>
 ```
+
+> **Don't hand-write the `# <title>` header, the `> <summary>` blockquote, or the
+> `<p class="lesson-md-nav">` footer.** They are GitHub-only reading aids (the live
+> site strips them via `src/lib/rehype-github-extras.mjs`). Run
+> `npm run sync:github-extras` and they're generated/updated from the frontmatter and
+> `curriculum.ts` order automatically.
 
 ## Checklist before you open a PR
 - [ ] One concept only; ~3–5 minutes to read.

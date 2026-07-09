@@ -61,6 +61,10 @@ figures:
   - selfEmploymentNetEarningsFactor
 ---
 
+# Side income & 1099s — what you owe
+
+> Side income is taxable from the first dollar, nobody withholds for you, and self-employment tax adds 15.3% on top of income tax — which is why you set aside 25–30% of every side-gig dollar the day it lands.
+
 ## The situation
 
 Our $48,000 first-jobber picks up a weekend side gig — freelance design, about **$3,000** a year after expenses. The money arrives whole: no withholding line, no FICA line, just the full payment. It feels like the cleanest money they've ever made. Lesson 2.5 already whispered the catch: it only *looks* clean because nobody has collected the taxes yet.
@@ -96,3 +100,5 @@ Total: **about $760 on $3,000 of side income — almost exactly 25%.** That's wh
 ## Where this fits
 
 Same playbook as lesson 2.5, now with the real machinery: dollar one taxable, 15.3% on 92.35%, $400 floor, $1,000 quarterly trigger, 25–30% set aside. Next lesson flips from what you owe to what you can shelter — the recap of every legal tax break you've collected across this course.
+
+<p class="lesson-md-nav"><a href="./11-2-standard-deduction-and-itemizing.md">← 11.2 The standard deduction and when to itemize</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./11-4-tax-advantaged-accounts-recap.md">11.4 Tax-advantaged accounts recap — how to legally pay less →</a></p>

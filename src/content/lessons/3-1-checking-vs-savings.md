@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/should-i-get-a-checking-account-that-pays-interest-en-925/"
 ---
 
+# Checking vs. savings — what each is for
+
+> Two accounts, two jobs: checking is your spending hub, savings is your don't-touch pile — and 'interest checking' is usually a low-rate trap.
+
 ## The situation
 
 You get your first paycheck and the bank opens you two accounts: checking and savings. Nobody explains the difference, so the money just... sits in checking, and "savings" stays empty. That's the default, and it quietly costs you.
@@ -58,3 +62,5 @@ Say you keep $5,000 parked in a typical big-bank savings account at **0.01% APY*
 Fifty cents. On five thousand dollars. The bank, meanwhile, lends that same money out and earns far more on it.
 
 That gap is the whole reason this phase exists. The fix is simple and we'll get there: keep spending money in checking, and move savings somewhere that pays a real rate. First, though, we need to plug the leaks — the fees quietly draining the account you already have. That's next.
+
+<p class="lesson-md-nav"><a href="./2-7-why-a-big-refund-isnt-a-win.md">← 2.7 Why a big refund isn't the win it feels like</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-2-the-account-fees-draining-you.md">3.2 The account fees quietly draining you →</a></p>

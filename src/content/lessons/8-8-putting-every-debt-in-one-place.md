@@ -49,6 +49,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
 ---
 
+# Putting every debt in one place (your payoff picture)
+
+> A debt plan starts with one simple list: every debt, its balance, its rate, and its minimum, all in one view. Once you can see the whole picture, the avalanche-or-snowball order becomes obvious and the plan runs itself.
+
 ## The situation
 
 Your debts live in different places — a card app, a separate loan portal, a store-card statement that comes in the mail, a "pay in 4" plan you half-forgot. Each one nags at you alone, and together they feel like a fog you can't see through. That fog is the real enemy. The moment you pull every debt onto one page, the dread shrinks into something you can actually *do* something about. This lesson is that page.
@@ -89,3 +93,5 @@ That's the whole plan, visible in one glance: cover the minimums, aim the extra 
 ## Where this fits
 
 You've turned scattered debts into one clear, ordered, trackable plan — the centerpiece of getting out of debt. The remaining lessons handle the harder edges: whether to consolidate or refinance, the predatory loans to avoid entirely, what to do if a debt goes to collections, and how to stay out for good once you're free. First up: consolidation and refinancing.
+
+<p class="lesson-md-nav"><a href="./8-7-why-extra-payments-crush-a-loan.md">← 8.7 Why extra payments crush a loan — and where to aim them</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-9-consolidate-or-refinance.md">8.9 Should I consolidate or refinance? →</a></p>

@@ -51,6 +51,10 @@ sources:
     url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
 ---
 
+# Why investing matters (compounding, now working for you)
+
+> You've met the compounding snowball three times — growing your savings, growing a card balance against you, growing a student loan in deferment. Investing is pointing that same snowball in your favor on purpose, with decades of runway: historically, stocks have averaged just over 10% a year over the long term — a historical average, not a guarantee.
+
 ## The situation
 
 You've done the unglamorous work: the emergency fund exists, the high-rate debt is handled or on a plan, the 401(k) match is captured. And now there's a little money left over each month with no assigned job. Letting it sit in checking feels safe but wrong, and "investing" sounds like a thing other people understand. Here's the part nobody told you: you already understand it. You've been studying its engine since Phase 6.
@@ -86,3 +90,5 @@ Why decades favor you specifically: remember the **Rule of 72** from lesson 6.4 
 ## Where this fits
 
 That's the *why*: the snowball that grew your savings and your debts is finally yours to aim, and your age is the biggest asset you bring. The rest of this phase is the *how*, kept deliberately boring: what risk really means (14.2), the simplest thing to actually buy (14.3), which account to hold it in (14.4), the first-time steps (14.5), and the hype to walk past (14.6). This is education, not personalized advice — but it's enough to make the whole topic stop feeling like a secret.
+
+<p class="lesson-md-nav"><a href="./13-5-big-purchases-how-to-decide.md">← 13.5 Big purchases: how to decide</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-2-risk-time-and-overthinking.md">14.2 Risk, time, and why beginners overthink it →</a></p>

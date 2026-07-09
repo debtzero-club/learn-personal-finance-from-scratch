@@ -54,6 +54,10 @@ sources:
     url: "https://www.healthcare.gov/glossary/out-of-pocket-maximum-limit/"
 ---
 
+# Health insurance basics (premium, deductible, out-of-pocket)
+
+> Four numbers run every health plan — premium (monthly cost), deductible (you pay first), copay (flat per-visit fee), and the out-of-pocket maximum (your annual worst-case cap). Know them and any plan comparison becomes arithmetic.
+
 ## The situation
 
 Open enrollment is on the screen (the once-a-year window from lessons 10.1 and 10.5), and each health plan is described by a wall of numbers. In lesson 10.4 our anchor picked the high-deductible plan to unlock the HSA — but we waved at words like "deductible" without properly defining them. This is the lesson that hands you the vocabulary. There are only four numbers that matter.
@@ -99,3 +103,5 @@ Read the disaster column slowly: a $40,000 bill became $8,400 — painful, but *
 ## Where this fits
 
 You now have the vocabulary the open-enrollment screen assumed: premium, deductible, copay, out-of-pocket max — and the seesaw between the first two that made the 10.4 HDHP-plus-HSA trade make sense. Next lesson: the two policies young renters and drivers skip most, and what each actually covers.
+
+<p class="lesson-md-nav"><a href="./12-1-what-insurance-is-really-for.md">← 12.1 What insurance is really for</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./12-3-renters-and-auto-insurance.md">12.3 Renters &amp; auto insurance — cheap protection you skip →</a></p>

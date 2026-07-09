@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/"
 ---
 
+# Avalanche vs. snowball — two ways to pay it down
+
+> When you owe on several debts, two methods compete: avalanche (highest rate first) saves the most money, while snowball (smallest balance first) gives you a faster first win. On the sample debts, avalanche saves $99.57 — but snowball clears the first debt sooner, and there's no single right answer.
+
 ## The situation
 
 You've got more than one debt — a card, a car loan, maybe a store card from a furniture splurge. You've freed up an extra $200 a month and you're ready to attack. But *which* one do you hit first? Spread the $200 across all of them and nothing moves fast. Pick one and go hard — but pick *which*? This is the most-argued question in personal finance, and the good news is there are only two sensible answers, and the calculator below shows you exactly what each one costs.
@@ -84,3 +88,5 @@ So which wins? On pure dollars, avalanche, by $99.57. On momentum, snowball, by 
 ## Where this fits
 
 You now have two real strategies — and permission to pick the one you'll stick with. But both start the same way: by getting every debt into one view so you can *see* the targets and the order. That single picture is the next lesson — and it's where this whole "get out of debt" plan comes together.
+
+<p class="lesson-md-nav"><a href="./8-5-the-17-year-problem.md">← 8.5 Why minimum payments cost so much (the 17-year problem)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-7-why-extra-payments-crush-a-loan.md">8.7 Why extra payments crush a loan — and where to aim them →</a></p>

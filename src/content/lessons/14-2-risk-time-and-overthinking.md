@@ -48,6 +48,10 @@ sources:
     url: "https://www.finra.org/investors/investing/investing-basics/risk"
 ---
 
+# Risk, time, and why beginners overthink it
+
+> Risk and time are a pair: markets swing hard year to year, but the long-run average only emerges over decades — which is why money you'll need soon stays in savings, and why waiting years for the 'perfect' start usually costs more than just starting.
+
 ## The situation
 
 You get the why from lesson 14.1 — snowball, your side, decades of runway. So you open your phone to actually begin and the questions start: *Which fund? Is now a bad time? What if it crashes the week after I put money in?* Two hours later you've read nine articles, picked nothing, and closed the tab. Repeat for a few years and you've made a choice after all — just the most expensive one available.
@@ -85,3 +89,5 @@ The decade of deliberating costs about **$42,122** — and read where it comes f
 ## Where this fits
 
 Risk sized, time understood, paralysis named. What's left is the question that started the spiral — *"okay, but which fund?"* — and the next lesson's answer is deliberately anticlimactic: the boring one that owns everything at once.
+
+<p class="lesson-md-nav"><a href="./14-1-why-investing-matters.md">← 14.1 Why investing matters (compounding, now working for you)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-3-index-funds.md">14.3 Index funds: the boring answer that works →</a></p>

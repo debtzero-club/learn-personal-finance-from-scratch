@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
 ---
 
+# Moving out / moving cities, money-wise
+
+> Landing a new place costs roughly three times one month's rent up front — first month, deposit, truck, setup — and a move to a new city means re-pricing your whole needs bucket, because the same salary buys a different life in a different zip code.
+
 ## The situation
 
 The lease application got approved — congratulations, you're moving. Then the email arrives: first month's rent due at signing, plus the security deposit, plus the elevator reservation fee. Meanwhile you still need a truck, the internet company wants an install fee, and your new place has exactly zero forks in it. Moving is a thousand small bills wearing a trench coat, and they all come due in the same two weeks.
@@ -86,3 +90,5 @@ That's **3× to nearly 4× one month's rent**, due in roughly the same two weeks
 ## Where this fits
 
 Renting (13.1), the car (13.2), and now the move — you can price all three before they happen. The one big housing decision left is the slowest one of all, and the least urgent: whether to someday buy a home. That conversation — calm, zero pressure — is next in lesson 13.4.
+
+<p class="lesson-md-nav"><a href="./13-2-buying-a-car-without-overpaying.md">← 13.2 Buying a car without overpaying</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./13-4-the-home-buying-conversation.md">13.4 The home-buying conversation (someday, not scary) →</a></p>

@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/should-i-get-a-checking-account-that-pays-interest-en-925/"
 ---
 
+# Where to actually keep your savings
+
+> Your emergency fund belongs in a separate high-yield savings account — liquid enough to grab in a crisis, but separate enough that you don't quietly spend it.
+
 ## The situation
 
 You've built the fund. Nice. Now it's sitting in your regular checking account next to your rent money and your "going out" money — and somehow, by the end of the month, it's a little smaller than it was. You didn't *mean* to spend it. It just looked like money, so it got treated like money. The fund is only as good as the account you keep it in.
@@ -76,3 +80,5 @@ Same $5,100, same instant-ish access, same FDIC protection — and roughly **$20
 ## The mindset
 
 Give the fund its own room. Separate, high-yield, FDIC-insured, one transfer from your checking but not mixed into it. Liquid enough to save your bad day, separate enough to survive your good ones. Next: what to do with money you're saving *for* something — and why the timeline decides the account.
+
+<p class="lesson-md-nav"><a href="./5-3-how-big-should-it-be.md">← 5.3 How big should my emergency fund be?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./5-5-saving-for-goals.md">5.5 Saving for goals: short, medium, long →</a></p>

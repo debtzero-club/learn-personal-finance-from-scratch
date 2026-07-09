@@ -48,6 +48,10 @@ sources:
     url: "https://www.healthcare.gov/glossary/open-enrollment-period/"
 ---
 
+# Open enrollment without the panic
+
+> Open enrollment is the once-a-year window to pick your benefits — miss it and you're locked into this year's choices — and a five-step checklist turns the 40-page packet into a 30-minute task.
+
 ## The situation
 
 It's October. An email titled "OPEN ENROLLMENT CLOSES NOVEMBER 14" is sitting in your inbox, flagged urgent, full of plan names and acronyms. Last year — your first year — you clicked the defaults just to make it stop. This year you know what a match, a Roth, an HSA, and an FSA actually are. Time to spend thirty minutes and collect everything this phase covered.
@@ -78,3 +82,5 @@ Thirty minutes, once a year. Step 1 alone pays better per minute than anything e
 ## Where this fits
 
 This closes the benefits phase: the packet decoded (10.1), the match collected (10.2), the tax timing picked (10.3), the health accounts sorted (10.4), and now the window where it all gets locked in. The same anchor's paycheck story continues in the next phase — taxes, a bit deeper, where some of these pre-tax choices show up again on your tax return.
+
+<p class="lesson-md-nav"><a href="./10-4-hsas-and-fsas.md">← 10.4 HSAs and FSAs — the accounts nobody explains</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./11-1-deductions-vs-credits.md">11.1 Deductions vs. credits — and which beat which →</a></p>

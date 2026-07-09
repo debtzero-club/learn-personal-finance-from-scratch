@@ -56,6 +56,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
 ---
 
+# Saving for goals: short, medium, long
+
+> Match the account to the timeline: short-term goals belong in cash savings, while money you won't touch for years is where investing — covered later in Phase 14 — comes in.
+
 ## The situation
 
 The emergency fund is squared away (lessons 5.1–5.4), and now you actually want to save *for* things — a trip, a security deposit on a better apartment, a reliable used car, maybe something decades off you can barely picture yet. The instinct is to dump it all into one savings account and hope. But a trip you're taking next summer and a goal that's 30 years away are not the same kind of money, and they don't belong in the same place.
@@ -89,3 +93,5 @@ The same math scales to any goal: figure the amount, figure the months, divide, 
 ## The mindset
 
 You don't need a complicated system — you need the right bucket for each goal. Short and medium goals: separate cash savings, one per goal, on autopilot. Long-horizon money: that's investing's job, and Phase 14 will show you how. For now, you've built the foundation that makes all of it possible — a safety net first, then goals on top. That's the whole point of this phase.
+
+<p class="lesson-md-nav"><a href="./5-4-where-to-keep-your-savings.md">← 5.4 Where to actually keep your savings</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-1-interest-the-simplest-version.md">6.1 Interest, the simplest version: money that grows, or costs, over time →</a></p>

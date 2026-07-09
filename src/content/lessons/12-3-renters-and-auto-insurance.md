@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
 ---
 
+# Renters & auto insurance — cheap protection you skip
+
+> The landlord's policy covers the building, never your stuff — renters insurance covers your belongings and your liability. Auto insurance splits the same way: liability (required nearly everywhere) pays for harm you cause others; collision and comprehensive pay for your own car.
+
 ## The situation
 
 First apartment: the lease has a line about renters insurance, and you think — "the landlord has insurance, why would I need any?" First car: the state demands proof of insurance before the plates, and the lender wants even more. These are the two policies people your age skip most — usually because nobody ever explained what each one actually covers.
@@ -99,3 +103,5 @@ The $32,000 line is the lesson: nobody's emergency fund covers that. That's a 12
 ## Where this fits
 
 Leases, deposits, and roommates get their own lesson — 13.1, "Renting: leases, deposits, roommates." The full car-buying math (and that amortized auto loan) is 13.2, "Buying a car without overpaying." Next here: the insurance question almost everyone your age can answer with "not yet" — life insurance.
+
+<p class="lesson-md-nav"><a href="./12-2-health-insurance-basics.md">← 12.2 Health insurance basics (premium, deductible, out-of-pocket)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./12-4-do-i-need-life-insurance-yet.md">12.4 Do I need life insurance yet? →</a></p>

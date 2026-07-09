@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/budget-help-manage-your-monthly-expenses-bill-calendar/"
 ---
 
+# Sinking funds: saving for what you know is coming
+
+> Some big bills aren't surprises — they're scheduled. Setting aside a little each month for the costs you can see coming keeps them from blowing up your budget.
+
 ## The situation
 
 Your budget is humming along, and then it's December — and suddenly there are gifts, travel, and the car insurance bill all landing in the same few weeks. It feels like an emergency. But none of it was actually a surprise: you knew the holidays were coming, and insurance bills you every year. The only surprise was that you hadn't saved for any of it.
@@ -69,3 +73,5 @@ Now do it for everything predictable:
 | **Total** | **$1,980** | **$165/month** |
 
 That $165 a month means three bills totaling nearly $2,000 never blindside you again. You traded a few panic months for a steady habit — and that's the entire point of a sinking fund.
+
+<p class="lesson-md-nav"><a href="./4-4-automating-your-money.md">← 4.4 Automating your money so willpower isn't the plan</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-6-the-24-hour-rule.md">4.6 The 24-hour rule and other anti-impulse tricks →</a></p>

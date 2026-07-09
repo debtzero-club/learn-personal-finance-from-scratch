@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1030/a/"
 ---
 
+# APR vs. APY — why the same "rate" isn't the same number
+
+> APR is the rate before compounding is folded in; APY is the rate after — the honest number — which is why a 5% APR compounded monthly actually works out to 5.12% APY.
+
 ## The situation
 
 You're comparing two savings accounts. One brags about a "5% rate," the other advertises a "5.1% APY." A card offer quotes a "24.99% APR." Three numbers, three different little acronyms, and a nagging feeling that they're not quite measuring the same thing. They're not — and once you know which is which, you can compare any two offers honestly instead of guessing.
@@ -85,3 +89,5 @@ The calculator below starts on this exact case — **5% APR, monthly, showing 5.
 ## Where this fits
 
 APR and APY aren't bank tricks; they're just two honest ways to quote the same engine — one before compounding, one after. On savings you hunt for the highest APY. On debt you respect the APR and remember the real cost is a bit steeper. Keep both straight and no rate label can fool you. Next: the two faces of this engine — the same compounding that grows your savings is what makes debt so hard to escape.
+
+<p class="lesson-md-nav"><a href="./6-4-the-rule-of-72.md">← 6.4 The Rule of 72: how fast money doubles</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-6-fixed-vs-variable-rates.md">6.6 Fixed vs. variable rates — what changes, and when it bites →</a></p>

@@ -47,6 +47,10 @@ figures:
   - standardDeductionSingle
 ---
 
+# Gross vs. net: why your paycheck is smaller than your salary
+
+> Your salary is the sticker price; your paycheck is what's left after taxes and deductions — and a raise can never shrink your take-home.
+
 ## The situation
 
 You signed an offer for $48,000 a year. Then your first paycheck shows up and it's… not a twelfth of $48,000, or a twenty-sixth, or whatever you expected. It's smaller. Sometimes a lot smaller. Nobody stole from you — this is just how pay works, and once you see the gap clearly it stops being scary.
@@ -97,3 +101,5 @@ Now picture a raise that pushes some taxable income past $50,400 into the 22% br
 ## The mindset
 
 You're not being taxed at your top rate on every dollar, and you're not losing money by earning more. Knowing the difference between gross and net — and between marginal and effective — means you can read your own paycheck, budget off the real number, and never turn down a raise out of a myth.
+
+<p class="lesson-md-nav"><a href="./1-6-your-money-snapshot.md">← 1.6 Your money snapshot: where am I right now?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-2-reading-a-pay-stub.md">2.2 Reading a pay stub, line by line →</a></p>

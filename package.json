@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate": "node scripts/validate-content.mjs",
+    "sync:github-extras": "node scripts/sync-lesson-github-extras.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

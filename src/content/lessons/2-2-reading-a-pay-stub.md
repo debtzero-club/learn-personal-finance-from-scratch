@@ -44,6 +44,10 @@ sources:
     url: "https://www.irs.gov/taxtopics/tc751"
 ---
 
+# Reading a pay stub, line by line
+
+> Every line on a pay stub, decoded — so you can tell at a glance where your money went and catch a mistake before it costs you.
+
 ## The situation
 
 Your first pay stub looks like a tax form had a baby with a spreadsheet. Acronyms, two columns of numbers, a "YTD" you've never heard of. But a pay stub is actually one of the most honest documents you own: it shows exactly where every dollar of your pay went. Once you can read it, you can spot a mistake — and payroll mistakes do happen.
@@ -93,3 +97,5 @@ That's $20 × 40 × 52 = **$41,600 a year** before income tax. Same stub structu
 ## The habit
 
 You don't need to audit every stub forever. But read the first one from any new job closely, then glance at the FICA line each period — if it's ever not ~7.65% of gross, or your net suddenly changes for no reason, that's your cue to ask. A two-minute check beats discovering a months-old payroll error at tax time.
+
+<p class="lesson-md-nav"><a href="./2-1-gross-vs-net.md">← 2.1 Gross vs. net: why your paycheck is smaller than your salary</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-3-fica-social-security-medicare.md">2.3 FICA, Social Security &amp; Medicare — what's actually taken out →</a></p>

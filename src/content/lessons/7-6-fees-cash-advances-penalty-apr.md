@@ -54,6 +54,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/credit-cards/answers/"
 ---
 
+# Fees, cash advances & penalty APR — the expensive fine print
+
+> Beyond regular interest, cards carry traps in the fine print: cash advances that start charging interest the instant you take them, late fees, and a penalty APR that can jack your rate up after a single missed payment.
+
 ## The situation
 
 You're short on cash, so you tap your credit card at an ATM for $200 — it works, easy. What you don't see is the meter that just started running at a higher rate, with no grace period and a fee already tacked on. Cards have a layer of fine print designed to catch you in moments exactly like this, and a few minutes of knowing about it saves you real money.
@@ -97,3 +101,5 @@ That penalty rate quietly adds roughly **$24 a month** in extra interest on the 
 ## Where this fits
 
 The headline APR is only part of a card's cost — the cash-advance rate, the late fee, and the penalty APR are where it gets genuinely expensive, and they're nearly all avoidable with autopay and a little awareness. Next we shift from the card itself to the number it builds: your credit score, and what actually moves it.
+
+<p class="lesson-md-nav"><a href="./7-5-the-minimum-payment-trap.md">← 7.5 The minimum-payment trap — how it's calculated and why it keeps you paying</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-7-your-credit-score.md">7.7 Your credit score: what actually moves it →</a></p>

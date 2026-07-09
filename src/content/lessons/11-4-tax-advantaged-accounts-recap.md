@@ -54,6 +54,10 @@ figures:
   - hsaContributionLimitSelfOnly
 ---
 
+# Tax-advantaged accounts recap — how to legally pay less
+
+> The three legal tax shelters you've already met — 401(k), IRA, HSA — side by side with their 2026 limits, and the order that usually makes sense: match first, then HSA if you're on an HDHP, then more as the budget allows.
+
 ## The situation
 
 Across Phase 10 you collected three accounts, each with a tax break attached, each explained in its own lesson. Now that you know what deductions and credits are actually worth (lesson 11.1), it's worth seeing the whole toolkit on one page — because together, these three accounts are the biggest legal "pay less tax" lever a first-jobber has.
@@ -93,3 +97,5 @@ The limits exist so high earners can't shelter unlimited income. At $48,000, the
 ## Where this fits
 
 That's the complete legal toolkit: deductions and credits at filing time (11.1–11.2), set-asides for side income (11.3), and tax-sheltered accounts all year (this lesson). One question left in this phase — when to handle the filing yourself, and when paying a professional actually pays for itself.
+
+<p class="lesson-md-nav"><a href="./11-3-side-income-and-1099s.md">← 11.3 Side income &amp; 1099s — what you owe</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./11-5-diy-vs-pro.md">11.5 When to DIY vs. get a pro →</a></p>

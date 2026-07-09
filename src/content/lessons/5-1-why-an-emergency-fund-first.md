@@ -50,6 +50,10 @@ sources:
     url: "https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-executive-summary.htm"
 ---
 
+# Why an emergency fund comes before almost everything
+
+> An emergency fund is the one thing standing between a normal bad day and new debt — which is why it comes before extra debt payoff, before investing, before almost anything else.
+
 ## The situation
 
 Your car won't start. The mechanic says it's the alternator — $480, and you need the car to get to work. Nothing about this is your fault, and nothing about it is rare. The only real question is the one nobody warns you about: *where does the $480 come from?* If the answer is "the credit card," a normal bad day just turned into a balance that grows every month. If the answer is "the savings I set aside for exactly this," it's annoying — and then it's over.
@@ -78,3 +82,5 @@ That gap — interest you never paid — *is* the return on an emergency fund. I
 ## The mindset
 
 You're not saving for a disaster movie. You're saving so the ordinary stuff — the flat tire, the surprise copay, the slow month — stays ordinary. Build the bucket first, even tiny. In the next lesson we'll set a concrete, reachable first target: your first $1,000.
+
+<p class="lesson-md-nav"><a href="./4-7-budgeting-when-your-income-is-irregular.md">← 4.7 Budgeting when your income is irregular</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./5-2-your-first-1000.md">5.2 Your first $1,000 (the starter fund) →</a></p>

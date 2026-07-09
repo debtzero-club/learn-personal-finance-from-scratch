@@ -37,6 +37,10 @@ sources:
     url: "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_avoid-checking-fees_tool_2018-11.pdf"
 ---
 
+# The account fees quietly draining you
+
+> Monthly maintenance, ATM, and minimum-balance fees add up to real money every year — and fee-free accounts exist, so you never have to pay them.
+
 ## The situation
 
 You glance at your statement and see a $12 charge you don't recognize. It's not a purchase — it's a "monthly maintenance fee." You didn't sign up for it on purpose. It just appears, every month, like rent on your own money.
@@ -65,3 +69,5 @@ Let's price out one common combo for someone earning around the $48,000 single-f
 | **Total** | | **$278/yr** |
 
 That's nearly a fifth of a paycheck — gone, every year, to fees you can opt out of by switching to a fee-free account. Setting up a no-fee account takes an afternoon and pays you back $278 a year, every year. Few money moves are that cheap or that permanent.
+
+<p class="lesson-md-nav"><a href="./3-1-checking-vs-savings.md">← 3.1 Checking vs. savings — what each is for</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-3-high-yield-savings.md">3.3 High-yield savings: same money, more of it →</a></p>

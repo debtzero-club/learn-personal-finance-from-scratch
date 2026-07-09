@@ -52,6 +52,10 @@ sources:
     url: "https://consumer.ftc.gov/articles/credit-freezes-and-fraud-alerts"
 ---
 
+# Identity theft and your financial safety
+
+> What identity theft looks like from the money side (accounts you didn't open, bills for things you didn't buy), the free prevention layer you control — a credit freeze at all three bureaus — and the four-step response playbook that starts at IdentityTheft.gov.
+
 ## The situation
 
 An email lands: "We're writing to inform you that your personal information may have been involved in a data breach." Or worse — your credit report shows a card you never applied for. Lesson 3.6 taught you to spot scams *before* they land and to lock your logins with 2FA. This lesson is the next layer: what it looks like when someone already has your information, and the playbook that limits the damage.
@@ -98,3 +102,5 @@ Compare that to the other column: months of cleanup, dispute letters, and stress
 ## Where this fits
 
 That closes the protection phase: you know what insurance is for (12.1), how a health plan charges you (12.2), what renters and auto policies actually cover (12.3), when life insurance starts mattering (12.4), and how to keep someone else from spending your good name (this lesson). Next phase: the big-ticket decisions — renting, cars, moving — where these protections quietly back you up.
+
+<p class="lesson-md-nav"><a href="./12-4-do-i-need-life-insurance-yet.md">← 12.4 Do I need life insurance yet?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./13-1-renting-leases-deposits-roommates.md">13.1 Renting: leases, deposits, roommates →</a></p>

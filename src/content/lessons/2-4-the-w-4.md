@@ -44,6 +44,10 @@ sources:
     url: "https://www.irs.gov/individuals/tax-withholding-estimator"
 ---
 
+# The W-4: telling your employer how much tax to hold back
+
+> The one form that controls how much income tax leaves each paycheck — and how to set it so you neither lend the IRS money for free nor get a surprise bill.
+
 ## The situation
 
 On your first day you get a stack of forms, and one of them — the **W-4** — quietly decides how big your paychecks are for the rest of the year. Most people fill it out in thirty seconds, never look at it again, and then wonder every April why they owe money or got a weirdly large refund. The W-4 is the dial; almost nobody adjusts it.
@@ -77,3 +81,5 @@ Notice the over-withholding row: a $2,400 refund feels great, but it means about
 ## How to actually set it
 
 You don't have to do the math by hand. The IRS publishes a free **Tax Withholding Estimator** (linked below): feed it a recent pay stub and it tells you whether to nudge your W-4 up or down, then hands you the exact lines to change. Run it once when you start a job, and again after anything big shifts — a raise, a second job, marriage, a kid. Ten minutes there can be the difference between a calm tax season and a stressful one.
+
+<p class="lesson-md-nav"><a href="./2-3-fica-social-security-medicare.md">← 2.3 FICA, Social Security &amp; Medicare — what's actually taken out</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-5-w-2-vs-1099.md">2.5 W-2 vs. 1099 — which one are you? →</a></p>

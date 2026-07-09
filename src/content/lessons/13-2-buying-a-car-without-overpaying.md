@@ -49,6 +49,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---
 
+# Buying a car without overpaying
+
+> A car has three prices — the sticker, the financed total, and the cost of owning it — and the dealer's favorite trick is selling you a monthly payment instead: the $20,000 car at 7% over 60 months really costs $23,761.48, and you should negotiate the price, never the payment.
+
 ## The situation
 
 You're at the dealership and the salesperson asks the famous question: "So… what monthly payment are you comfortable with?" It sounds helpful. It is the single most expensive question in car buying — because the moment you answer it, you've stopped negotiating the price of the car and started negotiating how the cost gets hidden. You already know how this loan works from Phase 8. Today you use that knowledge to buy the car without overpaying for it.
@@ -83,3 +87,5 @@ Now use the calculator to see the dealer's lever from the driver's seat: set the
 ## Where this fits
 
 You now have the full car-buying frame: three prices, two separate negotiations, and a calculator that prices any deal before a salesperson does. Next: the move itself — what it actually costs to pack your life into a truck and land somewhere new, in lesson 13.3.
+
+<p class="lesson-md-nav"><a href="./13-1-renting-leases-deposits-roommates.md">← 13.1 Renting: leases, deposits, roommates</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./13-3-moving-out-money-wise.md">13.3 Moving out / moving cities, money-wise →</a></p>

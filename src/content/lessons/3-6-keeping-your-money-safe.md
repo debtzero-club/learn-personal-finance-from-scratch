@@ -46,6 +46,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-think-i-have-been-a-victim-of-identity-theft-en-31/"
 ---
 
+# Keeping your money safe (fraud, scams, 2FA)
+
+> How to spot the scams aimed at your money, lock your accounts with two-factor authentication, and know exactly what to do if you get hit.
+
 ## The situation
 
 A text lands: "ALERT: unusual activity on your account. Verify immediately or it will be locked," with a link. Your stomach drops and your thumb hovers over the link. That spike of panic is the entire point — scams are engineered to make you act before you think. Knowing the playbook turns that panic into a shrug.
@@ -81,3 +85,5 @@ Speed limits the damage. If you suspect fraud or identity theft:
 ## By the numbers
 
 There's no dollar table here — the math of safety is simpler than that. **2FA takes about two minutes to switch on. A credit freeze is free and reversible. Reporting fast can be the difference between a canceled card and months of cleanup.** Set up the protections now, while nothing's wrong, so that the day a scary text arrives, you already know it's just a text — and your accounts are locked tight behind a second key.
+
+<p class="lesson-md-nav"><a href="./3-5-beating-overdraft.md">← 3.5 Beating overdraft and the $35 coffee</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-1-where-did-my-money-go.md">4.1 Where did my money go? (tracking, painlessly) →</a></p>

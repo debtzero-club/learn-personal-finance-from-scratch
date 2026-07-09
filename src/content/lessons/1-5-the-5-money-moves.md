@@ -31,6 +31,10 @@ sources:
     url: "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
 ---
 
+# The 5 money moves that matter most
+
+> The whole course in one map. Five moves, in order — do them roughly in this sequence and you're ahead of most people.
+
 ## The situation
 
 There's so much money advice that the real problem isn't *information* — it's *sequence*. Should you invest or pay off your card first? Save or grab the 401(k) match? Without an order, you freeze. So here's the order. This single lesson is the skeleton the whole course hangs on.
@@ -61,3 +65,5 @@ Paying off a 24% card is mathematically like earning a guaranteed 24% — someth
 ## How to use this
 
 You're somewhere on this list right now. Maybe you have no cushion (start at move 1). Maybe you've got a card balance eating you alive (move 3 is your priority). Find your spot — it tells you which phases of this course to focus on first. The rest of Foundations gives you the tools for each move.
+
+<p class="lesson-md-nav"><a href="./1-4-setting-a-money-goal.md">← 1.4 Setting a money goal you'll actually hit</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./1-6-your-money-snapshot.md">1.6 Your money snapshot: where am I right now? →</a></p>

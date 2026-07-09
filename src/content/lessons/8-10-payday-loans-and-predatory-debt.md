@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/payday-loans/"
 ---
 
+# Payday loans & predatory debt — what to avoid and why
+
+> Payday loans, car-title loans, and similar products charge triple-digit APRs and are built so most borrowers can't repay on time — they roll the debt over, fee after fee. Knowing the warning signs (and the cheaper alternatives) is how you stay out of the trap.
+
 ## The situation
 
 It's a tight week. Rent's due, the account is short, and a storefront (or an app) offers cash in minutes — no credit check, just a quick fee. When you're stressed and short, that "just pay it back next payday" pitch is almost impossible to resist. That's not an accident. These products are engineered for exactly that moment, and the way out costs far more than anyone tells you up front. The best defense is to see the trap clearly *before* you're standing in it.
@@ -94,3 +98,5 @@ The math is the whole warning: when a "small fee" annualizes to 400%, you're not
 ## Where this fits
 
 You can now spot a predatory loan by its real APR and its rollover design, and you know the cheaper doors to try first. Sometimes, though, a debt slips past — unpaid long enough to land in collections. That's a stressful place, but you have real rights there. Knowing them is the next lesson.
+
+<p class="lesson-md-nav"><a href="./8-9-consolidate-or-refinance.md">← 8.9 Should I consolidate or refinance?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-11-debt-in-collections.md">8.11 Dealing with debt in collections →</a></p>

@@ -48,6 +48,10 @@ sources:
     url: "https://www.investor.gov/introduction-investing"
 ---
 
+# Your first investment, step by step
+
+> The five steps first-time investors generally walk through: confirm the prerequisites (match, emergency fund, high-rate debt), pick the container, open an account at a low-cost brokerage using criteria — $0 minimums, no commissions, index funds available — pick a broad index fund, and automate a monthly amount.
+
 ## The situation
 
 You know the why (14.1), you've sized the risk (14.2), you know what to buy (14.3) and which container to hold it in (14.4). All that's left is the part nobody writes about because it's almost embarrassingly simple: actually doing it. Here's the whole walk, step by step — described as what first-time investors generally do, because this is education, not marching orders.
@@ -89,3 +93,5 @@ Nearly eight thousand dollars from a habit that costs less than most streaming b
 ## Where this fits
 
 That's the whole mechanical path from "I should probably invest someday" to a working, automated snowball. One lesson left in the course — and it's the bodyguard: the hype, scams, and get-rich-quick gravity that will absolutely find you now that you're an investor.
+
+<p class="lesson-md-nav"><a href="./14-4-retirement-accounts-recap.md">← 14.4 Retirement accounts recap (401k, IRA, Roth)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-6-avoiding-hype-and-scams.md">14.6 Avoiding hype, scams, and "get rich quick" →</a></p>

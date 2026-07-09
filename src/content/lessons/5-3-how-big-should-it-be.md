@@ -58,6 +58,10 @@ sources:
     url: "https://www.finra.org/media-center/newsreleases/2025/finra-foundation-releases-sixth-wave-national-financial-capability"
 ---
 
+# How big should my emergency fund be?
+
+> The full target is 3–6 months of essential expenses — not total spending — which makes the number far smaller and far more reachable than it first sounds.
+
 ## The situation
 
 You've got your $1,000 starter fund (lesson 5.2) and you're feeling good — until someone says the "real" emergency fund should be three to six *months* of expenses. Cue the panic math: six months of everything you spend? That's a number with a comma in it that you'll never reach. So the goal quietly slides into the "someday" pile.
@@ -95,3 +99,5 @@ And reaching it genuinely sets you apart. In the FINRA Foundation's most recent 
 ## The mindset
 
 The big number was never as big as it sounded — it's a few months of *essentials*, not a half-year of your whole life. Decide your target (essentials × 3, then aim for 6), write it down, and let the automatic transfers carry you there. Next: *where* this money should actually sit so it grows a little and stays out of spending's reach.
+
+<p class="lesson-md-nav"><a href="./5-2-your-first-1000.md">← 5.2 Your first $1,000 (the starter fund)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./5-4-where-to-keep-your-savings.md">5.4 Where to actually keep your savings →</a></p>

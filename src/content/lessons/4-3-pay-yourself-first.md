@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
 ---
 
+# Pay yourself first — the one habit that does the work
+
+> Save before you spend, not from whatever's left over. Moving your savings on payday — before the money has a chance to disappear — is the single habit that builds wealth.
+
 ## The situation
 
 Your plan is to save "whatever's left at the end of the month." Then the month happens — a dinner here, a sale there, a bill you forgot — and the end of the month arrives with nothing left to save. Again. It's not a willpower problem. It's an *order* problem.
@@ -61,3 +65,5 @@ Watch what happens to that $679 depending on *when* you move it:
 - **Save first:** The day your paycheck lands, $679 moves to savings automatically. The remaining $2,717 is what you live on — and you adjust to it without drama, because it's all you see in checking.
 
 Same income. Same person. The only difference is *order* — and over a year that's the gap between saving $480 and saving over $8,000. Paying yourself first isn't about earning more or wanting it more. It's about moving the money before life gets a vote. The next lesson (4.4) makes that move happen on its own, so you never even have to remember.
+
+<p class="lesson-md-nav"><a href="./4-2-the-50-30-20-starting-point.md">← 4.2 The 50/30/20 starting point</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-4-automating-your-money.md">4.4 Automating your money so willpower isn't the plan →</a></p>

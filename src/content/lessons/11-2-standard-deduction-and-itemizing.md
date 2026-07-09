@@ -52,6 +52,10 @@ figures:
   - standardDeductionSingle
 ---
 
+# The standard deduction and when to itemize
+
+> Everyone gets a flat $16,100 (single, 2026) subtracted automatically; itemizing means adding up specific deductions instead — and it only wins when that total beats $16,100, which almost never happens on a first job.
+
 ## The situation
 
 Every filing tool asks the same early question: *"Standard deduction, or itemize?"* It sounds like a fork that needs an accountant. For a first-job filer it's the easiest call on the whole return — and after this lesson you'll make it in under a minute, every year, with zero doubt.
@@ -92,3 +96,5 @@ Until then: the flat $16,100, the student loan interest deduction stacked on top
 ## Where this fits
 
 That's both halves of the deduction story — the automatic one and the add-it-up one. Next lesson, the money where *nothing* is automatic: side income, where no one withholds, no one matches, and the taxes are entirely your job.
+
+<p class="lesson-md-nav"><a href="./11-1-deductions-vs-credits.md">← 11.1 Deductions vs. credits — and which beat which</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./11-3-side-income-and-1099s.md">11.3 Side income &amp; 1099s — what you owe →</a></p>

@@ -51,6 +51,10 @@ sources:
     url: "https://studentaid.gov/announcements-events/interest-rates-for-new-direct-loans"
 ---
 
+# How student loan interest works (and capitalization)
+
+> Federal student loans charge simple interest every single day — about $4.81 a day on a $27,000 balance — and capitalization is the moment unpaid interest joins your principal, turning the snowball from Phase 6 against you.
+
 ## The situation
 
 You haven't made a single payment yet — maybe you're in the grace period after graduating, maybe the loan is in deferment. It's easy to assume the loan is just... waiting. It isn't. On an unsubsidized loan, it's growing every day, and there's one specific moment where that quiet growth gets locked in permanently. This is the lesson where you learn to see it.
@@ -89,3 +93,5 @@ Now, the calculator below. It's the same generic snowball machine from lesson 6.
 ## Where this fits
 
 You now know what the loan does on its own: $4.81 a day, and a one-time lock-in if interest goes unpaid through a deferment. The next lesson is about the thing you control — the monthly payment — and the two very different shapes it can take.
+
+<p class="lesson-md-nav"><a href="./9-1-federal-vs-private.md">← 9.1 Federal vs. private — know what you have</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./9-3-repayment-plans-explained.md">9.3 Repayment plans, explained (income-driven &amp; standard) →</a></p>

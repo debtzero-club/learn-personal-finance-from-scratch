@@ -49,6 +49,10 @@ sources:
     url: "https://studentaid.gov/manage-loans/repayment/plans/income-driven"
 ---
 
+# Repayment plans, explained (income-driven & standard)
+
+> Every federal repayment plan is one of two shapes — standard (same payment monthly, cheapest total) or income-driven (payment tied to what you earn, forgiveness after a long horizon, more total interest) — and the specific plan names change, so studentaid.gov keeps the current list.
+
 ## The situation
 
 Your first servicer bill lands: roughly $300 a month, every month, for ten years. On your budget from Phase 4, that nearly fills half of the whole save-and-pay-debt bucket. Is that number negotiable? Actually, yes — federal loans let you change the *shape* of repayment. What you can't change is the trade every shape makes.
@@ -82,3 +86,5 @@ Read the bottom rows together: standard is the cheap, fast path *if* the fixed p
 ## Where this fits
 
 Payment shapes, sorted. The natural next question: that word "forgiven" — who actually gets it, and what does it take? That's 9.4.
+
+<p class="lesson-md-nav"><a href="./9-2-how-student-loan-interest-works.md">← 9.2 How student loan interest works (and capitalization)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./9-4-forgiveness-programs.md">9.4 Forgiveness programs (PSLF and friends) →</a></p>

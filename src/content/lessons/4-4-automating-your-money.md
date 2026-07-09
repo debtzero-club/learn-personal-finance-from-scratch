@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-save-emergencies-and-future/"
 ---
 
+# Automating your money so willpower isn't the plan
+
+> Set your savings and bills to move on their own — split direct deposit, auto-transfers, autopay — so the right thing happens every payday whether you remember it or not.
+
 ## The situation
 
 You know you should save. You even know how much (the 20% from lesson 4.2) and when (payday, lesson 4.3). But "remember to log in and move $313 every two weeks" is a plan that depends on you being disciplined forever — and nobody is. So the move that needs to happen reliably is left to the part of you that's tired, busy, and easily distracted.
@@ -67,3 +71,5 @@ Take the anchor profile: $48,000 a year, paid biweekly, about **$1,567 in take-h
 You set that split **once.** Then it just runs. Over a year — 26 paychecks — that quiet $167 becomes about **$4,300 in savings** without a single act of monthly discipline. You didn't have to feel motivated 26 times. You had to set it up once. When you're ready to hit the full 20% bucket, bump the transfer up toward $313 a check — same automation, just a bigger number.
 
 That's the whole trick: willpower is a terrible savings plan, but it's a great *one-time* setup tool. Spend it on the setup, then let the automation carry the rest.
+
+<p class="lesson-md-nav"><a href="./4-3-pay-yourself-first.md">← 4.3 Pay yourself first — the one habit that does the work</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-5-sinking-funds.md">4.5 Sinking funds: saving for what you know is coming →</a></p>

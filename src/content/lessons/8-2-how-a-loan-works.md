@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/"
 ---
 
+# How a loan actually works: principal, interest, term
+
+> A loan is just three numbers — principal, interest rate, and term — and once you see how they combine into one fixed payment, the $20,000 auto loan stops being a mystery: $396.02 a month for 60 months, $3,761.48 of it interest.
+
 ## The situation
 
 You sign for a $20,000 car loan. The dealer says "$396 a month" and you nod, because what else are you going to do? But where does $396 come from? Why not $333 — the price split evenly across the months? That extra $63 a month, every month, for five years, is the part nobody explains. It's time someone did, because once you see how a loan is built, you can see exactly what it's costing you — and how to make it cost less.
@@ -89,3 +93,5 @@ Now play with the calculator. Drop the term to 36 months and watch the monthly p
 ## Where this fits
 
 You now know the three numbers behind any loan and where your payment comes from. But there's a twist hiding inside that $396.02: it is *not* split the same way every month. Early on, most of it is interest; only later does it become mostly principal. That's called amortization, and it's the single most important thing to understand about paying off a loan — it's the next lesson.
+
+<p class="lesson-md-nav"><a href="./8-1-types-of-debt.md">← 8.1 The types of debt, and how each works (revolving vs. installment, secured vs. unsecured)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-3-amortization.md">8.3 Amortization — why your early payments are almost all interest →</a></p>

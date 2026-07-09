@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/housing/housing-insecurity/help-for-renters/"
 ---
 
+# Renting: leases, deposits, roommates
+
+> A lease is a contract, a security deposit is your money held hostage to documentation, and one shared lease means every roommate owes all the rent — three things to understand before you sign, not after.
+
 ## The situation
 
 You found the place. The landlord slides a 14-page lease across the table and says "standard stuff, just sign the last page." Your roommate-to-be is already measuring for a couch. This is the moment most renting problems are born — because everything that goes wrong six months from now (the deposit fight, the surprise utility bill, the roommate who ghosts on rent) is usually decided right here, before you've spent a single night in the place.
@@ -96,3 +100,5 @@ Where does the $805 live in your budget? It's the biggest line in your 50/30/20 
 ## Where this fits
 
 Renting is the first big money contract most people sign, and now you know how to read it, protect the deposit, and share it safely. The next big decision usually has wheels on it: lesson 13.2 takes the auto loan you already understand from Phase 8 and walks into the dealership with it.
+
+<p class="lesson-md-nav"><a href="./12-5-identity-theft-and-financial-safety.md">← 12.5 Identity theft and your financial safety</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./13-2-buying-a-car-without-overpaying.md">13.2 Buying a car without overpaying →</a></p>

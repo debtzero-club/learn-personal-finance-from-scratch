@@ -49,6 +49,10 @@ sources:
     url: "https://www.finrafoundation.org/national-financial-capability-study"
 ---
 
+# Staying out of debt for good
+
+> Getting out of debt is half the battle; staying out is the other half. The same two habits from earlier phases — an emergency fund and a working budget — are what keep a one-time payoff from becoming a cycle, by covering the surprises that send people back to the cards.
+
 ## The situation
 
 You make the final payment. The balance reads $0.00 and you actually feel it — lighter, freer, a little proud. And then, three months later, the transmission dies, or a tooth cracks, or hours get cut, and there's $1,400 you don't have. The card is right there, empty and waiting. This is the exact moment debt cycles restart — not from carelessness, but from a surprise with nowhere to land. Staying out of debt is really about making sure that moment has a different ending.
@@ -84,3 +88,5 @@ That's the whole secret to staying out: don't let the surprise win (emergency fu
 ## Where this fits
 
 You've now gone all the way through debt — what kinds exist, how loans really work, how to escape the minimum trap, how to choose a payoff order, how to handle the hard edges, and how to stay free once you're there. The tools that keep you out — the emergency fund and the budget — were waiting for you the whole time, back in Phases 4 and 5. Getting out of debt and building a stable financial life turn out to be the same path. You're well on your way down it.
+
+<p class="lesson-md-nav"><a href="./8-11-debt-in-collections.md">← 8.11 Dealing with debt in collections</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./9-1-federal-vs-private.md">9.1 Federal vs. private — know what you have →</a></p>

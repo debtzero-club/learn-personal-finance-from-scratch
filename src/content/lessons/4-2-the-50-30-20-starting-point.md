@@ -37,6 +37,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
 ---
 
+# The 50/30/20 starting point
+
+> A simple default split of your take-home pay — half to needs, a third to wants, a fifth to saving and debt — that gives you a budget in about two minutes.
+
 ## The situation
 
 You've tracked a week (lesson 4.1), you can see where the money goes, and now you want a plan. But every budgeting "system" online has 40 categories and a color-coded spreadsheet, and you close the tab before you start. You don't need 40 categories. You need three.
@@ -68,3 +72,5 @@ Split that $3,396 three ways:
 So on a $48k salary, your starting plan is about **$1,698 for needs, $1,019 for wants, and $679 toward saving and paying off debt** — every month. That $679 is the bucket that quietly changes your life: it's the emergency fund you'll build in Phase 5, and the debt you'll crush in Phase 8.
 
 You don't have to hit these to the dollar. They're targets, not handcuffs. The next lessons make hitting the 20% almost automatic — by paying yourself first (4.3) and letting your bank do the moving for you (4.4).
+
+<p class="lesson-md-nav"><a href="./4-1-where-did-my-money-go.md">← 4.1 Where did my money go? (tracking, painlessly)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./4-3-pay-yourself-first.md">4.3 Pay yourself first — the one habit that does the work →</a></p>

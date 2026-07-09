@@ -53,6 +53,10 @@ sources:
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1026/m1/"
 ---
 
+# Why minimum payments cost so much (the 17-year problem)
+
+> Paying only the minimum on a $5,000 card at 24% APR isn't a slow path out of debt — it's a 17-year sentence: 201 months and $8,441.70 in interest, more than the original balance. The calculator pins the real number.
+
 ## The situation
 
 You met this trap in Phase 7 — the tiny "minimum payment" that feels like mercy. Here in the debt-payoff phase, we make it the centerpiece, because it's the single biggest reason people stay in card debt for *years.* And there's a detail worth being honest about: you may have heard an even scarier, much larger figure thrown around for the minimum-payment trap. Those bigger numbers come from a different, gentler minimum formula. With the formula most major cards actually use, the real number for our cardholder's $5,000 balance is **17 years** — and we'd rather show you the true figure than a scary myth.
@@ -90,3 +94,5 @@ Now use the calculator as a way *out.* It starts on the minimum-only trap. Then 
 ## Where this fits
 
 The minimum payment isn't a kindness — it's the lever that keeps the interest engine running on you for as long as possible, and the true cost is 17 years and $8,441.70 on a single $5,000 card. The escape is simply to pay more than it asks. But which debt should that extra go to first when you have several? That's the avalanche-vs-snowball question — and it's next.
+
+<p class="lesson-md-nav"><a href="./8-4-good-debt-bad-debt.md">← 8.4 Good debt, bad debt, and the line between</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-6-avalanche-vs-snowball.md">8.6 Avalanche vs. snowball — two ways to pay it down →</a></p>

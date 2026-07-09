@@ -39,6 +39,10 @@ sources:
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1030/"
 ---
 
+# High-yield savings: same money, more of it
+
+> Same dollars, more of them: a high-yield savings account pays a real rate where a big-bank account pays almost nothing — and APY is how you compare them honestly.
+
 ## The situation
 
 Your savings is sitting in the account the bank opened for you, earning basically nothing. Down the street (or in an app), another bank would pay you a few hundred dollars a year on the exact same balance. Nothing about your money changes — just the account holding it. That's the easiest raise you'll ever get.
@@ -63,3 +67,5 @@ Here's the entire pitch, in one comparison. Take **$5,000** and leave it alone f
 Same $5,000. Same safety (both FDIC-insured). One earns you fifty cents; the other earns you about **two hundred dollars** — roughly an extra car-insurance payment or a month of groceries, just for parking the money in a better account.
 
 Rates move over time, so the exact 4% will change. The lesson won't: **the gap between a high-yield account and a big-bank account is real money, and capturing it costs you one afternoon.** We'll come back to this in Phase 5 when we decide where your emergency fund should live — spoiler: right here.
+
+<p class="lesson-md-nav"><a href="./3-2-the-account-fees-draining-you.md">← 3.2 The account fees quietly draining you</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./3-4-debit-vs-credit.md">3.4 Debit vs. credit — what's really happening →</a></p>

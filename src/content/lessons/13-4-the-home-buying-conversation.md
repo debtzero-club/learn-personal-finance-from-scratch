@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/owning-a-home/"
 ---
 
+# The home-buying conversation (someday, not scary)
+
+> Renting isn't throwing money away — it buys flexibility with zero repair risk — and a mortgage is just the amortization engine you already know, at house scale; this is the vocabulary for a someday decision, with no deadline attached.
+
 ## The situation
 
 Someone at a family dinner asks when you're going to "stop wasting money on rent." Your social feed is split between people your age posting house keys and headlines saying homeownership is impossible for your generation. Both are noise. Here's the calm version of the home conversation — what the words mean, how the loan works, and why there is genuinely no clock ticking on this decision.
@@ -87,3 +91,5 @@ Notice the last row: amortization means a new mortgage builds equity *slowly* at
 ## Where this fits
 
 That's the someday-conversation: vocabulary down, no pressure, no clock. What's left in this phase is the decision frame for everything else with a big price tag — the five questions to ask before any purchase over about $500, in lesson 13.5.
+
+<p class="lesson-md-nav"><a href="./13-3-moving-out-money-wise.md">← 13.3 Moving out / moving cities, money-wise</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./13-5-big-purchases-how-to-decide.md">13.5 Big purchases: how to decide →</a></p>

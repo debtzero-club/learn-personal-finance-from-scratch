@@ -49,6 +49,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---
 
+# Good debt, bad debt, and the line between
+
+> Not all debt is equal: low-rate borrowing for something that lasts or grows in value sits on one side of a line; high-rate borrowing for things you consume sits on the other — and knowing which is which tells you what to pay off first.
+
 ## The situation
 
 You've probably heard someone say "that's good debt" about a mortgage, or "credit card debt is bad debt" like it's a moral failing. Both are oversimplified, and the moralizing isn't helpful. There *is* a useful line between kinds of debt — but it's not about being a good or bad person. It's about two practical things: the interest rate, and what you actually got for the money. Get the line right and you'll know exactly where to point your next dollar.
@@ -88,3 +92,5 @@ That's the whole value of the good/bad line: not to judge the past, but to tell 
 ## Where this fits
 
 You can now sort any debt by what really matters — its rate and what it bought — without the guilt trip. The high-rate, already-spent debt is your prime target. But there's one trap that quietly makes high-rate debt *worse* than its rate suggests: paying only the minimum. The number behind that trap is genuinely shocking, and it's next.
+
+<p class="lesson-md-nav"><a href="./8-3-amortization.md">← 8.3 Amortization — why your early payments are almost all interest</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-5-the-17-year-problem.md">8.5 Why minimum payments cost so much (the 17-year problem) →</a></p>

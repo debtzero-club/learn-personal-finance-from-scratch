@@ -50,6 +50,10 @@ sources:
     url: "https://consumer.ftc.gov/scams"
 ---
 
+# Avoiding hype, scams, and "get rich quick"
+
+> Now that you're an investor, the hype will find you — crypto moonshots, meme stocks, options plays, day-trading gurus — so here's the field guide: why each one is where beginners get burned, the scam red flags the FTC and SEC warn about, and the boring defense that beats them all.
+
 ## The situation
 
 The week you start investing, the algorithm notices. Suddenly your feed knows: a coin that's "about to 100x," a stock everyone's piling into, a 19-year-old in a rented sports car explaining how day trading bought it, a DM from a "mentor" with a guaranteed system. You have an automated index fund quietly doing its thing — and a phone full of people insisting that's for suckers. This last lesson is the bodyguard.
@@ -94,3 +98,5 @@ Anyone who could genuinely compound money at 2% a week would, within a few years
 ## Where this fits — and where you go from here
 
 This is the last lesson of the course. You started at a first paycheck (Phase 2) and you're ending as someone with a budget that works, a funded safety net, credit you control, debt with a plan, taxes that make sense, real insurance, and an automated investment quietly compounding — the same snowball from lesson 6.3, finally and permanently pointed your way. The hype will keep coming forever. Let it. **Boring built all of this, and boring doesn't need a miracle.** You know how the engine works now — keep it aimed, keep it fed, and let time do the part it was always going to do.
+
+<p class="lesson-md-nav"><a href="./14-5-your-first-investment.md">← 14.5 Your first investment, step by step</a> · <a href="../../../README.md#curriculum">Contents</a></p>

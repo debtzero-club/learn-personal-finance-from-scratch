@@ -47,6 +47,10 @@ sources:
     url: "https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service"
 ---
 
+# Forgiveness programs (PSLF and friends)
+
+> Public Service Loan Forgiveness has exactly three moving parts — a qualifying employer, 120 qualifying monthly payments, and a qualifying plan — and after ten years of all three, your remaining federal balance is wiped.
+
 ## The situation
 
 A coworker mentions, almost in passing, that their cousin "got their student loans forgiven for being a teacher." It sounds like an urban legend — too big to be real, too vague to act on. It's real. It's written into law. And it has exactly three moving parts.
@@ -83,3 +87,5 @@ For our anchor — $27,000 on a $48,000 salary — income-driven payments wouldn
 ## Where this fits
 
 Federal loans now make sense as a system: protections (9.1), the daily interest engine (9.2), payment shapes (9.3), and the forgiveness finish line. One question left in this phase — the ads promising to "refinance and save." That one has a one-way door, and it's next.
+
+<p class="lesson-md-nav"><a href="./9-3-repayment-plans-explained.md">← 9.3 Repayment plans, explained (income-driven &amp; standard)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./9-5-should-you-refinance-student-loans.md">9.5 Should you refinance your student loans? →</a></p>

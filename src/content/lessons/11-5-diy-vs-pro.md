@@ -50,6 +50,10 @@ sources:
     url: "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
 ---
 
+# When to DIY vs. get a pro
+
+> One W-2 plus the standard deduction is a free, one-hour DIY filing; side income, multiple states, or big life changes are when paying a professional starts paying for itself — match the tool to the complexity.
+
 ## The situation
 
 Every spring, the ads arrive: filing is dangerous, the rules changed, you need protection, upgrade now. Meanwhile your actual tax year was one W-2 and a student loan. Before paying anyone — software upsell or human professional — it's worth knowing the honest answer to one question: *how complicated is my year, really?*
@@ -90,3 +94,5 @@ Note what's *not* in the table: brand names. Free or paid, judge any tool by wha
 ## Where this fits
 
 That closes the deeper tax phase: deductions vs. credits (11.1), the standard-deduction call (11.2), side income (11.3), the shelter trio (11.4), and now who does the filing. The next phase changes the subject from taxes to protection — insurance, and the cheap coverage most people skip.
+
+<p class="lesson-md-nav"><a href="./11-4-tax-advantaged-accounts-recap.md">← 11.4 Tax-advantaged accounts recap — how to legally pay less</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./12-1-what-insurance-is-really-for.md">12.1 What insurance is really for →</a></p>

@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-reduce-your-debt/"
 ---
 
+# Why extra payments crush a loan — and where to aim them
+
+> A small extra payment hits a loan far harder than you'd expect: just $100 extra a month on the $20,000 auto loan ends it 13 months early and saves $893.74 in interest — because every extra dollar goes straight to principal.
+
 ## The situation
 
 You've got a little breathing room this month — maybe $100 you could throw at the car loan. It feels almost pointless against a $20,000 balance. A hundred bucks? That barely registers. So you keep it, or spend it, and the loan grinds on. But that instinct is exactly backwards. That $100, paid every month, doesn't just chip the balance — it *crushes* the loan, because of how amortization works. Let's prove it with the real number.
@@ -88,3 +92,5 @@ Now play with the calculator. Try $50 extra, or $200. Try aiming the same extra 
 ## Where this fits
 
 You've now got the full toolkit — know your debt types, read a loan, escape the minimum trap, pick avalanche or snowball, and supercharge any of it with extra payments. The last step is to stop juggling all of this in your head and get every debt into one clear picture. That single view is where the plan comes together — and it's next.
+
+<p class="lesson-md-nav"><a href="./8-6-avalanche-vs-snowball.md">← 8.6 Avalanche vs. snowball — two ways to pay it down</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-8-putting-every-debt-in-one-place.md">8.8 Putting every debt in one place (your payoff picture) →</a></p>

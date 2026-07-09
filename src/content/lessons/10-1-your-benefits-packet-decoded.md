@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/retirement/"
 ---
 
+# Your benefits packet, decoded
+
+> Benefits are part of your pay — health insurance, the 401(k) match, HSA/FSA, life and disability coverage, and PTO are compensation, and an unread packet is unclaimed money.
+
 ## The situation
 
 Week one at the new job, an email lands: "Action required: benefits enrollment closes in two weeks." Attached is a 40-page PDF full of words like "elective deferral," "HDHP," and "evidence of insurability." You've never picked a health plan, you don't know what an FSA is, and the deadline is real. Most people skim it, click the defaults, and move on — and quietly leave money on the table.
@@ -86,3 +90,5 @@ That match line alone is worth $1,920 a year on a $48,000 salary — real money,
 ## Where this fits
 
 This lesson is the map; the next four are the territory. The match (10.2), the traditional-vs-Roth checkbox (10.3), and the HSA/FSA decision (10.4) are the three choices with real dollars attached, and lesson 10.5 walks the once-a-year window where you make them. Health-insurance jargon — premium, deductible, out-of-pocket max — gets proper definitions in Phase 12's health-insurance lesson; for now, the packet list you make today is the foundation.
+
+<p class="lesson-md-nav"><a href="./9-5-should-you-refinance-student-loans.md">← 9.5 Should you refinance your student loans?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./10-2-the-401k-match.md">10.2 The 401(k) match — don't leave free money behind →</a></p>

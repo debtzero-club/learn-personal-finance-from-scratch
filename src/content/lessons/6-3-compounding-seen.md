@@ -51,6 +51,10 @@ sources:
     url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
 ---
 
+# Compounding, seen: how a little becomes a lot
+
+> Watch the snowball happen: $1,000 plus $100 a month at 5%, compounded monthly, grows to about $17,175 over ten years — and most of the back-end growth is interest earning interest.
+
 ## The situation
 
 You can read "interest earns interest" all day and still not *feel* it. Numbers on a page don't curve. So this lesson does something different: it shows you the snowball actually rolling — a real, steady saver, real monthly deposits, and a balance you can watch pull away from the line of your own contributions. Then it hands you the controls.
@@ -84,3 +88,5 @@ Now stop reading and **try it yourself.** The calculator below starts on this ex
 ## After you've played with it
 
 Notice what moved the ending number the most. Small changes to the rate help; small changes to your monthly deposit help; but stretching the *years* is what really bends the curve, because compounding feeds on time. That single insight — **start early, let it run** — is the most valuable thing in personal finance, and you just watched it happen. (This is a savings illustration, by the way, not investment advice — same engine, but we keep investing light and save it for Phase 14.)
+
+<p class="lesson-md-nav"><a href="./6-2-simple-vs-compound-interest.md">← 6.2 Simple vs. compound interest — the difference that changes your life</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-4-the-rule-of-72.md">6.4 The Rule of 72: how fast money doubles →</a></p>

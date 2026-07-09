@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-insurance/"
 ---
 
+# What insurance is really for
+
+> Insurance is one trade: you pay a small, known cost (the premium) so a rare, catastrophic cost can't ruin you — insure what you can't afford to replace, and let your emergency fund handle the rest.
+
 ## The situation
 
 Insurance keeps showing up. The benefits packet wants you to pick a health plan. The apartment lease asks for renters insurance. The DMV won't register a car without proof of coverage. And every one of these feels like the same bad deal: money out every month, nothing visible back. Before deciding what's worth paying for, it helps to know what insurance actually *is* — because it's not what it feels like.
@@ -86,3 +90,5 @@ That's the entire product: 995 people "lost" $500 each, and what they bought wit
 ## Where this fits
 
 This is the lens for the whole phase: every policy in the next three lessons — health, renters, auto, life — is the same trade with different disasters attached. Next: the four numbers that run every health plan, including the one sitting in your benefits packet.
+
+<p class="lesson-md-nav"><a href="./11-5-diy-vs-pro.md">← 11.5 When to DIY vs. get a pro</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./12-2-health-insurance-basics.md">12.2 Health insurance basics (premium, deductible, out-of-pocket) →</a></p>

@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/"
 ---
 
+# The two faces of compounding: friend when saving, enemy in debt
+
+> The exact engine that snowballs your savings is the same one that snowballs your debt — so the goal is simple: get compounding working for you, and stop it from working against you.
+
 ## The situation
 
 You've got a little in savings, slowly ticking up. You've also got a balance on a card, slowly ticking up. Both are doing the same quiet thing — growing on their own while you sleep — but one of them you *want* to grow and the other you definitely don't. They feel like two unrelated problems. They're not. They're the same engine, pointed in two directions, and seeing that is the key that unlocks the rest of this course.
@@ -78,3 +82,5 @@ Now flip it. If you use that $2,000 to **kill the 24% debt**, you don't earn $25
 ## Where this goes next
 
 You now own the engine. You've seen it grow a snowball, you can estimate its doubling time in your head, and you know APR from APY. From here, the course just points this same engine at the real situations in your life. **Phase 7 (Credit)** shows the enemy face up close — how a credit card calculates interest and why the minimum payment is a trap. **Phase 8 (Debt)** hands you the tools to beat it and turn the snowball back to your side. Same engine. You just learned how it works — now you get to aim it.
+
+<p class="lesson-md-nav"><a href="./6-6-fixed-vs-variable-rates.md">← 6.6 Fixed vs. variable rates — what changes, and when it bites</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-1-what-credit-is.md">7.1 What credit even is — and why it matters →</a></p>

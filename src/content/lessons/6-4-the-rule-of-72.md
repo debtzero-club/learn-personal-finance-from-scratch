@@ -48,6 +48,10 @@ sources:
     url: "https://www.investor.gov/additional-resources/information/youth/teachers-classroom-resources/what-compound-interest"
 ---
 
+# The Rule of 72: how fast money doubles
+
+> Divide 72 by the interest rate and you get roughly how many years it takes money to double — a back-of-the-napkin shortcut that works for savings you earn and debt you owe.
+
 ## The situation
 
 Someone tells you their savings earns 4% and your eyes glaze over — 4% of *what*, over *how long*, and does that even matter? You want a gut-level sense of whether a rate is a big deal or a rounding error, without opening a spreadsheet. There's a one-step trick for exactly that, and it fits on a napkin.
@@ -84,3 +88,5 @@ The rule isn't perfectly precise (the true doubling time at 6% is a hair over 11
 ## Why it matters
 
 This is the pocket version of everything in this phase. You don't need to run the compound calculator for every rate you bump into — just divide 72 and you instantly know if a rate is a slow simmer or a fast burn. Keep it handy for Phase 7 (credit) and Phase 8 (debt), where the fast-burn side is the whole point.
+
+<p class="lesson-md-nav"><a href="./6-3-compounding-seen.md">← 6.3 Compounding, seen: how a little becomes a lot</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-5-apr-vs-apy.md">6.5 APR vs. APY — why the same "rate" isn't the same number →</a></p>

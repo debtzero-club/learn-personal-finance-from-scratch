@@ -54,6 +54,10 @@ figures:
   - federalIncomeTaxBrackets.single
 ---
 
+# Your first tax return, demystified
+
+> Filing isn't a bill — it's a once-a-year reconciliation between what was withheld and what you actually owe, and the standard deduction shrinks the part that's taxed.
+
 ## The situation
 
 It's February, a form called a **W-2** shows up, and somewhere in the back of your mind a clock starts ticking toward "taxes are due." If you've never filed, it feels like a test you didn't study for. It isn't. For a first-job single filer with one W-2, a tax return is one of the simplest grown-up tasks there is — and most of the work was already done for you, paycheck by paycheck.
@@ -98,3 +102,5 @@ So your true federal income tax for the year is about **$3,580**. If your payche
 ## When it's this simple — and when it isn't
 
 One W-2, no side income, taking the standard deduction: free filing tools (including the IRS's own) will walk you line by line, and it can take under an hour. It gets more involved if you have 1099 income (the next-door case from the W-2 vs. 1099 lesson), itemize instead of taking the standard deduction, or have multiple jobs. For a first-job single filer, though, the version above is usually the whole picture — withheld vs. owed, reconciled once a year.
+
+<p class="lesson-md-nav"><a href="./2-5-w-2-vs-1099.md">← 2.5 W-2 vs. 1099 — which one are you?</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-7-why-a-big-refund-isnt-a-win.md">2.7 Why a big refund isn't the win it feels like →</a></p>

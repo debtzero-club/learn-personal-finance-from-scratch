@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/"
 ---
 
+# Simple vs. compound interest — the difference that changes your life
+
+> Simple interest only ever earns on your original amount; compound interest earns on your original amount plus all the interest already added — and over years, that one difference is enormous.
+
 ## The situation
 
 Two people each put $1,000 somewhere that pays 10% a year. One account uses *simple* interest, the other uses *compound*. For the first year they look identical. Ten years later, one of them has noticeably more money — for doing absolutely nothing different. The only difference was a single word in the fine print, and it's the most important word in this whole phase.
@@ -82,3 +86,5 @@ These are clean once-a-year numbers to show the idea. In real life interest usua
 ## Why this is a ⚙ lesson
 
 This is one of the credibility-spine lessons — the "how it actually works" that everything else leans on. You don't need to memorize a formula. You need exactly one idea: **compound interest is interest earning interest, and the gap it opens up grows with time.** Hold that, and the next lesson — where you'll *see* the snowball — will click instantly.
+
+<p class="lesson-md-nav"><a href="./6-1-interest-the-simplest-version.md">← 6.1 Interest, the simplest version: money that grows, or costs, over time</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-3-compounding-seen.md">6.3 Compounding, seen: how a little becomes a lot →</a></p>

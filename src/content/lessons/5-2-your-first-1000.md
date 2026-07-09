@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
 ---
 
+# Your first $1,000 (the starter fund)
+
+> Before the full emergency fund, aim at one concrete, reachable target: a $1,000 starter fund that covers most everyday surprises — and proves to you that saving works.
+
 ## The situation
 
 You're sold on the idea of an emergency fund (lesson 5.1), and then you hear the real target — three to six months of expenses — and your stomach drops. That's thousands of dollars. On a first-job paycheck, it sounds like a goal for some other, richer person. So you do the natural thing with any goal that feels impossible: nothing.
@@ -84,3 +88,5 @@ The exact pace doesn't matter. What matters is that you set the transfer once an
 ## The mindset
 
 Don't let the full fund scare you out of the starter fund. $1,000 is close, it's concrete, and the day you hit it you've already escaped the most common money traps a first-job year throws at you. Next lesson: how big the *full* fund should actually be — and why it's smaller than the scary number in your head.
+
+<p class="lesson-md-nav"><a href="./5-1-why-an-emergency-fund-first.md">← 5.1 Why an emergency fund comes before almost everything</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./5-3-how-big-should-it-be.md">5.3 How big should my emergency fund be? →</a></p>

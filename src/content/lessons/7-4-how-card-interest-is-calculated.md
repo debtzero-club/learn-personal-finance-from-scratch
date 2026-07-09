@@ -53,6 +53,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/"
 ---
 
+# How card interest is calculated (APR → daily rate → average daily balance)
+
+> Card interest isn't one yearly charge — it's your APR split into a tiny daily rate, applied to the average balance you carried each day of the cycle, which is why a $5,000 balance costs about $98.63 a month.
+
 ## The situation
 
 Your card says "24% APR." You carry a $5,000 balance for a month. Quick: how much interest do you owe? Most people guess wildly — and the card company is counting on you not knowing. The actual math is completely learnable, and once you see it, that 24% stops being a mystery number and becomes a cost you can predict.
@@ -96,3 +100,5 @@ Now play with the calculator. Watch what happens when you add a **payment mid-cy
 ## Where this fits
 
 You now know exactly what a carried balance costs and why: a daily rate, applied to your average balance, every day. That's the engine. The next lesson points it at the cruelest setting of all — what happens when you pay only the *minimum* and let that engine run for years.
+
+<p class="lesson-md-nav"><a href="./7-3-the-grace-period.md">← 7.3 The grace period — how to borrow for free (if you do it right)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-5-the-minimum-payment-trap.md">7.5 The minimum-payment trap — how it's calculated and why it keeps you paying →</a></p>

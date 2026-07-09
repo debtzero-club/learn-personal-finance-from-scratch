@@ -50,6 +50,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-are-some-ways-to-start-or-rebuild-a-good-credit-history-en-2155/"
 ---
 
+# How to build credit from zero
+
+> If you have no credit history, you can start one with tools built for exactly that — a secured card, becoming an authorized user, or a credit-builder loan — and then the same two habits do the rest: pay on time, keep balances low.
+
 ## The situation
 
 There's a catch-22 at the start: to get a credit card or a loan, lenders want to see a credit history — but you can't have a credit history until someone lends to you. If you're 19 and have never borrowed a cent, your credit file might be blank, and a blank file can feel like a locked door. The good news is there are tools built specifically to open it.
@@ -82,3 +86,5 @@ Notice there's no dramatic moment — just a small deposit and a year of boring,
 ## Where this fits
 
 You're never truly stuck with "no credit" — secured cards, authorized-user status, and credit-builder loans are doors built for exactly that starting point, and the same on-time, low-balance habits carry you from there. Next: now that you have a card, how to use it without getting burned.
+
+<p class="lesson-md-nav"><a href="./7-7-your-credit-score.md">← 7.7 Your credit score: what actually moves it</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-9-using-a-card-without-getting-burned.md">7.9 Using a credit card without getting burned →</a></p>

@@ -52,6 +52,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
 ---
 
+# Checking your credit report (free) and fixing errors
+
+> Your credit report is the file your score is built from, you can get it free at AnnualCreditReport.com, and errors are common — spotting and disputing them is a free way to protect your credit.
+
 ## The situation
 
 Your credit score gets all the attention, but it's just a number squeezed out of a bigger document you've probably never read: your **credit report.** And here's the unsettling part — credit reports contain errors surprisingly often, and an error you don't catch can quietly cost you a loan approval or a better rate. The fix is free, and it starts with simply *looking.*
@@ -87,3 +91,5 @@ Same real balance, same person — but a single wrong number on the report makes
 ## Where this fits
 
 Your report is the source of truth your score is built on, and you get it free — so check it, read it for errors, and dispute anything wrong. That closes out the credit half of the picture: you now understand cards, interest, scores, building credit, and the report behind it all. Next phase, we turn to the other side — loans, debt, and a real plan to pay it down.
+
+<p class="lesson-md-nav"><a href="./7-10-buy-now-pay-later.md">← 7.10 Buy Now, Pay Later (Klarna, Afterpay) — how it really works</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-1-types-of-debt.md">8.1 The types of debt, and how each works (revolving vs. installment, secured vs. unsecured) →</a></p>

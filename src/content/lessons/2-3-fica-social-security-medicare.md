@@ -50,6 +50,10 @@ figures:
   - medicareEmployeeRate
 ---
 
+# FICA, Social Security & Medicare — what's actually taken out
+
+> The 7.65% that leaves every paycheck no matter what — what it is, what it buys, and why most first-jobbers never hit its ceiling.
+
 ## The situation
 
 You scan your pay stub and spot two lines you didn't sign up for: one says *Social Security* (or maybe *OASDI*), the other says *Medicare*. Together they're taking a chunk of every check, and there's no box to uncheck. That's FICA — and unlike a lot of money mysteries, this one has a clean, fixed answer.
@@ -83,3 +87,5 @@ So about **$141 of every $1,846.15 check** goes to FICA. It's the most predictab
 ## What it actually buys
 
 It's easy to see FICA as money vanishing, but it's closer to a prepayment on future-you. The Social Security part builds toward the retirement, disability, and survivor benefits you can draw on later; the Medicare part funds the health coverage you'll likely use after 65. You're not getting nothing for that 7.65% — you're funding a safety net that, by law, includes you.
+
+<p class="lesson-md-nav"><a href="./2-2-reading-a-pay-stub.md">← 2.2 Reading a pay stub, line by line</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-4-the-w-4.md">2.4 The W-4: telling your employer how much tax to hold back →</a></p>

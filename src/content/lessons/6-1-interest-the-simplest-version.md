@@ -48,6 +48,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/"
 ---
 
+# Interest, the simplest version: money that grows, or costs, over time
+
+> Interest is the price of using money over time — you earn it on savings and you pay it on debt — and it's the same idea sitting under every account, card, and loan you'll ever touch.
+
 ## The situation
 
 You open your bank app and see a little number sitting next to your savings — maybe "4.00% APY." Across town, your friend's credit card shows "24.99% APR." Two different numbers, two different accounts, and the same quiet thing happening underneath both: money is changing hands just because time is passing. That number is interest, and once you see what it really is, every account and loan you'll ever have gets a lot less mysterious.
@@ -79,3 +83,5 @@ That's the simplest version: one rate, one year, one amount. In real life intere
 ## Where this fits
 
 This is the engine room of the whole course. Interest sits under savings, credit, loans, and student debt — everything in Phases 7, 8, and 9. Get this one idea ("rent on money, earned or paid") and the harder lessons ahead are just the same idea with more detail. Next up: what happens when interest starts earning interest.
+
+<p class="lesson-md-nav"><a href="./5-5-saving-for-goals.md">← 5.5 Saving for goals: short, medium, long</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./6-2-simple-vs-compound-interest.md">6.2 Simple vs. compound interest — the difference that changes your life →</a></p>

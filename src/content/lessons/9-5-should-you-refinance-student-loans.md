@@ -49,6 +49,10 @@ sources:
     url: "https://studentaid.gov/manage-loans/consolidation"
 ---
 
+# Should you refinance your student loans?
+
+> Refinancing a federal student loan into a private one can lower the rate — but it permanently forfeits income-driven repayment, forgiveness eligibility, and federal pause rights, so the real comparison is the savings against everything you'd give up.
+
 ## The situation
 
 The ad finds you eventually: "Refinance your student loans — rates from 4.99%! Save thousands!" After lesson 8.9 you know the move: compare totals, not monthlies. But student loans add a twist that ordinary loans don't have — with federal loans, refinancing isn't just a math problem. It's a one-way door.
@@ -91,3 +95,5 @@ That's the honest shape of the deal on this loan: about **$20 a month** in excha
 ## Where this fits
 
 That closes the student-loan toolkit: know what you have, watch the daily interest, pick a payment shape, chase forgiveness if it fits, and treat refinancing as the one-way door it is. Next phase: the money your job *gives* you — benefits, matches, and the free money hiding in your enrollment packet.
+
+<p class="lesson-md-nav"><a href="./9-4-forgiveness-programs.md">← 9.4 Forgiveness programs (PSLF and friends)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./10-1-your-benefits-packet-decoded.md">10.1 Your benefits packet, decoded →</a></p>

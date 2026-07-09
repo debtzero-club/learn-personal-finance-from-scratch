@@ -48,6 +48,10 @@ sources:
     url: "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4"
 ---
 
+# Index funds: the boring answer that works
+
+> An index is a published list measuring a slice of the market — like the S&P 500 — and an index fund simply buys the whole list, giving you a tiny piece of hundreds of companies in one purchase (diversification) at a very low yearly cost (expense ratio).
+
 ## The situation
 
 This is the question that froze you in lesson 14.2: *which fund?* There are thousands, every one wrapped in confident marketing, and picking wrong feels catastrophic. So here's the deliberately anticlimactic answer most beginner money education lands on — the one that requires no genius, no screen-watching, and no luck. It's boring. That's the point.
@@ -89,3 +93,5 @@ So the entire fund-shopping checklist, the one lesson 14.5 will actually use:
 ## Where this fits
 
 You now know *what* to own. Next question: what to own it *inside* — because the account wrapped around an investment decides how it's taxed, and you've already met every account that matters (Phase 10 built them; 14.4 lines them up).
+
+<p class="lesson-md-nav"><a href="./14-2-risk-time-and-overthinking.md">← 14.2 Risk, time, and why beginners overthink it</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./14-4-retirement-accounts-recap.md">14.4 Retirement accounts recap (401k, IRA, Roth) →</a></p>

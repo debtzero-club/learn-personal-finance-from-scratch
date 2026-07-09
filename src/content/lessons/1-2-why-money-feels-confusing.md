@@ -28,6 +28,10 @@ sources:
     url: "https://www.finrafoundation.org/national-financial-capability-study"
 ---
 
+# Why money feels confusing — and why it's not your fault
+
+> The reason money feels overwhelming isn't a you problem. It's a system that never taught you and profits from the confusion.
+
 ## The situation
 
 You open a banking app, a benefits portal, or a credit card statement, and within ten seconds there are six numbers, three acronyms, and a word you've never seen. The feeling that follows — "I should understand this and I don't" — is incredibly common. It is not a sign that something's wrong with you.
@@ -49,3 +53,5 @@ Surveys of US adults consistently find that a majority can't answer a few basic 
 ## The reframe
 
 For the rest of this course, try swapping the thought *"I'm bad with money"* for *"I haven't learned this part yet."* The first one is a dead end. The second one is just a to-do list — and you're already working through it.
+
+<p class="lesson-md-nav"><a href="./1-1-what-this-course-is.md">← 1.1 What this course is (and isn't)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./1-3-needs-wants-and-the-cost-of-later.md">1.3 Needs, wants, and the cost of "later" →</a></p>

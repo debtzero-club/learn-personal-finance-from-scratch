@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
 ---
 
+# Amortization — why your early payments are almost all interest
+
+> Your loan payment is the same every month, but how it splits isn't: on the $20,000 auto loan, payment one is $116.67 interest and only $279.35 principal — early payments barely dent the balance, and the split-bar shows exactly why.
+
 ## The situation
 
 Six months into your car loan, you check the balance and your stomach drops. You've paid almost $2,400 — six payments of $396 — but the balance has barely moved. Did the payment not go through? Is the bank cheating you? No. This is amortization doing exactly what it's designed to do, and it's working against your intuition. Once you see *why* the balance crawls at first, you'll never be confused by a loan statement again — and you'll know exactly how to beat it.
@@ -88,3 +92,5 @@ Watch the split-bars in the calculator: the interest slice (the larger early por
 ## Where this fits
 
 You now understand the most counterintuitive thing about loans: your balance crawls at first because early payments are mostly interest. That's not a reason to despair — it's a reason to act early. But before we talk about crushing a loan with extra payments, we need to look at the debt where amortization works *cruelly* slowly: paying only the minimum on a credit card. That's next, and the number will surprise you.
+
+<p class="lesson-md-nav"><a href="./8-2-how-a-loan-works.md">← 8.2 How a loan actually works: principal, interest, term</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-4-good-debt-bad-debt.md">8.4 Good debt, bad debt, and the line between →</a></p>

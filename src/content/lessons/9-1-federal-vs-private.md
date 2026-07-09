@@ -49,6 +49,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/student-loans/"
 ---
 
+# Federal vs. private — know what you have
+
+> Every student loan is either federal (government-set fixed rate, income-driven options, forgiveness programs, pause rights) or private (bank-set, credit-based, none of those) — and which kind you have decides every move you can make later.
+
 ## The situation
 
 A letter arrives from a company you've never heard of: "Welcome! We're your student loan servicer. Your first payment is due soon." You vaguely remember signing things at eighteen. You're not sure how many loans you have, what kind they are, or what they cost. That's where almost everyone starts — and it's fixable in about twenty minutes.
@@ -94,3 +98,5 @@ That left column is why the inventory matters. Every choice in lessons 9.3, 9.4,
 ## Where this fits
 
 You now know what you're holding. Next: what it's doing while you're not looking — how student loan interest actually accrues, and the one event (capitalization) that quietly makes a loan permanently more expensive.
+
+<p class="lesson-md-nav"><a href="./8-12-staying-out-of-debt.md">← 8.12 Staying out of debt for good</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./9-2-how-student-loan-interest-works.md">9.2 How student loan interest works (and capitalization) →</a></p>

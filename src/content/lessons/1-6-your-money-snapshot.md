@@ -29,6 +29,10 @@ sources:
     url: "https://www.consumerfinance.gov/consumer-tools/financial-well-being/"
 ---
 
+# Your money snapshot: where am I right now?
+
+> Before you can improve anything, you need a clear picture. A 10-minute snapshot of what you own, what you owe, and what flows in and out.
+
 ## The situation
 
 You can't get directions without a starting point on the map. Same with money: every plan in this course gets easier once you can see, on one page, where you actually stand today. Most people avoid this because they're scared of the number. We're going to make it boring instead of scary.
@@ -67,3 +71,5 @@ Negative net worth, slightly positive cash flow. This person isn't behind — th
 ## Why this matters
 
 This snapshot is your "before" photo. Take it today, then again in a few months. Watching net worth climb and cash flow widen is weirdly motivating — it turns abstract effort into a visible line going the right way. That's the end of Phase 1: you now have a goal (1.4), a map (1.5), and a starting point (1.6). Next up, Phase 2 — where your paycheck actually goes.
+
+<p class="lesson-md-nav"><a href="./1-5-the-5-money-moves.md">← 1.5 The 5 money moves that matter most</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./2-1-gross-vs-net.md">2.1 Gross vs. net: why your paycheck is smaller than your salary →</a></p>

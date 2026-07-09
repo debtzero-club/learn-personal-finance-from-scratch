@@ -52,6 +52,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/will-paying-off-my-credit-card-balance-every-month-improve-my-score-en-1293/"
 ---
 
+# Your credit score: what actually moves it
+
+> A credit score is a number lenders use to judge your reliability, and it's driven mostly by two things: paying on time and not using too much of your available credit.
+
 ## The situation
 
 You hear "your credit score" tossed around like it's a grade that decides your whole financial life — and to a degree, it does shape what you can borrow and how cheaply. But almost nobody explains what the number actually measures or, more usefully, *which* of your habits move it. It's not a mystery. It's a handful of factors, and you already control the two biggest ones.
@@ -90,3 +94,5 @@ Same card, same person — the only thing that changed is how much of the limit 
 ## Where this fits
 
 A credit score isn't a verdict on you as a person — it's a summary of two habits you already control: paying on time and keeping balances low. Build those, and the number takes care of itself. But what if you're starting from zero, with no history at all? That's exactly the next lesson.
+
+<p class="lesson-md-nav"><a href="./7-6-fees-cash-advances-penalty-apr.md">← 7.6 Fees, cash advances &amp; penalty APR — the expensive fine print</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-8-how-to-build-credit-from-zero.md">7.8 How to build credit from zero →</a></p>

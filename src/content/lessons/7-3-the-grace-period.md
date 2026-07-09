@@ -51,6 +51,10 @@ sources:
     url: "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
 ---
 
+# The grace period — how to borrow for free (if you do it right)
+
+> If you pay your full statement balance by the due date, the grace period means new purchases are charged zero interest — but the moment you carry a balance, that free window disappears.
+
 ## The situation
 
 Here's the part that sounds too good to be true: a credit card can let you spend money you don't have *right now* and charge you absolutely nothing for it. People do this every month, on purpose, and they never pay a cent of interest. The trick has a name — the **grace period** — and there's exactly one rule to keep it.
@@ -85,3 +89,5 @@ Now glance at the second row — and flip the toggle off if you want a preview. 
 ## Where this fits
 
 The grace period is the single most valuable feature of a credit card, and it's free — you just have to claim it by paying in full. Set autopay to the full statement balance and you claim it automatically, forever. Lose it, and you've opened the door to the interest machine. Next: exactly how that machine calculates what a carried balance costs.
+
+<p class="lesson-md-nav"><a href="./7-2-how-a-credit-card-works.md">← 7.2 How a credit card actually works (statement, balance, due date)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-4-how-card-interest-is-calculated.md">7.4 How card interest is calculated (APR → daily rate → average daily balance) →</a></p>

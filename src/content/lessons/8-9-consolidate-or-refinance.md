@@ -49,6 +49,10 @@ sources:
     url: "https://www.consumerfinance.gov/about-us/blog/how-reduce-your-debt/"
 ---
 
+# Should I consolidate or refinance?
+
+> Consolidating combines several debts into one payment; refinancing replaces a loan with a new one, ideally at a lower rate. Both can help — or quietly cost more — so the deciding question is always the same: does the total interest go down, and can you avoid running the balances back up?
+
 ## The situation
 
 You're tired of juggling four due dates and four interest rates, and an ad promises to roll it all into "one easy monthly payment" — often with a number lower than what you pay now. It sounds like relief. Sometimes it genuinely is. But "one easy payment" and "less money" are not the same thing, and the gap between them is where people get hurt. Here's how to tell a good offer from an expensive one, without needing a finance degree.
@@ -90,3 +94,5 @@ That's the entire skill: ignore the shiny monthly number, total up the real cost
 ## Where this fits
 
 Consolidation and refinancing are tools — useful when the total truly drops, costly when they just stretch the debt out. The key habit is comparing totals, not monthlies. Next we go to the other end of the spectrum: the loans designed to trap you, with triple-digit rates — what payday and predatory lending look like, and why to avoid them.
+
+<p class="lesson-md-nav"><a href="./8-8-putting-every-debt-in-one-place.md">← 8.8 Putting every debt in one place (your payoff picture)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./8-10-payday-loans-and-predatory-debt.md">8.10 Payday loans &amp; predatory debt — what to avoid and why →</a></p>

@@ -61,6 +61,10 @@ sources:
     url: "https://www.consumerfinance.gov/rules-policy/regulations/1026/m1/"
 ---
 
+# The minimum-payment trap — how it's calculated and why it keeps you paying
+
+> The minimum payment is designed to barely dent your balance — paying only the minimum on a $5,000 card at 24% keeps you in debt for 201 months and costs $8,441.70 in interest, more than the original balance.
+
 ## The situation
 
 Your statement lists a big number you owe — and right next to it, a tiny "minimum payment" that feels like a relief. Pay *that*, and you're fine, right? You're current, no late fee, account in good standing. That minimum looks like mercy. It's actually the most expensive door in the building, and it's standing wide open on purpose.
@@ -96,3 +100,5 @@ Now use the calculator as a way *out.* It starts on the minimum-only trap. Then 
 ## Where this fits
 
 The minimum payment isn't a kindness — it's the lever that keeps the interest engine running on you for as long as possible. The single most powerful habit with any card is to pay *more* than it asks, every time. Next: the rest of the expensive fine print — fees, cash advances, and the penalty APR that punishes a single slip.
+
+<p class="lesson-md-nav"><a href="./7-4-how-card-interest-is-calculated.md">← 7.4 How card interest is calculated (APR → daily rate → average daily balance)</a> · <a href="../../../README.md#curriculum">Contents</a> · <a href="./7-6-fees-cash-advances-penalty-apr.md">7.6 Fees, cash advances &amp; penalty APR — the expensive fine print →</a></p>
