@@ -328,7 +328,7 @@ const interestSaved = baseline.totalInterest - seed.totalInterest;
 
   .am-headline {
     margin: 0.4rem 0 0.2rem;
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.15;
@@ -383,6 +383,9 @@ const interestSaved = baseline.totalInterest - seed.totalInterest;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
+  /* Principal segments sit on --line-strong; var(--paper) there is ~1.58:1.
+     Use ink for readable labels (interest segments keep paper on --accent). */
+  .split-seg--principal .seg-text { color: var(--ink); }
 
   .am-legend {
     display: flex;
